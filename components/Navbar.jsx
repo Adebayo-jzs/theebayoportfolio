@@ -5,8 +5,8 @@ export default function Navbar(){
     { name: "Home", href: "/", icon: LucideHome },
     { name: "About", href: "#about", icon: User },
     { name: "Skills", href: "#skills", icon: Code },
-    { name: "Projects", href: "#projects", icon: Briefcase },
-    { name: "Contact", href: "#contact", icon: Mail },
+    // { name: "Projects", href: "#projects", icon: Briefcase },
+    // { name: "Contact", href: "#contact", icon: Mail },
   ];
     return(
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center text-black p-3">
@@ -14,7 +14,7 @@ export default function Navbar(){
                  {navLinks.map((link) =>{
                     const Icon = link.icon;
                     return(
-                        <Link key={link.name} href={link.href}  className="flex items-center gap-2 px-0 text-md text-white transition-gap duration-300 hover:px-1">
+                        <Link key={link.name} href={link.href}  className="flex items-center gap-2 px-0 text-md  transition-gap duration-300 hover:px-1">
                             <Icon className="h-4 w-4" />
                             <span className="">
                                 {link.name}

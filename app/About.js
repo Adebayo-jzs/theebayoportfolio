@@ -1,6 +1,6 @@
 export default function About(){
     return(
-        <section className="max-w-5xl mx-auto text-left mt-20"> 
+        <section id="about" className="max-w-5xl mx-auto text-left mt-20"> 
         <h2 className="text-4xl md:text-5xl max-w-xl">About</h2>
         <p className="text-base md:text-lg  mt-4 text-[#5a5a5a] max-w-xl">
           I am a passionate Software Engineering student at Babcock University with a focus on Full Stack Development. My journey in tech began with a curiosity about how websites work, which led me to explore the fascinating world of web development.
