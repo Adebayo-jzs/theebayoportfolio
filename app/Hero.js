@@ -4,7 +4,7 @@ export default function Hero() {
         <section className="max-w-5xl mx-auto mt-16 text-left">
                 <Image 
                  src="/avatar.jpg" 
-                 alt="Profile photo"
+                 alt="Adedeji Adebayo portrait"
                  width={100}
                  height={100} 
                  className="mb-9 rounded-full"

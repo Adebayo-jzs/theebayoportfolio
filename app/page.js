@@ -6,6 +6,7 @@ import Skills from "./Skills";
 // import { Computer } from "lucide-react";
 // import Image from "next/image";
 export const metadata = {
+  metadataBase: new URL("https://adebayodv.com.ng"),
   title: "Adedeji Adebayo | Software Developer",
   description:
     "Software Developer specializing in modern full‑stack development with Next.js, React,Node.js and other prominent javascript technologies",
@@ -30,13 +31,17 @@ export const metadata = {
     description:
       "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
     type: "website",
+     images: [
+      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Adebayo Portfolio" }
+    ],
   },
   twitter: {
-  card: "summary_large_image",
-  title: "Adedeji Adebayo | Software Developer",
-  description: "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
-  site: "@theebayo",
-  creator: "@theebayo"
+    card: "summary_large_image",
+    title: "Adedeji Adebayo | Software Developer",
+    description: "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
+    site: "@theebayo",
+    creator: "@theebayo",
+    images: ["/og-image.jpg"],
   },
 };
 
