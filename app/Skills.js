@@ -7,9 +7,9 @@ const skills = {
 const Skills = () => {
   return (
     <section className="max-w-5xl mx-auto space-y-12 text-left mt-20"> 
-        <h1 className="text-4xl md:text-5xl  tracking-tight max-w-xl">
+        <h2 className="text-4xl md:text-5xl  tracking-tight max-w-xl">
           Skills & Technologies
-        </h1>
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
           {Object.entries(skills).map(([category, items]) => (
@@ -17,7 +17,7 @@ const Skills = () => {
               key={category}
               className="skill-card hover:shadow-lg transition-shadow"
             >
-              <h1 className="text-3xl mb-4">{category}</h1>
+              <h2 className="text-3xl mb-4">{category}</h2>
 
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (

@@ -9,7 +9,7 @@ body{
   /* background-color: #121212; */
   font-family: var(--font-primary);
 }
- h1{
+ h1,h2{
   font-weight: 500;
  }
 .borderr{

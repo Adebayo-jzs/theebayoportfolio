@@ -42,42 +42,39 @@ export const metadata = {
 
 export default function Home() {
   return (
+    <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: [
+              "Adedeji Adebayo",
+              "Theebayo",
+              "Theebayo dev",
+              "Adebayodv"
+            ],
+            jobTitle:[ 
+              "Software Developer",
+              "Frontend Developer",
+              "Fullstack Developer",
+              "Web Developer"
+            ],
+            url: "https://adebayodv.com.ng/",
+            sameAs: [
+              "https://x.com/theebayo",
+              "https://linkedin.com/in/theebayo",
+              "https://github.com/adebayo-jzs",
+            ],
+          }),
+        }}
+      />
     <main className="min-h-screen bg-white text-black px-6 md:px-10 lg:px-20 py-20flex flex-col gap-32 ">
       <Hero/>
       <About/>
       <Skills/>
-      
-       
-
-      
-
-      {/* PROJECTS */}
-      {/* <section className="max-w-5xl mx-auto">
-        <h2 className="text-2xl font-semibold mb-6">Projects</h2>
-        <div className="grid gap-6">
-          <div className="p-6 border border-gray-200 rounded-2xl hover:shadow-sm transition bg-white">
-            <h3 className="text-xl font-semibold">CampusBooks</h3>
-            <p className="text-gray-600 mt-2 text-sm leading-relaxed">
-              A student‑focused platform for uploading and browsing book listings, built
-              with MongoDB and a clean custom HTML/CSS front‑end.
-            </p>
-          </div>
-
-          <div className="p-6 border border-gray-200 rounded-2xl hover:shadow-sm transition bg-white">
-            <h3 className="text-xl font-semibold">AI Study Assistant</h3>
-            <p className="text-gray-600 mt-2 text-sm leading-relaxed">
-              An AI‑powered learning tool with summarization, flashcards, quiz
-              generation, and a chat‑based tutor using the ChatGPT API.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* CONTACT */}
-      {/* <section className="max-w-4xl mx-auto text-center pb-20">
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-        <p className="text-gray-700 text-lg">Email: adedeji@example.com</p>
-      </section> */}
     </main>
+    </>
   );
 }
