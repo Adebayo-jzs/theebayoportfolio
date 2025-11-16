@@ -1,13 +1,12 @@
 const skills = {
-  Frontend: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
-  Backend: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis"],
-  DevOps: ["Docker", "AWS", "CI/CD", "Kubernetes", "Vercel"],
-  Tools: ["Git", "VS Code", "Figma", "Postman", "Jest"]
+  Frontend: ["HTML","CSS","React", "Javascript", "Next.js", "Tailwind CSS", "Bootstrap"],
+  Backend: ["Node.js", "Express", "PostgreSQL", "MongoDB",],
+//   DevOps: ["Docker", "AWS", "CI/CD", "Kubernetes", "Vercel"],
+  Tools: ["Git","Github", "VS Code", "Figma"]
 };
 const Skills = () => {
   return (
-    <section id="skills" className="py-24">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section className="max-w-5xl mx-auto space-y-12 text-left mt-20"> 
         <h1 className="text-4xl md:text-5xl  tracking-tight max-w-xl">
           Skills & Technologies
         </h1>
@@ -16,9 +15,9 @@ const Skills = () => {
           {Object.entries(skills).map(([category, items]) => (
             <div
               key={category}
-              className="p-6 border-2 rounded-xl bg-white hover:shadow-lg transition-shadow"
+              className="skill-card hover:shadow-lg transition-shadow"
             >
-              <h3 className="text-2xl font-semibold mb-4">{category}</h3>
+              <h1 className="text-3xl mb-4">{category}</h1>
 
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
@@ -33,7 +32,6 @@ const Skills = () => {
             </div>
           ))}
         </div>
-      </div>
     </section>
   );
 };

@@ -3,8 +3,8 @@
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
-import { Computer } from "lucide-react";
-import Image from "next/image";
+// import { Computer } from "lucide-react";
+// import Image from "next/image";
 export const metadata = {
   title: "Adedeji Adebayo | Software Developer",
   description:
@@ -45,11 +45,11 @@ export default function Home() {
     <main className="min-h-screen bg-white text-black px-6 md:px-10 lg:px-20 py-20flex flex-col gap-32 ">
       <Hero/>
       <About/>
+      <Skills/>
       
        
 
-      {/* SKILLS */}
-       {/* <Skills/> */}
+      
 
       {/* PROJECTS */}
       {/* <section className="max-w-5xl mx-auto">

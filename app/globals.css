@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 /* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --font-primary:"Elms Sans", sans-serif;
 }
@@ -48,4 +48,11 @@ body{
 }
 .tag:hover{
   padding: 14px 25px;
+}
+.skill-card{
+  background-color: #fafafa;
+  border: 3px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 16px;
+
 }
