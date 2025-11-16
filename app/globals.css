@@ -1,0 +1,51 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --font-primary:"Elms Sans", sans-serif;
+}
+
+body{
+  /* background-color: #121212; */
+  font-family: var(--font-primary);
+}
+ h1{
+  font-weight: 500;
+ }
+.borderr{
+  border: 1px solid rgba(255, 255, 255, 0.258);
+}
+.glass-effect {
+  background: #12121268;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  /* border: 1px solid #1f1f1f; */
+  border-radius: 19px;
+}
+.button1{
+  padding: 14px 20px ;
+  /* background-color:#272e51; */
+  background: linear-gradient(to right,#272e51, black);
+  color: white;
+  border-radius: 14px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.button1:hover{
+  padding: 14px 25px;
+}
+.tag{
+  padding: 14px 20px ;
+  /* background-color:#272e51; */
+  background: linear-gradient(to right,#20272f, black);
+  color: white;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.tag:hover{
+  padding: 14px 25px;
+}
