@@ -1,8 +1,10 @@
 // app/page.jsx
 // import { Metadata } from "next";
+// import { motion } from "framer-motion";
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
+// import ContactPage from "./Contact";
 // import { Computer } from "lucide-react";
 // import Image from "next/image";
 export const metadata = {
@@ -75,10 +77,12 @@ export default function Home() {
           }),
         }}
       />
-    <main className="min-h-screen bg-white text-black px-6 md:px-10 lg:px-20 py-20flex flex-col gap-32 ">
+    <main className="min-h-screen bg-white text-black px-6 md:px-10 lg:px-60  flex flex-col ">
+      
       <Hero/>
       <About/>
       <Skills/>
+      {/* <ContactPage/> */}
     </main>
     </>
   );

@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion";
 const skills = {
   Frontend: ["HTML","CSS","React", "Javascript", "Next.js", "Tailwind CSS", "Bootstrap"],
   Backend: ["Node.js", "Express", "PostgreSQL", "MongoDB",],
@@ -5,33 +7,51 @@ const skills = {
   Tools: ["Git","Github", "VS Code", "Figma"]
 };
 const Skills = () => {
-  return (
-    <section id="skills" className="max-w-5xl mx-auto space-y-12 text-left mt-20"> 
-        <h2 className="text-4xl md:text-5xl  tracking-tight max-w-xl">
-          Skills & Technologies
-        </h2>
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.65,   // Delay between child animations
+      }
+    }
+  };
+  const fadeUp = {
+      hidden: { opacity: 0, y: 40 },
+      visible: { 
+        opacity: 1, y: 0, transition: { duration: 0.6 } 
+      },
+  };
 
-        <div className="grid md:grid-cols-2 gap-6">
+  return (
+    <section id="skills" className="max-w-4xl mx-auto space-y-12 text-left my-20"> 
+      <motion.h2 initial="hidden" whileInView="visible" variants={fadeUp} className="text-4xl md:text-5xl  tracking-tight max-w-xl" >
+          Skills & Technologies
+      </motion.h2>
+
+        <motion.div className="grid md:grid-cols-2 gap-6" initial="hidden" whileInView="visible" variants={container} viewport={{ once: true }} >
           {Object.entries(skills).map(([category, items]) => (
-            <div
+            
+            <motion.div
               key={category}
+              variants={fadeUp}
               className="skill-card hover:shadow-lg transition-shadow"
-            >
+              >
               <h2 className="text-3xl mb-4">{category}</h2>
 
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
                   <span
-                    key={skill}
-                    className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
+                  key={skill}
+                  className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
     </section>
   );
 };
