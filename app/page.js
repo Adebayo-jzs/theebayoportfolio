@@ -14,15 +14,15 @@ export const metadata = {
     "Software Developer specializing in modern full‑stack development with Next.js, React,Node.js and other prominent javascript technologies",
   keywords: [
     "Adedeji Adebayo",
-    "Adedeji Samod Adebayo",
-    "Adedeji Samod",
     "Theebayo",
     "Theebayo dev",
-    "Adebayodv",
+    "frontend Developer",
     "Software Developer",
+    "Adedeji Samod Adebayo",
+    "Adedeji Samod",
+    "Adebayodv",
     "Javascript",
     "Full Stack Developer",
-    "frontend Developer",
     "Next.js",
     "React",
     "Node.js",
@@ -50,7 +50,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    <script
+    {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -76,7 +76,7 @@ export default function Home() {
             ],
           }),
         }}
-      />
+      /> */}
     <main className="min-h-screen bg-white text-black px-6 md:px-10 lg:px-60  flex flex-col ">
       
       <Hero/>

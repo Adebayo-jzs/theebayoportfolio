@@ -19,6 +19,36 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Adedeji Adebayo",
+              "alternateName": ["Theebayo", "Theebayo dev", "Adebayodv"],
+              "jobTitle": "Full-Stack JavaScript Developer",
+              "url": "https://adebayodv.com.ng/",
+              "sameAs": [
+                "https://x.com/theebayo",
+                "https://linkedin.com/in/theebayo",
+                "https://github.com/adebayo-jzs"
+              ],
+              "knowsAbout": [
+                "Next.js",
+                "React",
+                "Node.js",
+                "Tailwind CSS",
+                "Frontend Development",
+                "Backend Development",
+                "Web Applications"
+              ]
+            }),
+          }}
+        />
+
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
