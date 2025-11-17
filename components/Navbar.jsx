@@ -5,6 +5,7 @@ export default function Navbar(){
     { name: "Home", href: "/", icon: LucideHome },
     { name: "About", href: "#about", icon: User },
     { name: "Skills", href: "#skills", icon: Code },
+    { name: "Projects", href: "#projects", icon: Briefcase },
     // { name: "Projects", href: "#projects", icon: Briefcase },
     // { name: "Contact", href: "#contact", icon: Mail },
   ];

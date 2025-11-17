@@ -6,7 +6,7 @@
 }
 
 body{
-  /* background-color: #121212; */
+  background-color: #f0f4f9;
   font-family: var(--font-primary);
 }
  h1,h2{
@@ -58,4 +58,21 @@ nav{
   border-radius: 10px;
   padding: 16px;
 
+}
+.tags{
+  background-color: #f0f4f9;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 0;
+  /* border-radius: 10px; */
+  /* padding: 16px; */
+}
+.project-tools{
+  background-color: #f0f4f9;
+  border: 1px solid #e6e6e6;
+  font-size: 12px;
+}
+.project-image{
+  border-radius: 9px;
+  border: 3px solid #e6e6e6;
+  /* height: 350px; */
 }

@@ -15,7 +15,7 @@ export default function About(){
       visible: { opacity: 1, y: 0, transition: { duration: 1.4 } },
      };
     return(
-      <section id="about" className="max-w-5xl mx-auto  text-left mt-20">
+      <section id="about" className="max-w-5xl mx-auto  text-left pt-20">
         <motion.div initial="hidden" whileInView="visible" variants={fadeUp} >
         <h2 className="text-4xl md:text-5xl max-w-xl">About</h2>
         </motion.div> 

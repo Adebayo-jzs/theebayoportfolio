@@ -15,7 +15,7 @@ export default function Hero() {
       visible: { opacity: 1, y: 0, transition: { duration: 1.4 } },
      };
   return(
-    <section className=" max-w-5xl mx-auto  mt-36 text-left">
+    <section className="max-w-5xl mx-auto  mt-36 text-left">
       <motion.div initial="hidden" whileInView="visible" variants={fadeUp} >
         <Image 
           src="/avatar.jpg" 
