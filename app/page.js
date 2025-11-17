@@ -9,8 +9,8 @@ import Projects from "./Projects";
 // import { Computer } from "lucide-react";
 // import Image from "next/image";
 export const metadata = {
-  metadataBase: new URL("https://adebayodv.com.ng"),
-  title: "Adedeji Adebayo | Software Developer",
+  metadataBase: new URL("https://theebayo.name.ng"),
+  title: "Adebayo ADEDEJI | Software Developer",
   description:
     "Software Developer specializing in modern full‑stack development with Next.js, React,Node.js and other prominent javascript technologies",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata = {
   ],
   authors: [{ name: "Adedeji Adebayo" }],
   openGraph: {
-    title: "Adedeji Adebayo | Software Developer",
+    title: "Adebayo ADEDEJI | Software Developer",
     description:
       "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adedeji Adebayo | Software Developer",
+    title: "Adebayo ADEDEJI | Software Developer",
     description: "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
     site: "@theebayo",
     creator: "@theebayo",
@@ -69,7 +69,7 @@ export default function Home() {
               "Fullstack Developer",
               "Web Developer"
             ],
-            url: "https://adebayodv.com.ng/",
+            url: "https://theebayo.name.ng",
             sameAs: [
               "https://x.com/theebayo",
               "https://linkedin.com/in/theebayo",

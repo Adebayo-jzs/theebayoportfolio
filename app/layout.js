@@ -26,10 +26,11 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Adedeji Adebayo",
+              "name": "Adebayo ADEDEJI",
+              image: "https://theebayo.name.ng/avatar.jpg",
               "alternateName": ["Theebayo", "Theebayo dev", "Adebayodv"],
               "jobTitle": "Full-Stack JavaScript Developer",
-              "url": "https://adebayodv.com.ng/",
+              "url": "https://theebayo.name.ng",
               "sameAs": [
                 "https://x.com/theebayo",
                 "https://linkedin.com/in/theebayo",
