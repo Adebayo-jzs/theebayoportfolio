@@ -60,10 +60,10 @@ const Projects = () => {
             <motion.div
               key={project.id}
               variants={fadeUp}
-              className="skill-card hover:shadow-lg transition-shadow"
+              className="skill-card hover:shadow-lg hover:-translate-y-1 transition-all duration-750"
               >
               <div className="">
-                <Image src={project.imgurl} alt={project.projectname} className="project-image w-full rounded" width={800}
+                <Image src={project.imgurl} alt={project.projectname} className="project-image w-full rounded hover:scale-103 transition duration-750" width={800}
             height={0}/>
               </div>
               <div>
@@ -85,7 +85,7 @@ const Projects = () => {
                   <a
                     href={project.code}
                     target="_blank"
-                    className="px-4 py-2 tags rounded-lg text-sm flex items-center gap-2 hover:bg-gray-100 transition"
+                    className="px-4 py-2 project-button rounded-lg text-sm flex items-center gap-2 hover:bg-gray-100 transition"
                   >
                     <Code className="h-4 w-4" />
                     Code
@@ -94,7 +94,7 @@ const Projects = () => {
                   <a
                     href={project.preview}
                     target="_blank"
-                    className="px-4 py-2 tags rounded-lg text-sm flex items-center gap-2 hover:bg-gray-100 transition"
+                    className="px-4 py-2 project-button rounded-lg text-sm flex items-center gap-2 hover:bg-gray-100 transition"
                     >
                     <ExternalLink className="h-4 w-4" />
                     Demo

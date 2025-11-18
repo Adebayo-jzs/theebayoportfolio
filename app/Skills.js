@@ -35,7 +35,7 @@ const Skills = () => {
             <motion.div
               key={category}
               variants={fadeUp}
-              className="skill-card hover:shadow-lg transition-shadow"
+              className="skill-card hover:shadow-lg transition duration-750"
               >
               <h2 className="text-3xl mb-4">{category}</h2>
 
@@ -43,7 +43,7 @@ const Skills = () => {
                 {items.map((skill) => (
                   <span
                   key={skill}
-                  className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
+                  className="skills px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>
