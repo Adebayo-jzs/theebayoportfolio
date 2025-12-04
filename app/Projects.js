@@ -45,7 +45,7 @@ const Projects = () => {
   const fadeUp = {
       hidden: { opacity: 0, y: 40 },
       visible: { 
-        opacity: 1, y: 0, transition: { duration: 0.6 } 
+        opacity: 1, y: 0, transition: { duration: 0.9 } 
       },
   };
   return (

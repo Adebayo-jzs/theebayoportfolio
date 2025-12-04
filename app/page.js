@@ -5,7 +5,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-// import ContactPage from "./Contact";
+import ContactPage from "./Contact";
 // import { Computer } from "lucide-react";
 // import Image from "next/image";
 export const metadata = {
@@ -84,7 +84,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Projects/>
-      {/* <ContactPage/> */}
+      <ContactPage/>  
     </main>
     </>
   );
