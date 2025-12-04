@@ -54,7 +54,7 @@ nav{
 }
 .skill-card{
   background-color: #fafafa;
-  border: 3px solid #e6e6e6;
+  border: 2px solid #e6e6e6;
   border-radius: 10px;
   padding: 16px;
 
@@ -81,4 +81,25 @@ nav{
   border: 3px solid #e6e6e6;
   /* height: 350px; */
   cursor:grabbing;
+}
+
+
+.inputb{
+  border: 1px solid #e6e6e6;
+  outline-color: #bdbcbc;
+}
+
+
+
+
+
+
+/* Contact component */
+.social-links{
+  background-color: #fafafa;
+  border: 2px solid #e6e6e6;
+}
+.lightborder{
+  background-color: #fafafa;
+  border: 2px solid #e6e6e6;
 }
