@@ -1,0 +1,21 @@
+# AI Crawler Instructions for theebayo.name.ng
+
+allow:
+  - /
+  - /api/llm
+
+
+ 
+
+preferred_metadata:
+  format: JSON-LD
+  type: Person
+  include:
+    - name
+    - skills
+    - socialLinks 
+
+priority_pages:
+  homepage: high
+
+sitemap: https://theebayo.name.ng/sitemap.xml

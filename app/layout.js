@@ -30,16 +30,34 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               "name": "Adebayo ADEDEJI",
               image: "https://theebayo.name.ng/avatar.jpg",
-              "alternateName": ["Theebayo", "Theebayo dev", "Adebayodv"],
-              "jobTitle": "Full-Stack JavaScript Developer",
+              "alternateName": ["Theebayo", "Adedeji Adebayo", "Adebayodv"],
+              "jobTitle": "FullStack JavaScript Developer",
+              "description":"Fullstack Javascript developer skilled in Next.Js,React,Node.js and modern javascript technologies",
               "url": "https://theebayo.name.ng",
+              "image": "https://theebayo.name.ng/avatar.jpg",
               "sameAs": [
+                "https://x.com/theebayo",
+                "https://linkedin.com/in/theebayo",
+                "https://github.com/adebayo-jzs"
+              ],
+              "socialLinks": [
                 "https://x.com/theebayo",
                 "https://linkedin.com/in/theebayo",
                 "https://github.com/adebayo-jzs"
               ],
               "knowsAbout": [
                 "Next.js",
+                "React",
+                "Javascript",
+                "Node.js",
+                "Tailwind CSS",
+                "Frontend Development",
+                "Backend Development",
+                "Web Applications"
+              ],
+              "skills": [
+                "Next.js",
+                "Javascript",
                 "React",
                 "Node.js",
                 "Tailwind CSS",
