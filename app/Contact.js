@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin,Twitter } from "lucide-react";
 import Link from "next/link";
+// import { headers } from "next/headers";
 
 const links = [
   {id:1,linkname:"Email",handle:"adedejiadebayo732@gmail.com",link:"mailto:adededejiadebayo732@gmail.com",icon:Mail},
@@ -11,9 +12,7 @@ const links = [
   {id:4,linkname:"X",handle:"@theebayo",link:"https://x.com/theebayo",icon:Twitter},
 ]
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,7 +43,18 @@ const Contact = () => {
       transition: { staggerChildren: 0.2 },
     },
   };
-  
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    await fetch("https://formdrop.co/f/BIHBg1on", {
+      method:"POST",
+      body: formData,
+      headers: {
+        "Accept":"application/json"
+      }
+    });
+  }
   return (
     <section id="contact" className="py-24 px-3">
       <div className="max-w-6xl mx-auto space-y-12">
