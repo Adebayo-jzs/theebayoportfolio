@@ -45,15 +45,26 @@ const Contact = () => {
   };
   async function handleSubmit(e) {
     e.preventDefault();
-    const formData = new FormData(e.target);
+    const formData = {
+      name:e.target.name.value,
+      email:e.target.email.value, 
+      message:e.target.message.value,
+    }
 
-    await fetch("https://formdrop.co/f/BIHBg1on", {
-      method:"POST",
+     const res = fetch('https://api.formdrop.co/f/BIHBg1on', {
+      method: 'POST',
       headers: {
-        "Content-Type":"application/json"
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData),
-    });
+      body: JSON.stringify(formData)
+      })
+      // .then(alert("Message sent successfully"))
+    .then(res => res.json())
+    .then(data => alert("Message sent successfully"))
+    .catch(err => alert("Failed to send message"));
+    e.target.reset();
+
+    // });
   }
   return (
     <section id="contact" className="py-24 px-3">
@@ -101,6 +112,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   required
                   placeholder="Your name"
                   className="w-full rounded-md  inputb px-3 py-2  "
@@ -114,6 +126,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   required
                   placeholder="your@email.com"
@@ -128,6 +141,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="5"
                   required
                   placeholder="Tell me about your project..."
