@@ -49,10 +49,10 @@ const Contact = () => {
 
     await fetch("https://formdrop.co/f/BIHBg1on", {
       method:"POST",
-      body: formData,
       headers: {
-        "Accept":"application/json"
-      }
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(formData),
     });
   }
   return (
