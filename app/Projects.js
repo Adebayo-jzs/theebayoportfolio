@@ -30,6 +30,15 @@ const projects = [
     code: "https://github.com/adebayo-jzs/examhelp",
     imgurl:"/quizapp.jpg",
   },
+  {
+    id: 4,
+    projectname: "Personal Blog",
+    desc:"Personal Developer blog fully optimisized for Search Engines ",
+    tools: ["React", "Tailwind", "Typescript","Supabse"],
+    preview: "https://blog.theebayo.name.ng",
+    code: "https://github.com/adebayo-jzs/examhelp",
+    imgurl:"/blog.jpg",
+  },
 ];
 
 const Projects = () => {
@@ -82,14 +91,14 @@ const Projects = () => {
                 ))}
               </div>
               <div className="flex gap-7 mt-6" >
-                  <a
+                  {/* <a
                     href={project.code}
                     target="_blank"
                     className="px-4 py-2 project-button rounded-lg text-sm flex items-center gap-2 hover:bg-gray-100 transition"
                   >
                     <Code className="h-4 w-4" />
                     Code
-                  </a>
+                  </a> */}
 
                   <a
                     href={project.preview}
@@ -97,7 +106,7 @@ const Projects = () => {
                     className="px-4 py-2 project-button rounded-lg text-sm flex items-center gap-2 hover:bg-gray-100 transition"
                     >
                     <ExternalLink className="h-4 w-4" />
-                    Demo
+                    Preview
                   </a>
               </div>
               </div>
