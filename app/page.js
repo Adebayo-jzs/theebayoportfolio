@@ -1,6 +1,7 @@
 // app/page.jsx
 // import { Metadata } from "next";
 // import { motion } from "framer-motion";
+import Navbar from "@/components/Navbar";
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
@@ -79,7 +80,7 @@ export default function Home() {
         }}
       /> */}
     <main className="min-h-screen bg-[#f0f4f9] text-black px-6 md:px-10 lg:px-60  flex flex-col ">
-      
+      <Navbar/>
       <Hero/>
       <About/>
       <Skills/>
