@@ -67,8 +67,8 @@ const Contact = () => {
     // });
   }
   return (
-    <section id="contact" className="py-24 px-3">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section id="contact" className="py-24 ">
+      <div className="max-w-4xl min-h-screen mx-auto space-y-12">
 
         {/* Title Section */}
         <motion.div 
