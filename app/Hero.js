@@ -15,7 +15,7 @@ export default function Hero() {
       visible: { opacity: 1, y: 0, transition: { duration: 1.4 } },
      }; 
   return(
-    <section className="max-w-5xl mx-auto  mt-36 text-left">
+    <section className="max-w-4xl  mx-auto md:pe-40 mt-36 text-left">
       <motion.div initial="hidden" whileInView="visible" variants={fadeUp} >
         <Image 
           src="/avatar.jpg" 
@@ -27,12 +27,12 @@ export default function Hero() {
       </motion.div>
       <motion.div initial="hidden" whileInView="visible" variants={fade2} >
 
-        <h1 className="text-4xl md:text-5xl  tracking-tight max-w-xl">Hi, I'm Adedeji Adebayo.</h1>
-        <h2 className="text-4xl md:text-5xl  tracking-tight max-w-xl">Software Developer</h2>
+        <h1 className="text-4xl md:text-5xl  tracking-tight">Hi, I'm Adedeji Adebayo.</h1>
+        <h2 className="text-4xl md:text-5xl  tracking-tight">Software Developer</h2>
       </motion.div>
       <motion.div initial="hidden" whileInView="visible" variants={fade3} >
 
-        <p className="text-base md:text-lg  mt-4 text-[#5a5a5a] max-w-xl  ">
+        <p className="text-base md:text-lg  mt-4 text-[#5a5a5a]  ">
           Year 2 Software Engineering student  passionate about creating beautiful, functional websites and web applications with cutting-edge technology.
         </p>
         <button className="button1 mt-4">Get In Touch</button>
