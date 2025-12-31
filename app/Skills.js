@@ -24,7 +24,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="max-w-6xl mx-auto space-y-12 pt-20 text-left mb-0"> 
+    <section id="skills" className="max-w-4xl mx-auto space-y-12 pt-20 text-left mb-0"> 
       <motion.h2 initial="hidden" whileInView="visible" variants={fadeUp} className="text-4xl md:text-5xl  tracking-tight max-w-xl" >
           Skills & Technologies
       </motion.h2>

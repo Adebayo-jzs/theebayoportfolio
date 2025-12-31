@@ -58,7 +58,7 @@ const Projects = () => {
       },
   };
   return (
-    <section id="projects" className="max-w-6xl mx-auto space-y-12 text-left pt-20 mb-20">
+    <section id="projects" className="max-w-4xl mx-auto space-y-12 text-left pt-20 mb-20">
       {/* <div className="max-w-6xl mx-auto space-y-12"> */}
         <motion.h2 initial="hidden" whileInView="visible" variants={fadeUp} className="text-4xl md:text-5xl  tracking-tight max-w-xl" >
           Projects

@@ -13,7 +13,7 @@ export default function Navbar(){
         <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center  text-black p-6">
             {/* <div className="glass-effect w-6xl flex justify-center"> */}
 
-            <div className="flex items-center justify-center gap-5  p-5 w-6xl bg-gray glass-effect " >
+            <div className="flex items-center justify-center gap-5  py-4 px-4 w-4xl bg-gray glass-effect " >
                  {navLinks.map((link) =>{
                      const Icon = link.icon;
                      return(

@@ -67,8 +67,8 @@ const Contact = () => {
     // });
   }
   return (
-    <section id="contact" className="py-24 px-3">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section id="contact" className="py-24 ">
+      <section className="max-w-4xl  mx-auto space-y-12">
 
         {/* Title Section */}
         <motion.div 
@@ -168,7 +168,7 @@ const Contact = () => {
               <motion.div 
               variants={fadeUp}
               key={social.id}
-              className="p-6 social-links rounded-xl hover:shadow-lg transition-shadow"
+              className="py-6 px-4 social-links rounded-xl hover:shadow-lg transition-shadow"
             >
               <Link href={social.link}>
               <div className="flex items-center gap-4">
@@ -191,7 +191,7 @@ const Contact = () => {
           </motion.div>
         </motion.div>
 
-      </div>
+      </section>
     </section>
   );
 };
