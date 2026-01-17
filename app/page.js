@@ -7,6 +7,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import ContactPage from "./Contact";
+import NewPortfolio from "./New";
 // import { Computer } from "lucide-react";
 // import Image from "next/image";
 export const metadata = {
@@ -79,13 +80,15 @@ export default function Home() {
           }),
         }}
       /> */}
-    <main className="min-h-screen bg-[#f0f4f9] text-black px-6 md:px-10 xl:px-60  flex flex-col ">
+    <main className="min-h-screen     flex flex-col ">
+    {/* <main className="min-h-screen bg-[#f0f4f9] text-black px-6 md:px-10 xl:px-60  flex flex-col "> */}
       <Navbar/>
-      <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <ContactPage/>  
+      <NewPortfolio/>
+      {/* <Hero/> */}
+      {/* <About/> */}
+      {/* <Skills/> */}
+      {/* <Projects/> */}
+      {/* <ContactPage/>   */}
     </main>
     </>
   );
