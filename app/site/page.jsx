@@ -1,7 +1,9 @@
 "use client"
 import React,{useState,useEffect} from "react";
 import { motion } from "framer-motion";
-import { East, West} from "@mui/icons-material";
+import { East, North, West} from "@mui/icons-material";
+import { useRef } from "react";
+import ProjectsCard from "@/components/ProjectCard";
 
 const projects = [
   {
@@ -90,6 +92,7 @@ const SocialLink = ({ href, iconPath, label }) => (
 
 export default function HomePage() {
   const [scrollProgress,setScrollProgress] = useState(0);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
 		const handleScroll = () => {
@@ -185,7 +188,7 @@ export default function HomePage() {
           </div>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center pt-20 lg:pt-0" id="experience">
+			<section className="flex flex-col justify-center py-20" id="experience">
 				{/* <div className="lg:col-span-7">
             <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
               Experience <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 01</span>
@@ -242,19 +245,27 @@ export default function HomePage() {
             </h2>
             {/* Arrows hidden on mobile, user naturally swipes */}
             <div className="flex gap-4">
-              <button className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
+              <button 
+                onClick={() =>
+                  scrollRef.current.scrollBy({ left: -300, behavior: "smooth" })
+                }
+                className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
                 <West/>
               </button>
-              <button className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
+              <button 
+                onClick={() =>
+                  scrollRef.current.scrollBy({ left: 300, behavior: "smooth" })
+                }
+                className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
                 <East/>
               </button>
             </div>
           </div>
           
           {/* Scroll Container with Snap */}
-          <div className="flex gap-6 md:gap-10 overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
+          <div ref={scrollRef} className="flex gap-6 md:gap-10 overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
 						{projects.map((project) => (
-    					<ProjectCard
+    					<ProjectsCard
       					key={project.id}
       					{...project}
 							/>
@@ -280,6 +291,27 @@ export default function HomePage() {
           </div>
       </section>
 		</div>
+
+      <div className="block fixed bottom-8 right-8 mix-blend-difference z-50">
+        <div className="flex flex-col items-center gap-6">
+          <span className="[writing-mode:vertical-rl] text-[11px] font-black tracking-[0.6em] text-white uppercase">SCROLL TO EXPLORE</span>
+          <div className="h-16 w-[2px] bg-white/20 relative overflow-hidden">
+            <div 
+              className="absolute top-0 left-0 w-full bg-white transition-all duration-100 ease-out" 
+              style={{ height: `${scrollProgress * 100}%` }}
+            ></div>
+          </div>
+        </div>
+        <button
+          onClick={() =>
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
+          className="border rounded-full p-2 mt-3"
+        >
+          <North/>
+        </button>
+
+      </div>
 		</div>
 	);
 }
