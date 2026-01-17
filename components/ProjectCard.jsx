@@ -21,27 +21,20 @@ const ProjectsCard = ({
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent hover:backdrop-blur-md" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent group-hover:opacity-80 group-hover:backdrop-blur-sm" />
 
-      {/* Hover Description */}
-      <div
-        className="
-          absolute inset-0 flex items-end
-          opacity-0 group-hover:opacity-100
-          transition-opacity duration-500
-        "
-      ></div>
+       
 
-      {/* Title (always visible) */}
-      <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6 pointer-events-none transition-all">
+      
+      <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6 transition-all">
          
         <h3 className="text-3xl transition-all md:text-4xl font-black text-white uppercase tracking-tighter leading-none">
           {projectname}
         </h3>
         <p className="
             translate-y-8 group-hover:translate-y-0
-            transition-transform duration-500 text-white/80 
-            text-sm md:text-base leading-relaxed mb-6 max-w-md 
+            transition-transform duration-500 text-[#939393]
+            text-sm md:text-base leading-relaxed my-6 max-w-md 
             opacity-0 group-hover:opacity-100 absolute group-hover:relative">
             {desc}
         </p>
