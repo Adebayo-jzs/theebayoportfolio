@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     projectname: "Textcognito",
-    desc:"Textcognito is an anonymous messaging website where users can create unique links to receive anonymous messages from friends.",
+    desc:"Textcognito is an anonymous messaging website where users can create unique links to receive anonymous messages from their friends.",
     tools: ["NextJS", "Tailwind","Vanilla CSS","Supabase","Node.js"],
     preview: "https://textcognito.click",
     code: "https://github.com/adebayo-jzs/incognito",
