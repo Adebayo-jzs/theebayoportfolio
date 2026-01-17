@@ -292,7 +292,7 @@ export default function HomePage() {
       </section>
 		</div>
 
-      <div className="block fixed bottom-8 right-8 mix-blend-difference z-50">
+      <div className="block fixed bottom-8 right-3 mix-blend-difference z-50">
         <div className="flex flex-col items-center gap-6">
           <span className="[writing-mode:vertical-rl] text-[11px] font-black tracking-[0.6em] text-white uppercase">SCROLL TO EXPLORE</span>
           <div className="h-16 w-[2px] bg-white/20 relative overflow-hidden">
