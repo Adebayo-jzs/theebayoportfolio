@@ -1,6 +1,7 @@
 "use client"
 import React,{useState,useEffect} from "react";
 import { motion } from "framer-motion";
+import { East, West} from "@mui/icons-material";
 
 const projects = [
   {
@@ -242,10 +243,10 @@ export default function HomePage() {
             {/* Arrows hidden on mobile, user naturally swipes */}
             <div className="flex gap-4">
               <button className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
-                <span className="material-symbols-outlined">west</span>
+                <West/>
               </button>
               <button className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
-                <span className="material-symbols-outlined">east</span>
+                <East/>
               </button>
             </div>
           </div>
