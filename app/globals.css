@@ -178,8 +178,8 @@ nav{
   -ms-overflow-style: none; 
   scrollbar-width: none; 
 }
-a{
-  cursor: pointer;
+a:hover{
+  cursor: pointer !important;
 }
 /* .grid-bg {
    
