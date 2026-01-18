@@ -138,7 +138,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-27 lg:gap-8 items-center">
 					<div className="order-1 lg:order-1 lg:col-span-7 z-10">
 						<span className="text-white/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
-                Premium Software Engineering
+                Premium Software Development
             </span>
 						<h1 className="font-outfit leading-[0.9] flex flex-col gap-2 lg:gap-0">
 							<span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter text-white">ADEDEJI</span>
@@ -146,7 +146,7 @@ export default function HomePage() {
 						</h1>
 						<div className="mt-8 md:mt-12 flex items-center gap-6">
 							<div className="h-px w-12 md:w-24 bg-white"></div>
-							<p className="text-sm md:text-xl text-white font-bold font-sans tracking-widest uppercase">Senior Fullstack Architect</p>
+							<p className="text-sm md:text-xl text-white font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
 						</div>
 					</div>
 					<div className="order-2 lg:order-2  lg:col-span-5 relative flex justify-center lg:justify-end">
