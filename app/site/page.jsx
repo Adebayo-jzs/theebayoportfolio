@@ -7,6 +7,23 @@ import ProjectsCard from "@/components/ProjectCard";
 // import { GitHub } from "@mui/icons-material";
 import { Github } from "lucide-react";
 
+const ExperienceItem = ({ date, title, institution, description, isLast }) => (
+  <div className="relative pl-8 md:pl-12 group">
+    {/* Timeline Dot */}
+    <div className={`absolute left-0 top-2 w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-white z-10 transition-all ${isLast ? 'bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]' : 'bg-black group-hover:bg-white'}`}></div>
+    
+    <span className="text-white text-xs md:text-sm font-bold mb-2 block uppercase tracking-[0.2em] text-white/60">
+      {date}
+    </span>
+    <h3 className="text-2xl md:text-3xl font-black text-white mb-2">
+      {title} <span className="block text-lg md:text-xl font-medium text-white/70 mt-1">{institution}</span>
+    </h3>
+    <p className="text-[#E0E0E0] text-base md:text-lg leading-relaxed max-w-xl font-medium">
+      {description}
+    </p>
+  </div>
+);
+
 const projects = [
   {
     id: 1,
@@ -78,7 +95,7 @@ const ProjectCard = ({id,projectname,desc,imgurl,preview,code,type,year}) => (
     </div>
     </div>
 );
-
+const techs = ["REACT", "JAVASCRIPT", "NEXT.JS", "SUPABASE", "TAILWIND", "REACT", "JAVASCRIPT", "NEXT.JS", "SUPABASE", "TAILWIND"];
 const social_links = [
   {id:1,href:"https://github.com/adebayo-jzs",label:"github",iconPath:<path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"></path>},
   {id:2,href:"https://linkendin/in/theebayo",label:"LInkedin",iconPath:<path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 110-4 2 2 0 010 4z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"></path>},
@@ -115,7 +132,7 @@ export default function HomePage() {
 
 	return (
 		<div className="bg-[#050505] text-white selection:bg-white selection:text-black min-h-screen overflow-x-hidden">
-		<div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 pb-32">
+		<div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 ">
 			<div className="noise-texture"></div>
 			<section className="min-h-screen flex flex-col justify-center relative grid-bg pt-20 lg:pt-0" id="hero">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-27 lg:gap-8 items-center">
@@ -196,36 +213,35 @@ export default function HomePage() {
           </div>
 				</div>
 			</section>
-			<section className="flex flex-col justify-center py-20" id="experience">
-				{/* <div className="lg:col-span-7">
+      <section className="py-20 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 border-t border-white/10" id="experience">
+			{/* <section className="flex flex-col justify-center py-20" id="experience"> */}
+				<div className="lg:col-span-7">
             <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
-              Experience <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 01</span>
+              Education <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 01</span>
             </h2>
             
             <div className="space-y-16 md:space-y-20 relative"> 
               <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-white/20"></div>
               
               <ExperienceItem 
-                date="January 2024 - Present" 
-                title="Senior Developer" 
-                company="Horizon Tech"
-                description="Architecting scalable microservices and leading a cross-functional team of 12 engineers in building next-gen fintech solutions."
+                date="October 2024 - Present" 
+                title="BSC. SOFTWARE ENGINEERING" 
+                institution="Babcock University"
+                description=""
                 isLast={true}
               />
               <ExperienceItem 
-                date="May 2022 - Dec 2023" 
-                title="Lead Frontend Engineer" 
-                company="Nexus Systems"
-                description="Pioneered the migration of legacy systems to a unified Design System using React and Tailwind, improving deployment speed by 40%."
+                date="July 2024 - October 2024" 
+                title="FRONTEND ENGINEERING" 
+                institution="Tech Talent Academy"
               />
               <ExperienceItem 
-                date="Oct 2020 - April 2022" 
-                title="Fullstack Developer" 
-                company="StartUp Inc"
-                description="Developed high-performance APIs and interactive dashboards for data-driven analytics platforms."
+                date="September 2021 - June 2024" 
+                title="SECONDARY EDUCATION" 
+                institution="Sacred Heart Catholic College"
               />
             </div>
-          </div> */}
+          </div> 
           
           <div className="lg:col-span-5">
             <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
@@ -245,7 +261,20 @@ export default function HomePage() {
               <span className="text-2xl md:text-3xl font-black text-white/90">Bootstrap</span>
             </div>
           </div>
+          
 			</section>
+      <div className="w-full py-10 border-y border-white/10 mb-20">
+        <div className="flex w-full overflow-hidden">
+          <div className="flex whitespace-nowrap animate-scroll">
+            {/* We render the list twice to ensure seamless looping */}
+            {[...techs, ...techs].map((tech, i) => (
+              <span key={i} className="text-6xl md:text-8xl font-black mx-8 text-stroke font-sans tracking-tighter">
+                {tech} <span className="text-white/20 ml-8">///</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
 			<section className="py-20 md:py-32 border-t border-white/10" id="projects">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 gap-6">
             <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-white">
@@ -298,7 +327,53 @@ export default function HomePage() {
             /> */}
           </div>
       </section>
-      <section className="py-20 md:py-32 flex flex-col items-center" id="contact">
+      {/* <section>
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        
+        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300 group">
+          <h3 className="text-gray-500 text-sm font-mono mb-6 tracking-widest">BASED IN</h3>
+          <p className="text-2xl font-bold flex items-center gap-2">
+            <span>🇳🇬</span> IBADAN, NG
+          </p>
+        </div>
+
+         
+        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div className="flex justify-between items-start">
+            <h3 className="text-gray-500 text-sm font-mono tracking-widest">STATUS</h3>
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+          </div>
+          <p className="text-2xl font-bold mt-4">AVAILABLE</p>
+        </div>
+
+         
+        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300">
+          <h3 className="text-gray-500 text-sm font-mono mb-6 tracking-widest">EXPERIENCE</h3>
+          <p className="text-4xl font-black">3+ YEARS</p>
+        </div>
+
+         
+        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300">
+          <h3 className="text-gray-500 text-sm font-mono mb-6 tracking-widest">LISTENING TO</h3>
+          <div className="flex items-center gap-4">
+             
+            <div className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center animate-spin-slow">
+                🎵
+            </div>
+            <div>
+                <p className="font-bold text-lg leading-tight">City Boys</p>
+                <p className="text-gray-500 text-sm">Burna Boy</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </section> */}
+      <section className="pt-20 md:pt-32 flex flex-col items-center" id="contact">
         <div className="w-full mb-20 md:mb-32 ">
            
           <div className="flex flex-wrap justify-center  items-center gap-12 md:gap-32">
@@ -310,6 +385,8 @@ export default function HomePage() {
 						))}
           </div>
         </div>
+        
+      
         <div className="w-full flex flex-col md:flex-row justify-between items-center py-10 border-t border-white/20 text-white text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.4em] gap-6 md:gap-0">
             <p> &copy; {new Date().getFullYear()} ADEDEJI ADEBAYO</p>
             <div className="flex gap-8 md:gap-12">
