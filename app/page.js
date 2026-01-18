@@ -30,7 +30,7 @@ export const metadata = {
       "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
     type: "website",
     images: [
-      { url: "/og-image.png", width: 1200, height: 630, alt: "Adedeji Adebayo Portfolio" }
+      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Adebayo Portfolio" }
     ],
   },
   twitter: {
@@ -39,7 +39,7 @@ export const metadata = {
     description: "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
     site: "@theebayo",
     creator: "@theebayo",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
 };
 
