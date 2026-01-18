@@ -64,66 +64,12 @@ body{
 nav{
   /* border-bottom: 1px solid #1f1f1f; */
 }
-.button1{
-  padding: 14px 20px ;
-  /* background-color:#272e51; */
-  background: linear-gradient(to right,#272e51, black);
-  color: white;
-  border-radius: 14px;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.button1:hover{
-  padding: 14px 25px;
-}
-.tag{
-  padding: 14px 20px ;
-  /* background-color:#272e51; */
-  background: linear-gradient(to right,#20272f, black);
-  color: white;
-  border-radius: 27px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.tag:hover{
-  padding: 14px 25px;
-}
-.skill-card{
-  background-color: #fafafa;
-  border: 2px solid #e6e6e6;
-  border-radius: 10px;
-  padding: 16px;
-
-}
-.project-button{
-  background-color: #f0f4f9;
-  border: 1px solid #e6e6e6;
-  margin-bottom: 0;
-  /* border-radius: 10px; */
-  /* padding: 16px; */
-}
-.project-tools{
-  background-color: #f0f4f9;
-  border: 1px solid #e6e6e6;
-  font-size: 12px;
-}
-.skills{
-  background-color: #f0f4f9;
-  border: 1px solid #e6e6e6;
-  /* font-size: 12px; */
-}
+ 
 
 
  
 
-/* Contact component */
-.social-links{
-  background-color: #fafafa;
-  border: 2px solid #e6e6e6;
-}
+ 
  
 .grid-bg {
   position: relative;
