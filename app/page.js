@@ -93,7 +93,7 @@ export default function Home() {
       {/* <ContactPage/>   */}
 
       <footer className="footer-container">
-        <div className="big-text">LET'S BUILD</div>
+        <div className="big-text text-[16vw] md:text-[15vw]">LET'S BUILD</div>
       </footer>
     </main>
     </>
