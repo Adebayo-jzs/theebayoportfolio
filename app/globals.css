@@ -178,9 +178,9 @@ nav{
   -ms-overflow-style: none; 
   scrollbar-width: none; 
 }
-a:hover{
+/* a:hover{
   cursor: pointer !important;
-}
+} */
 /* .grid-bg {
    
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
@@ -308,5 +308,22 @@ a:hover{
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+@layer utilities {
+  /* The scrolling animation */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  /* The hollow text effect */
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    color: transparent;
   }
 }
