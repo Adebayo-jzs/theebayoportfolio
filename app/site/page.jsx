@@ -144,6 +144,9 @@ export default function HomePage() {
 							<span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter text-white">ADEDEJI</span>
 							<span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter outline-text">ADEBAYO</span>
 						</h1>
+            <p className="max-w-2xl text-base md:text-lg  mt-4 text-white/80 ">
+              Year 2 Software Engineering student passionate about creating beautiful, functional websites and web applications using modern technologies.
+            </p>
 						<div className="mt-8 md:mt-12 flex items-center gap-6">
 							<div className="h-px w-12 md:w-24 bg-white"></div>
 							<p className="text-sm md:text-xl text-white font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
