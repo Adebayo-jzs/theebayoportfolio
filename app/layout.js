@@ -6,6 +6,7 @@ import React,{useState,useEffect} from "react";
 import { North } from "@mui/icons-material";
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 // import Navbar from "@/components/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
         {/* <Analytics> */}
         <CursorWrapper className="mix-blend-difference">
           {children}
+          <Footer/>
         </CursorWrapper>
         <Analytics/>
 
