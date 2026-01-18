@@ -213,72 +213,41 @@ export default function HomePage() {
           </div>
 				</div>
 			</section>
-      <section className="py-20 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 border-t border-white/10" id="experience">
-			{/* <section className="flex flex-col justify-center py-20" id="experience"> */}
-				<div className="lg:col-span-7">
-            <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
-              Education <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 01</span>
-            </h2>
-            
-            <div className="space-y-16 md:space-y-20 relative"> 
-              <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-white/20"></div>
-              
-              <ExperienceItem 
-                date="October 2024 - Present" 
-                title="BSC. SOFTWARE ENGINEERING" 
-                institution="Babcock University"
-                description=""
-                isLast={true}
-              />
-              <ExperienceItem 
-                date="July 2024 - October 2024" 
-                title="FRONTEND ENGINEERING" 
-                institution="Tech Talent Academy"
-              />
-              <ExperienceItem 
-                date="September 2021 - June 2024" 
-                title="SECONDARY EDUCATION" 
-                institution="Sacred Heart Catholic College"
-              />
-            </div>
-          </div> 
-          
-          <div className="lg:col-span-5">
-            <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
-              Tools <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 02</span>
-            </h2>
-            <div className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline">
-              <span className="text-4xl md:text-6xl font-black text-white">React</span>
-              <span className="text-2xl md:text-4xl font-black text-white/90">Node.js</span>
-              <span className="text-xl md:text-2xl font-bold text-white/80">Javascript</span>
-              {/* <span className="text-3xl md:text-5xl font-black text-white">AWS</span> */}
-              <span className="text-2xl md:text-3xl font-bold text-white/85">Next.js</span>
-              <span className="text-3xl md:text-5xl font-black outline-text">MongoDB</span>
-              <span className="text-xl md:text-2xl font-bold text-white/70">Git</span>
-              <span className="text-2xl md:text-4xl font-black text-white">Github</span>
-              <span className="text-xl md:text-2xl font-bold text-white/60">Supabase</span>
-              <span className="text-2xl md:text-3xl font-black text-white/90">Tailwind</span>
-              <span className="text-2xl md:text-3xl font-black text-white/90">Bootstrap</span>
-            </div>
+      <section id="about" className="py-20 md:py-32">
+        <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-white">
+              About <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 01</span>
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div>
+            <p className="text-base md:text-lg  mt-4 text-white/80 ">
+              I am a passionate Software Engineering student at Babcock University with a focus on Full Stack Development. My journey in tech began with a curiosity about how websites work, which led me to explore the fascinating world of web development.
+            </p>
+            <p className="text-base md:text-lg  mt-4 text-white/80 ">
+              I specialize in both frontend and backend development, continuously exploring new technologies and methodologies to stay at the forefront of web development. My main goal is to become a proficient web developer by consistently exploring how technology can be applied to solve real-world problems in our daily lives.
+            </p>
           </div>
-          
-			</section>
-      <div className="w-full py-10 border-y border-white/10 mb-20">
-        <div className="flex w-full overflow-hidden">
-          <div className="flex whitespace-nowrap animate-scroll">
-            {/* We render the list twice to ensure seamless looping */}
-            {[...techs, ...techs].map((tech, i) => (
-              <span key={i} className="text-6xl md:text-8xl font-black mx-8 text-stroke font-sans tracking-tighter">
-                {tech} <span className="text-white/20 ml-8">///</span>
-              </span>
-            ))}
+          <div>
+            <h2 className="text-3xl md:text-4xl mb-5 font-black tracking-tight flex items-center gap-4 text-white">Favourite Tracks</h2>
+            <iframe
+              title="Spotify Embed: Recommendation Playlist "
+              src={`https://open.spotify.com/embed/playlist/21fSTvzLcGkx12unbI2nMe?utm_source=generator&theme=0`}
+              width="100%"
+              height="100%"
+              style={{ minHeight: '360px' }}
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
         </div>
-      </div>
+        {/* const playlistId = '21fSTvzLcGkx12unbI2nMe'; */}
+
+ 
+      </section>
 			<section className="py-20 md:py-32 border-t border-white/10" id="projects">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 gap-6">
             <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-white">
-              Projects <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 03</span>
+              Projects <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 02</span>
             </h2>
             {/* Arrows hidden on mobile, user naturally swipes */}
             <div className="flex gap-4">
@@ -327,6 +296,71 @@ export default function HomePage() {
             /> */}
           </div>
       </section>
+      <section className="pt-20 md:pt-32 pb-12 border-t border-white/10" id="experience">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+
+			{/* <section className="flex flex-col justify-center py-20" id="experience"> */}
+				<div className="lg:col-span-7">
+            <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
+              Education <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 03</span>
+            </h2>
+            
+            <div className="space-y-16 md:space-y-20 relative"> 
+              <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-white/20"></div>
+              
+              <ExperienceItem 
+                date="October 2024 - Present" 
+                title="BSC. SOFTWARE ENGINEERING" 
+                institution="Babcock University"
+                description=""
+                isLast={true}
+                />
+              <ExperienceItem 
+                date="July 2024 - October 2024" 
+                title="FRONTEND ENGINEERING" 
+                institution="Tech Talent Academy"
+              />
+              <ExperienceItem 
+                date="September 2021 - June 2024" 
+                title="SECONDARY EDUCATION" 
+                institution="Sacred Heart Catholic College"
+              />
+            </div>
+          </div> 
+          
+          <div className="lg:col-span-5">
+            <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
+              Tools <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 04</span>
+            </h2>
+            <div className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline">
+              <span className="text-4xl md:text-6xl font-black text-white">React</span>
+              <span className="text-2xl md:text-4xl font-black text-white/90">Node.js</span>
+              <span className="text-xl md:text-2xl font-bold text-white/80">Javascript</span>
+              {/* <span className="text-3xl md:text-5xl font-black text-white">AWS</span> */}
+              <span className="text-2xl md:text-3xl font-bold text-white/85">Next.js</span>
+              <span className="text-3xl md:text-5xl font-black outline-text">MongoDB</span>
+              <span className="text-xl md:text-2xl font-bold text-white/70">Git</span>
+              <span className="text-2xl md:text-4xl font-black text-white">Github</span>
+              <span className="text-xl md:text-2xl font-bold text-white/60">Supabase</span>
+              <span className="text-2xl md:text-3xl font-black text-white/90">Tailwind</span>
+              <span className="text-2xl md:text-3xl font-black text-white/90">Bootstrap</span>
+            </div>
+          </div>
+          
+      </div>
+      <div className="w-full py-10  ">
+        <div className="flex w-full overflow-hidden">
+          <div className="flex whitespace-nowrap animate-scroll">
+            {/* We render the list twice to ensure seamless looping */}
+            {[...techs, ...techs].map((tech, i) => (
+              <span key={i} className="text-6xl md:text-8xl font-black mx-8 text-stroke font-sans tracking-tighter">
+                {tech} <span className="text-white/20 ml-8">///</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+			</section>
       {/* <section>
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
         
