@@ -137,9 +137,13 @@ export default function HomePage() {
 			<section className="min-h-screen flex flex-col justify-center relative grid-bg pt-20 lg:pt-0" id="hero">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-27 lg:gap-8 items-center">
 					<div className="order-1 lg:order-1 lg:col-span-7 z-10">
-						<span className="text-white/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
+						{/* <span className="text-white/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
                 Premium Software Development
-            </span>
+            </span> */}
+            <div className="mt-8 md:mt-12 flex items-center gap-6">
+							<div className="h-px w-12 md:w-24 bg-white"></div>
+							<p className="text-sm md:text-xl text-white font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
+						</div>
 						<h1 className="font-outfit leading-[0.9] flex flex-col gap-2 lg:gap-0">
 							<span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter text-white">ADEDEJI</span>
 							<span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter outline-text">ADEBAYO</span>
@@ -147,10 +151,14 @@ export default function HomePage() {
             <p className="max-w-2xl text-base md:text-lg  mt-4 text-white/80 ">
               Year 2 Software Engineering student passionate about creating beautiful, functional websites and web applications using modern technologies.
             </p>
-						<div className="mt-8 md:mt-12 flex items-center gap-6">
-							<div className="h-px w-12 md:w-24 bg-white"></div>
-							<p className="text-sm md:text-xl text-white font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
-						</div>
+            <a
+              href="#contact" 
+              className="mt-3 inline-block py-3 px-6 border-2 border-white text-xs font-black uppercase tracking-widest
+                bg-white text-black hover:bg-transparent hover:text-white transition-all"
+            >
+              Hire Me!
+            </a>
+						
 					</div>
 					<div className="order-2 lg:order-2  lg:col-span-5 relative flex justify-center lg:justify-end">
 						<motion.div
