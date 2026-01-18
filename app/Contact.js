@@ -68,7 +68,7 @@ const Contact = () => {
   }
   return (
     <section id="contact" className="py-24 ">
-      <section className="max-w-4xl  mx-auto space-y-12">
+      <section className=" mx-auto space-y-12">
 
         {/* Title Section */}
         <motion.div 
@@ -99,7 +99,7 @@ const Contact = () => {
             initial="hidden" 
             whileInView="visible" 
             variants={fadeUp}
-            className="p-8 lightborder rounded-xl "
+            className="lightborder border-white "
           >
             <motion.form
             initial="hidden" whileInView="visible" variants={containerr} viewport={{ once: true }}
@@ -107,22 +107,22 @@ const Contact = () => {
 
               {/* Name */}
               <motion.div className="space-y-2" variants={fadeUp}>
-                <label htmlFor="name" className="text-sm font-medium">
-                  Name
+                <label htmlFor="name" className="text-sm md:text-xl text-white font-bold font-sans tracking-widest">
+                  NAME
                 </label>
                 <input
                   id="name"
                   name="name"
                   required
                   placeholder="Your name"
-                  className="w-full rounded-md  inputb px-3 py-2  "
+                  className="w-full border-2 border-white mt-3  inputb px-3 py-2  "
                 />
               </motion.div>
 
               {/* Email */}
               <motion.div className="space-y-2" variants={fadeUp}>
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email
+                <label htmlFor="email" className="text-sm md:text-xl text-white font-bold font-sans tracking-widest">
+                  EMAIL
                 </label>
                 <input
                   id="email"
@@ -130,14 +130,14 @@ const Contact = () => {
                   type="email"
                   required
                   placeholder="your@email.com"
-                  className="w-full rounded-md inputb px-3 py-2"
+                  className="w-full border-2 border-white mt-3 inputb px-3 py-2"
                 />
               </motion.div>
 
               {/* Message */}
               <motion.div className="space-y-2" variants={fadeUp}>
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
+                <label htmlFor="message" className="text-sm md:text-xl text-white font-bold font-sans tracking-widest">
+                  MESSAGE
                 </label>
                 <textarea
                   id="message"
@@ -145,7 +145,7 @@ const Contact = () => {
                   rows="5"
                   required
                   placeholder="Tell me about your project..."
-                  className="w-full rounded-md inputb px-3 py-2  "
+                  className="w-full border-2 border-white mt-3 inputb px-3 py-2  "
                 ></textarea>
               </motion.div>
 
@@ -153,7 +153,7 @@ const Contact = () => {
               <motion.button
               variants={fadeUp}
                 type="submit"
-                className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+                className="w-full bg-white  text-black py-3  border-2 border-white font-semibold hover:bg-transparent hover:text-white transition"
               >
                 Send Message
               </motion.button>
