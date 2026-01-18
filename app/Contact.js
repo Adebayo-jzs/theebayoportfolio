@@ -67,7 +67,7 @@ const Contact = () => {
     // });
   }
   return (
-    <section id="contact" className="py-24 ">
+    <section id="contact" className="py-20 md:py-32 border-t border-white/10">
       <section className=" mx-auto space-y-12">
 
         {/* Title Section */}
@@ -153,7 +153,7 @@ const Contact = () => {
               <motion.button
               variants={fadeUp}
                 type="submit"
-                className="w-full bg-white  text-black py-3  border-2 border-white font-semibold hover:bg-transparent hover:text-white transition"
+                className="w-full tracking-widest uppercase bg-white  text-black py-3  border-2 border-white font-semibold hover:bg-transparent hover:text-white transition"
               >
                 Send Message
               </motion.button>
