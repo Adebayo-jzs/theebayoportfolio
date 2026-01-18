@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'; 
-import { Cancel } from '@mui/icons-material';
+import { Cancel, Close } from '@mui/icons-material';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Icon (Placeholder) */}
         <button className="text-white md:hidden" onClick={() => setOpen(!open)}>
-            {open?<Cancel/>:
+            {open?<Close/>:
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             }
         </button>
