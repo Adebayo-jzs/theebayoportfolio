@@ -1,16 +1,8 @@
 // app/page.jsx
 // import { Metadata } from "next";
 // import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
-import Hero from "./Hero";
-import About from "./About";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Contact from "./Contact";
+ 
 import HomePage from "./main";
-import NewPortfolio from "./New";
-// import { Computer } from "lucide-react";
-// import Image from "next/image";
 export const metadata = {
   metadataBase: new URL("https://theebayo.name.ng"),
   title: "Adebayo ADEDEJI | Software Developer",
@@ -84,8 +76,8 @@ export default function Home() {
       <main className="min-h-screen flex flex-col ">
         {/* <main className="min-h-screen bg-[#f0f4f9] text-black px-6 md:px-10 xl:px-60  flex flex-col "> */}
         {/* <Navbar/> */}
-        {/* <HomePage /> */}
-        <NewPortfolio/>
+        <HomePage />
+        {/* <NewPortfolio/> */}
         {/* <Hero/> */}
         {/* <About/> */}
         {/* <Skills/> */}
