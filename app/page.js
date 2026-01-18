@@ -81,15 +81,20 @@ export default function Home() {
           }),
         }}
       /> */}
-    <main className="min-h-screen     flex flex-col ">
+    <main className="min-h-screen flex flex-col ">
     {/* <main className="min-h-screen bg-[#f0f4f9] text-black px-6 md:px-10 xl:px-60  flex flex-col "> */}
       {/* <Navbar/> */}
       <HomePage/>
+      {/* <NewPortfolio/> */}
       {/* <Hero/> */}
       {/* <About/> */}
       {/* <Skills/> */}
       {/* <Projects/> */}
       {/* <ContactPage/>   */}
+
+      <footer className="footer-container">
+        <div className="big-text">LET'S BUILD</div>
+      </footer>
     </main>
     </>
   );
