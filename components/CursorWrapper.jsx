@@ -12,9 +12,9 @@ export default function CursorWrapper({
     return (
         <CursorProvider global>
             <Cursor />
-            <CursorFollow>
+            {/* <CursorFollow>
                 Developer
-            </CursorFollow>
+            </CursorFollow> */}
             {children}
         </CursorProvider>
     );

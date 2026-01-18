@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <Analytics> */}
-        <CursorWrapper>
+        <CursorWrapper className="mix-blend-difference">
           {children}
         </CursorWrapper>
         <Analytics/>
