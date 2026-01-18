@@ -348,14 +348,15 @@ export default function HomePage() {
                 <span className="text-4xl md:text-6xl font-black text-white">React</span>
                 <span className="text-2xl md:text-4xl font-black text-white/90">Node.js</span>
                 <span className="text-xl md:text-2xl font-bold text-white/80">Javascript</span>
-                {/* <span className="text-3xl md:text-5xl font-black text-white">AWS</span> */}
+                <span className="text-3xl md:text-5xl font-black text-white">HTML</span>
                 <span className="text-2xl md:text-3xl font-bold text-white/85">Next.js</span>
                 <span className="text-3xl md:text-5xl font-black outline-text">MongoDB</span>
+                <span className="text-xl md:text-2xl font-bold text-white/60">Supabase</span>
+                <span className="text-2xl md:text-3xl font-black text-white/90">PostgreSQL</span>
                 <span className="text-xl md:text-2xl font-bold text-white/70">Git</span>
                 <span className="text-2xl md:text-4xl font-black text-white">Github</span>
-                <span className="text-xl md:text-2xl font-bold text-white/60">Supabase</span>
+                <span className="text-xl md:text-2xl font-bold text-white/60">Bootstrap</span>
                 <span className="text-2xl md:text-3xl font-black text-white/90">Tailwind</span>
-                <span className="text-2xl md:text-3xl font-black text-white/90">Bootstrap</span>
               </div>
             </div>
 
