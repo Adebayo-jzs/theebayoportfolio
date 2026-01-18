@@ -44,7 +44,7 @@
 }
 
 body{
-  /* background-color: #f0f4f9; */
+  background-color: #050505;
   /* font-family: var(--font-primary); */
   font-family: 'Outfit', sans-serif;
 }
@@ -223,9 +223,10 @@ nav{
   white-space: nowrap; /* Prevents text from wrapping */
   
   /* The Magic Sauce */
-  font-size: 15vw; /* Makes text responsive to screen width */
+  /* font-size: 15vw;   */
   transform: translateY(15%); /* Pushes text down to hide the bottom */
 }
+
 
 @theme inline {
   --radius-sm:calc(var(--radius) - 4px);
