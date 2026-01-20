@@ -70,6 +70,17 @@ const projects = [
     type: "Web Application",
     year: 2025,
   },
+  {
+    id: 5,
+    projectname: "Anime Recommendation Site App",
+    desc: "Arecnime is a high-performance web application designed to reimagine the anime browsing experience for anime lovers",
+    tools: ["TAilwind", "CSS", "Javascript"],
+    preview: "https://arecnime.vercel.app",
+    code: "https://github.com/adebayo-jzs/arecnime",
+    imgurl: "/anime.png",
+    type: "Web Application",
+    year: 2026,
+  },
 ];
 const ProjectCard = ({ id, projectname, desc, imgurl, preview, code, type, year }) => (
   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] group snap-center">
