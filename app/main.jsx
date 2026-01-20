@@ -264,7 +264,7 @@ export default function HomePage() {
               Projects <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 02</span>
             </h2>
             {/* Arrows hidden on mobile, user naturally swipes */}
-            <div className="flex gap-4">
+            <div className="hidden sm:flex gap-4">
               <button
                 onClick={() =>
                   scrollRef.current.scrollBy({ left: -300, behavior: "smooth" })
@@ -283,7 +283,7 @@ export default function HomePage() {
           </div>
 
           {/* Scroll Container with Snap */}
-          <div ref={scrollRef} className="flex gap-6 md:gap-10 overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
+          <div ref={scrollRef} className="flex flex-col sm:flex-row gap-16 sm:gap-10  overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
             {projects.map((project) => (
               <ProjectsCard
                 key={project.id}
