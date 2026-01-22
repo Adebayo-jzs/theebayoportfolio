@@ -39,6 +39,17 @@ const projects = [
   },
   {
     id: 2,
+    projectname: "Arecnime",
+    desc: "Arecnime is an anime discovery and recommendation website designed to reimagine the anime browsing experience for anime lovers",
+    tools: ["TAilwind", "CSS", "Javascript"],
+    preview: "https://arecnime.vercel.app",
+    code: "https://github.com/adebayo-jzs/arecnime",
+    imgurl: "/anime.png",
+    type: "Website",
+    year: 2026,
+  },
+  {
+    id: 3,
     projectname: "Tourtech Admin Dashboard",
     desc: "Overview and analytics dashboard for an industrial visit planning and booking system for a school project",
     tools: ["NextJS", "Tailwind", "Vanilla CSS", "Supabase", "Node.js"],
@@ -49,7 +60,7 @@ const projects = [
     year: 2025,
   },
   {
-    id: 3,
+    id: 4,
     projectname: "Personal Blog",
     desc: "Personal Developer blog built with supabase fully optimisized for Search Engines ",
     tools: ["React", "Tailwind", "Typescript", "Supabse"],
@@ -59,28 +70,19 @@ const projects = [
     type: "Web Application",
     year: 2025,
   },
+  
   {
-    id: 4,
+    id: 5,
     projectname: "Basic Weather App",
     desc: "A basic weather app built with Open Weather API for checking 24 hours weather forecast for various locations ",
     tools: ["HTML", "CSS", "Javascript"],
     preview: "https://adebayo-jzs.github.io/weatherapp",
     code: "https://github.com/adebayo-jzs/examhelp",
     imgurl: "/weatherapp.jpg",
-    type: "Web Application",
+    type: "Website",
     year: 2025,
   },
-  {
-    id: 5,
-    projectname: "Anime Recommendation Site App",
-    desc: "Arecnime is a high-performance web application designed to reimagine the anime browsing experience for anime lovers",
-    tools: ["TAilwind", "CSS", "Javascript"],
-    preview: "https://arecnime.vercel.app",
-    code: "https://github.com/adebayo-jzs/arecnime",
-    imgurl: "/anime.png",
-    type: "Web Application",
-    year: 2026,
-  },
+  
 ];
 const ProjectCard = ({ id, projectname, desc, imgurl, preview, code, type, year }) => (
   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] group snap-center">
