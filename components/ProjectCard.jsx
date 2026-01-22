@@ -48,7 +48,7 @@ const ProjectsCard = ({
               View Project
             </a>
 
-            {code && (
+            {/* {code && (
               <a
                 href={code}
                 target="_blank"
@@ -57,7 +57,7 @@ const ProjectsCard = ({
               >
                 Code
               </a>
-            )}
+            )} */}
           </div>
       </div>
     </div>
