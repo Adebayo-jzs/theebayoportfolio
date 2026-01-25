@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /api/llm
 Sitemap: https://theebayo.name.ng/sitemap.xml
 
  
