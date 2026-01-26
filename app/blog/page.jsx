@@ -1,6 +1,6 @@
 
 export const metadata = {
-    metadataBase: new URL("https://theebayo.name.ng"),
+    metadataBase: new URL("https://theebayo.name.ng/blog"),
     title: "Theebayo | Blog",
     description:
         "Sharing insights on Next.js, Software Development and life updates.",
