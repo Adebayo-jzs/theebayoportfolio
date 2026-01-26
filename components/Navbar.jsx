@@ -35,6 +35,7 @@ const Navbar = () => {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#experience">Education</NavLink>
+          <NavLink href="/blog">Insights</NavLink>
           {/* <NavLink href="#tools">Tools</NavLink> */}
         </div>
 
@@ -69,6 +70,7 @@ const Navbar = () => {
         <NavLink href="#about" onClick={() => setOpen(false)}>About</NavLink>
         <NavLink href="#projects" onClick={() => setOpen(false)}>Projects</NavLink>
         <NavLink href="#experience" onClick={() => setOpen(false)}>Education</NavLink>
+        <NavLink href="/blog" onClick={() => setOpen(false)}>Insights</NavLink>
       </div>
     </>
   );
@@ -76,12 +78,12 @@ const Navbar = () => {
 
 // Helper component for links
 const NavLink = ({ href, children }) => (
-  <a 
+  <Link 
     href={href} 
     className="text-sm  text-gray-300 font-bold tracking-widest transition hover:text-white transition"
   >
     {children}
-  </a>
+  </Link>
 );
 
 export default Navbar;
