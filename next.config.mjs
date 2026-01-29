@@ -15,6 +15,6 @@ export default withOutray(
     apiKey: process.env.OUTRAY_API_KEY,
   },
   {
-    enabled: process.env.EXPOSE_TUNNEL === 'true',
+    enabled: process.env.EXPOSE_TUNNEL === 'false',
   }
 )
