@@ -448,7 +448,7 @@ export default function HomePage() {
         </div>
 
       </section> */}
-        <Contact />
+        {/* <Contact /> */}
       </div>
 
 
