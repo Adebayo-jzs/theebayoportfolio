@@ -8,6 +8,7 @@ import { North } from "@mui/icons-material";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Contact from "./Contact";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -96,6 +97,7 @@ export default function RootLayout({ children }) {
         <CursorWrapper className="mix-blend-difference">
           <Navbar/>
           {children}
+          <Contact/>
           <Footer/>
         </CursorWrapper>
         <Analytics/>
