@@ -32,16 +32,16 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 uppercase font-bold">
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#experience">Education</NavLink>
+          <NavLink href="/#about">About</NavLink>
+          <NavLink href="/#projects">Projects</NavLink>
+          <NavLink href="/#experience">Education</NavLink>
           <NavLink href="/blog">Insights</NavLink>
           {/* <NavLink href="#tools">Tools</NavLink> */}
         </div>
 
         {/* CTA Button */}
         <a 
-          href="#contact" 
+          href="/#contact" 
           className="hidden md:block border-2 border-white  bg-white px-5 py-2 text-sm font-semibold text-black transition hover:bg-transparent hover:text-white"
         >
           Let's Talk
