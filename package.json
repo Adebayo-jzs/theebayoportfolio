@@ -10,6 +10,8 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@hugeicons/core-free-icons": "^3.1.1",
+    "@hugeicons/react": "^1.1.4",
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
     "@outray/next": "^0.0.3",
@@ -17,7 +19,6 @@
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
-    "lucide-react": "^0.553.0",
     "motion": "^12.26.2",
     "next": "16.0.10",
     "react": "19.2.0",
