@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, Home } from "lucide-react";
-import { ArrowDownward } from "@mui/icons-material";
+import { ArrowDownward, ArrowLeft, Home  } from "@mui/icons-material";
 
 export default function NotFound() {
     return (
