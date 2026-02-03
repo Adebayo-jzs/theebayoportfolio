@@ -1,14 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin,Twitter } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Twitter, Linkedin02Icon, GithubIcon , Mail02FreeIcons} from "@hugeicons/core-free-icons/index";
 import Link from "next/link";
 // import { headers } from "next/headers";
 
 const links = [
-  {id:1,linkname:"Email",handle:"adedejiadebayo732@gmail.com",link:"mailto:adededejiadebayo732@gmail.com",icon:Mail},
-  {id:2,linkname:"GitHub",handle:"@adebayo-jzs",link:"https://github.com/Adebayo-jzs",icon:Github},
-  {id:3,linkname:"LinkedIn",handle:"/in/theebayo",link:"https://linkedin.com/in/theebayo",icon:Linkedin},
+  {id:1,linkname:"Email",handle:"adedejiadebayo732@gmail.com",link:"mailto:adededejiadebayo732@gmail.com",icon:Mail02FreeIcons},
+  {id:2,linkname:"GitHub",handle:"@adebayo-jzs",link:"https://github.com/Adebayo-jzs",icon:GithubIcon},
+  {id:3,linkname:"LinkedIn",handle:"/in/theebayo",link:"https://linkedin.com/in/theebayo",icon:Linkedin02Icon},
   {id:4,linkname:"𝕏",handle:"@theebayo",link:"https://x.com/theebayo",icon:Twitter},
 ]
 const Contact = () => {
@@ -163,7 +164,7 @@ const Contact = () => {
           {/* CONTACT CARDS */}
           <motion.div className="space-y-6" initial="hidden" whileInView="visible" variants={container} viewport={{ once: true }} >
             {links.map((social) => {
-              const Icon = social.icon;
+              // const Icon = social.icon;
               return (
               <motion.div 
               variants={fadeUp}
@@ -173,8 +174,10 @@ const Contact = () => {
               <Link href={social.link}>
               <div className="flex items-center gap-4">
                 <div className="p-3">
-                  <Icon className="h-6 w-6" />
+                  {/* <Icon className="h-6 w-6" /> */}
+                  <HugeiconsIcon icon={social.icon} />
                   {/* {social.icon} */}
+                  
                 </div>
                 <div>
                   <h3 className="text-base md:text-lg text-white font-bold font-sans tracking-widest uppercase">{social.linkname}</h3>
