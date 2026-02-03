@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { East, North, West } from "@mui/icons-material";
 import { useRef } from "react";
 import ProjectsCard from "@/components/ProjectCard";
-// import { GitHub } from "@mui/icons-material";
-import { Github } from "lucide-react";
 import Contact from "./Contact";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowRight02Icon ,ArrowLeft02Icon} from '@hugeicons/core-free-icons'
 
 const ExperienceItem = ({ date, title, institution, description, isLast }) => (
   <div className="relative pl-8 md:pl-12 group">
@@ -273,6 +273,7 @@ export default function HomePage() {
                 }
                 className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
                 <West />
+                {/* <HugeiconsIcon icon={ArrowLeft0Icon} /> */}
               </button>
               <button
                 onClick={() =>
@@ -280,6 +281,7 @@ export default function HomePage() {
                 }
                 className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
                 <East />
+                {/* <HugeiconsIcon icon={ArrowRight02Icon} /> */}
               </button>
             </div>
           </div>
