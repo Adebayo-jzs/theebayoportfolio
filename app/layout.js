@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import CursorWrapper from "@/components/CursorWrapper";
 import React,{useState,useEffect} from "react";
 import { North } from "@mui/icons-material";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUp02Icon} from '@hugeicons/core-free-icons'
 
 import "./globals.css";
 import Footer from "@/components/Footer";
@@ -119,6 +121,7 @@ export default function RootLayout({ children }) {
           className="border rounded-full p-2 mt-3"
         >
           <North/>
+          {/* <HugeiconsIcon icon={ArrowUp02Icon} /> */}
         </button>
 
       </div>
