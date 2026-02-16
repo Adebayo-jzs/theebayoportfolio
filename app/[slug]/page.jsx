@@ -118,12 +118,12 @@ export default async function BlogPostPage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <div className="bg-[#050505] grid-bg text-white selection:bg-white selection:text-black min-h-screen overflow-x-hidden relative">
+            <div className="bg-[#050505] grid-bg-static text-white selection:bg-white selection:text-black min-h-screen overflow-x-hidden relative">
                  <div className="fixed inset-0 z-50 pointer-events-none noise-overlay opacity-20"></div>
-                <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 pt-32 pb-20">
+                <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 pt-20 md:pt-32">
                     
                     {/* Header / Nav Area */}
-                    <div className="pt-10 mb-20 flex justify-between items-center relative z-10">
+                    <div className="pt-10 mb-12 md:mb-20 flex justify-between items-center relative z-10">
                         <Link 
                             href="/blog" 
                             className="group flex items-center gap-2 text-sm font-bold tracking-widest text-white/50 uppercase hover:text-white transition-colors"
@@ -166,7 +166,7 @@ export default async function BlogPostPage({ params }) {
                             prose-img:rounded-xl prose-img:border prose-img:border-white/10 prose-img:w-full prose-img:shadow-2xl
                             prose-hr:border-white/10 prose-hr:my-12
                             prose-ul:marker:text-[#00e6ff] prose-ol:marker:text-[#00e6ff]
-                            mb-32 selection:bg-[#00e6ff] selection:text-black"
+                            mb-18 md:mb-32 selection:bg-[#00e6ff] selection:text-black"
                             dangerouslySetInnerHTML={{ __html: htmlContent }}
                         />
                     </article>
