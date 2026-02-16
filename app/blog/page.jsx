@@ -1,5 +1,6 @@
 import { ArrowOutward } from "@mui/icons-material";
 import Link from "next/link";
+import { supabase } from "@/utils/supabase";
 
 export const metadata = {
     metadataBase: new URL("https://theebayo.name.ng/blog"),
@@ -46,14 +47,21 @@ export const metadata = {
     },
 };
 
-const insights = [
-    {date:"Jan 20, 2026",title:"Building Textcognito",excerpt:"Built out of curiousity",type:"engineering",link:"/building-textcognito"},
-    {date:"Jan 24, 2026",title:"Integrating Gemini SDK in Textcognito",excerpt:"Gemini SDK in Textcognito",type:"ai",link:"/building-textcognito"},
-    {date:"Jan 26, 2026",title:"Frontend Engineering in 2026",excerpt:"Building scalable frontends in 2026",type:"architecture",link:"/building-textcognito"},
-    // {date:"Jan 20, 2026",title:"Building Textcognito",excerpt:"Built out of curiousity",type:"engineering",link:"/building-textcognito"},
-    // {date:"Jan 20, 2026",title:"Building Textcognito",excerpt:"Built out of curiousity",type:"engineering",link:"/building-textcognito"},
-]
-export default function Blog() {
+const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
+};
+
+export default async function Blog() {
+    const { data: posts } = await supabase
+        .from("posts")
+        .select("*")
+        .eq("published", true)
+        .order("created_at", { ascending: false });
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Blog",
@@ -79,28 +87,33 @@ export default function Blog() {
                         <h1 className="font-outfit leading-[0.9]  mb-10">
                             <span className="text-[17vw] md:text-[15vw] font-black tracking-tighter text-white">INSIGHTS</span>
                         </h1>
-                        {/* <p>eew</p> */}
                         <p className="font-serif text-2xl lg:text-3xl text-white/80 max-w-2xl italic border-l-4 border-white pl-8">Thoughts on software architecture,engineering,<br />philosophy of physical designs and life update.</p>
 
                     </section>
-                    <section className="min-h-scree mb-15 flex flex-col justify-center  pt-20 lg:pt-0" id="hero">
-                        {insights.map((item,index) => (
-                            <Link href={item.link} className="blog-item group grid grid-cols-1 md:grid-cols-12 gap-5 py-16 border-b border-white/10 items-center hover:bg-white/5 transition-all duration-300 cursor-pointer" key={index}>
-                                <div className="md:col-span-3 flex flex-col gap-1">
-                                    <span className="text-sm font-bold tracking-widest text-white/50 uppercase">{item.date}</span>
-                                    <span className="text-xs font-black tracking-widest text-white uppercase">/ {item.type}</span>
-                                </div>
-                                <div className="md:col-span-6">
-                                    <h2 className="">
-                                        <span className="text-4xl md:text-5xl font-black tracking-tighter uppercase">{item.title}</span>
-                                    </h2>
-                                </div>
-                                <div className="md:col-span-3 flex justify-between items-center pr-4">
-                                    <p className="text-sm text-white/60  truncat">{item.excerpt}</p>
-                                    <span className="transform group-hover:translate-x-2 transition-transform"><ArrowOutward/></span>
-                                </div>
-                            </Link>
-                        ))}
+                    <section className="min-h-scree mb-15 flex flex-col justify-center  pt-20 lg:pt-0" id="posts">
+                        {!posts || posts.length === 0 ? (
+                            <p className="text-center text-white/50 py-20 text-lg">No posts yet. Check back soon!</p>
+                        ) : (
+                            posts.map((post) => (
+                                <Link href={`/${post.slug}`} className="blog-item group grid grid-cols-1 lg:grid-cols-12 gap-5 py-16 border-b border-white/10 items-center hover:bg-white/5 transition-all duration-300 cursor-pointer" key={post.id}>
+                                    <div className="lg:col-span-3 flex flex-col gap-1">
+                                        <span className="text-sm font-bold tracking-widest text-white/50 uppercase">{formatDate(post.created_at)}</span>
+                                        <span className="text-xs font-black tracking-widest text-white uppercase">/ {post.category}</span>
+                                    </div>
+                                    <div className="lg:col-span-6">
+                                        <h2 className="">
+                                            <span className="text-4xl lg:text-5xl font-black tracking-tighter uppercase">
+                                                {post.title.length > 50 ? post.title.slice(0, 50) + "..." : post.title}
+                                            </span>
+                                        </h2>
+                                    </div>
+                                    <div className="lg:col-span-3 flex justify-between items-center pr-4">
+                                        <p className="text-sm text-white/60  truncat">{post.excerpt}</p>
+                                        <span className="transform group-hover:translate-x-2 transition-transform"><ArrowOutward/></span>
+                                    </div>
+                                </Link>
+                            ))
+                        )}
                     </section>
                 </div>
             </div>
