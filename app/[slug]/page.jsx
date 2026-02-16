@@ -30,6 +30,7 @@ export async function generateMetadata({ params }) {
     return {
         title: post.title,
         description: post.excerpt,
+        keywords: [post.category, "Web Development", "JavaScript", "Frontend", "Tech Blog"].filter(Boolean),
         alternates: {
             canonical: `https://theebayo.name.ng/${post.slug}`,
         },
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }) {
             authors: ["Adebayo Adedeji"],
             images: [
                 {
-                    url: `https://theebayo.name.ng/og-image.jpg`,
+                    url: `https://theebayo.name.ng/${post.slug}/opengraph-image`,
                     width: 1200,
                     height: 630,
                     alt: post.title,
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }) {
             card: "summary_large_image",
             title: post.title,
             description: post.excerpt,
-            images: [`https://theebayo.name.ng/og-image.jpg`],
+            images: [`https://theebayo.name.ng/${post.slug}/opengraph-image`],
         },
     };
 }
