@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft } from '@mui/icons-material';
 import MarkdownIt from "markdown-it";
 import { ArrowOutward } from "@mui/icons-material";
+import SharePost from "./share";
 
 const md = new MarkdownIt({
     html: true,
@@ -132,6 +133,7 @@ export default async function BlogPostPage({ params }) {
                             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                             Back to Insights
                         </Link>
+                        <SharePost shareLink={`https://theebayo.name.ng/${post.slug}`} title={post.title} />
                     </div>
 
                     <article className="max-w-3xl mx-auto relative z-10">
