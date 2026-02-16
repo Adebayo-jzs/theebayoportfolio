@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Copy01Icon, Share01Icon, Tick02Icon } from "@hugeicons/core-free-icons/index";
+import { Copy01Icon, Share01Icon,Share03Icon, Tick02Icon } from "@hugeicons/core-free-icons/index";
 
 export default function SharePost({ shareLink, title }) {
     const [copied, setCopied] = useState(false);
@@ -37,19 +37,30 @@ export default function SharePost({ shareLink, title }) {
     };
 
     return (
+        <div className="flex gap-2">
         <button
             onClick={handleShare}
             className="group flex items-center gap-2 text-sm font-bold tracking-widest text-[#00e6ff]/80 hover:text-[#00e6ff] transition-colors uppercase"
             aria-label="Share this post"
         >
-            <span className="relative">
-                {copied ? (
-                     <HugeiconsIcon icon={Tick02Icon} className="w-5 h-5" />
+            <span className="relative text-[18px] border border-1 border-[#00e6ff]/80 rounded-full p-2">
+                {/* {copied ? (
+                     <HugeiconsIcon icon={Tick02Icon}  />
                 ) : (
-                    <HugeiconsIcon icon={Share01Icon} className="w-5 h-5" />
-                )}
+                )} */}
+                <HugeiconsIcon icon={Share03Icon}  />
             </span>
-            <span>{copied ? "Copied!" : "Share"}</span>
+            {/* <span>{copied ? "Copied!" : "Share"}</span> */}
         </button>
+        <button
+                    onClick={handleCopy}
+                    className="font-bold text-sm transition-all flex items-center gap-2 text-[#00e6ff]/80"
+                >
+                    <span className="text-[18px] border border-1 border-[#00e6ff]/80 rounded-full p-2">
+                    {copied ? <HugeiconsIcon icon={Tick02Icon}/> : <HugeiconsIcon icon={Copy01Icon}/>}
+                    </span>
+             
+        </button>
+        </div>
     );
 }

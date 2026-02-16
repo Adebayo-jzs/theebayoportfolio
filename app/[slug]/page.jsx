@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }) {
                             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                             Back to Insights
                         </Link>
-                        <SharePost shareLink={`https://theebayo.name.ng/${post.slug}`} title={post.title} />
+                        {/* <SharePost shareLink={`https://theebayo.name.ng/${post.slug}`} title={post.title} /> */}
                     </div>
 
                     <article className="max-w-3xl mx-auto relative z-10">
@@ -146,14 +146,16 @@ export default async function BlogPostPage({ params }) {
                                     <span className="text-[#00e6ff]">{post.category}</span>
                                     <span className="text-white/20">/</span>
                                     <span>{post.read_time}</span>
+                                    {/* <SharePost shareLink={`https://theebayo.name.ng/${post.slug}`} title={post.title} /> */}
                                 </div>
                                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter uppercase font-outfit leading-[0.9] text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/50">
                                     {post.title}
                                 </h1>
                             </div>
-                            <p className="font-serif text-lg md:text-2xl text-white/80 italic pl-6 border-l-2 border-[#00e6ff] max-w-2xl leading-relaxed">
+                            <p className="font-serif text-lg md:text-2xl mb-5 text-white/80 italic pl-6 border-l-2 border-[#00e6ff] max-w-2xl leading-relaxed">
                                 {post.excerpt}
                             </p>
+                            <SharePost shareLink={`https://theebayo.name.ng/${post.slug}`} title={post.title} />
                         </header>
 
                         {/* Article Content */}
