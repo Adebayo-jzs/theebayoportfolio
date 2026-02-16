@@ -50,8 +50,8 @@ html {
 body {
   background-color: #050505;
   /* font-family: var(--font-primary); */
-  font-family: "Grotesk", sans-serif;
-  /* font-family: "Outfit", sans-serif; */
+  /* font-family: "Grotesk", sans-serif; */
+  font-family: "Outfit", sans-serif;
 }
 h1,
 h2 {
