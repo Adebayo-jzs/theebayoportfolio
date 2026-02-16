@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <div className="bg-[#050505] grid-bg-static text-white selection:bg-white selection:text-black min-h-screen overflow-x-hidden relative">
-                 <div className="fixed inset-0 z-50 pointer-events-none noise-overlay opacity-20"></div>
+                 {/* <div className="fixed inset-0 z-50 pointer-events-none noise-overlay opacity-20"></div> */}
                 <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 pt-20 md:pt-32">
                     
                     {/* Header / Nav Area */}
