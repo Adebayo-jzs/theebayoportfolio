@@ -10,13 +10,20 @@ export const size = {
 };
 export const contentType = "image/png";
 
+const formatDate = (string) => {
+    return new Date(string).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+};
 export default async function Image({ params }) {
   const { slug } = await params;
 
   // Retrieve data from Supabase
   const { data: post } = await supabase
     .from("posts")
-    .select("title, category")
+    .select("title, category, created_at, read_time")
     .eq("slug", slug)
     .single();
 
@@ -50,13 +57,8 @@ export default async function Image({ params }) {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "center",
-          padding: "80px",
-          color: "white",
-          fontFamily: "sans-serif",
           position: "relative",
+          fontFamily: "sans-serif",
         }}
       >
         {/* Grid Background */}
@@ -68,13 +70,23 @@ export default async function Image({ params }) {
             width: "100%",
             height: "100%",
             backgroundImage:
-              "linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+              "linear-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
             zIndex: 0,
           }}
         />
         
-        <div style={{ zIndex: 1, display: "flex", flexDirection: "column" }}>
+        {/* Content Wrapper */}
+        <div style={{ 
+            zIndex: 1, 
+            display: "flex", 
+            flexDirection: "column",
+            width: "100%",
+            height: "100%",
+            padding: "80px",
+            justifyContent: "center",
+            alignItems: "flex-start",
+        }}>
             <div
                 style={{
                     display: "flex",
@@ -86,7 +98,7 @@ export default async function Image({ params }) {
                     letterSpacing: "0.1em",
                 }}
             >
-                Theebayo Insights / {post.category || "Article"}
+                Theebayo Insights / <span style={{color: "#00e6ff" ,marginLeft:"2px" }}> {post.category || "Article"}</span>
             </div>
             
             <div
@@ -112,6 +124,19 @@ export default async function Image({ params }) {
                     style={{ borderRadius: "50%", marginRight: "20px", border: "2px solid rgba(255,255,255,0.2)" }} 
                 /> */}
                 <div style={{ fontSize: "30px", fontWeight: "bold", color: "#00e6ff" }}>Adebayo Adedeji</div>
+            </div>
+            <div
+            style={{
+                display: "flex",
+                marginTop: "20px",
+                fontSize: "24px",
+                fontWeight: "bold",
+                color: "rgba(255,255,255,0.5)",
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+            }}
+            >
+            {formatDate(post.created_at)} • {post.read_time}
             </div>
         </div>
       </div>
