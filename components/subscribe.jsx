@@ -56,7 +56,7 @@ export default function SubscribeToNewsLetter() {
                 <span className="text-[15vw] md:text-[13vw] font-black tracking-tighter text-white">stay synced</span>
             </h1>
             <form onSubmit={handleSubmit}>
-                <div className="max-w-4xl flex mx-auto border-b-2 border-white">
+                <div className="max-w-3xl flex mx-auto border-b-2 border-white">
                     <input
                         id="email"
                         name="email"
@@ -65,7 +65,7 @@ export default function SubscribeToNewsLetter() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter Email Address"
-                        className="bg-transparent border-none focus:ring-0 outline-none flex-grow text-lg md:text-xl placeholder:text-white/20 uppercase tracking-widest px-3 py-2 text-white"
+                        className="bg-transparent border-none focus:ring-0 outline-none flex-grow md:text-xl placeholder:text-white/20 uppercase tracking-widest px-3 py-2 text-white"
                         disabled={isSubmitting}
                     />
                     <button
