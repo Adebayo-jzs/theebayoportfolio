@@ -91,7 +91,8 @@ export default async function Blog() {
 
                     </section>
                     <section className="min-h-scree mb-15 flex flex-col justify-center  pt-20 lg:pt-0" id="posts">
-                        {!posts || posts.length === 0 ? (
+                        {/* {!posts || posts.length === 0 ? ( */}
+                        {!posts || posts.length > 0 ? (
                             <p className="text-center text-white/50 py-20 text-lg">No posts yet. Check back soon!</p>
                         ) : (
                             posts.map((post) => (
