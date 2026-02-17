@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Twitter, Linkedin02Icon, GithubIcon , Mail02FreeIcons} from "@hugeicons/core-free-icons/index";
 import Link from "next/link";
+import SubscribeToNewsLetter from "@/components/subscribe";
 // import { headers } from "next/headers";
 
 const links = [
@@ -193,7 +194,7 @@ const Contact = () => {
 
           </motion.div>
         </motion.div>
-
+        <SubscribeToNewsLetter/>
       </section>
     </section>
   );
