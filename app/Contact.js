@@ -69,7 +69,7 @@ const Contact = () => {
     // });
   }
   return (
-    <section id="contact" className="py-20 md:py-32 border-t border-white/10">
+    <section id="contact" className="py-20 md:py-32 border-t border-border/10">
       <section className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 space-y-12">
 
         {/* Title Section */}
@@ -80,10 +80,10 @@ const Contact = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-white">
-            Contact <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 05</span>
+          <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
+            Contact <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 05</span>
           </h2>
-          <p className="text-[#939393] text-sm md:text-base mt-4">
+          <p className="text-muted-foreground text-sm md:text-base mt-4">
             Have a project in mind? Let's work together.
           </p>
         </motion.div>
@@ -107,9 +107,9 @@ const Contact = () => {
             initial="hidden" whileInView="visible" variants={containerr} viewport={{ once: true }}
              onSubmit={handleSubmit} className="space-y-6">
 
-              {/* Name */}
+               {/* Name */}
               <motion.div className="space-y-2" variants={fadeUp}>
-                <label htmlFor="name" className="text-base md:text-lg text-white font-bold font-sans tracking-widest">
+                <label htmlFor="name" className="text-base md:text-lg text-foreground font-bold font-sans tracking-widest">
                   NAME
                 </label>
                 <input
@@ -117,13 +117,13 @@ const Contact = () => {
                   name="name"
                   required
                   placeholder="Your name"
-                  className="w-full border-2 border-white mt-3  inputb px-3 py-2  "
+                  className="w-full border-2 border-border mt-3 bg-transparent px-3 py-2 text-foreground focus:border-primary outline-none"
                 />
               </motion.div>
 
               {/* Email */}
               <motion.div className="space-y-2" variants={fadeUp}>
-                <label htmlFor="email" className="text-base md:text-lg text-white font-bold font-sans tracking-widest">
+                <label htmlFor="email" className="text-base md:text-lg text-foreground font-bold font-sans tracking-widest">
                   EMAIL
                 </label>
                 <input
@@ -132,13 +132,13 @@ const Contact = () => {
                   type="email"
                   required
                   placeholder="your@email.com"
-                  className="w-full border-2 border-white mt-3 inputb px-3 py-2"
+                  className="w-full border-2 border-border mt-3 bg-transparent px-3 py-2 text-foreground focus:border-primary outline-none"
                 />
               </motion.div>
 
               {/* Message */}
               <motion.div className="space-y-2" variants={fadeUp}>
-                <label htmlFor="message" className="text-base md:text-lg text-white font-bold font-sans tracking-widest">
+                <label htmlFor="message" className="text-base md:text-lg text-foreground font-bold font-sans tracking-widest">
                   MESSAGE
                 </label>
                 <textarea
@@ -147,7 +147,7 @@ const Contact = () => {
                   rows="5"
                   required
                   placeholder="Tell me about your project..."
-                  className="w-full border-2 border-white mt-3 inputb px-3 py-2  "
+                  className="w-full border-2 border-border mt-3 bg-transparent px-3 py-2 text-foreground focus:border-primary outline-none"
                 ></textarea>
               </motion.div>
 
@@ -155,7 +155,7 @@ const Contact = () => {
               <motion.button
               variants={fadeUp}
                 type="submit"
-                className="w-full tracking-widest uppercase bg-white  text-black py-3  border-2 border-white font-semibold hover:bg-transparent hover:text-white transition"
+                className="w-full tracking-widest uppercase bg-foreground text-background py-3 border-2 border-foreground font-semibold hover:bg-transparent hover:text-foreground transition"
               >
                 Send Message
               </motion.button>
@@ -170,19 +170,19 @@ const Contact = () => {
               <motion.div 
               variants={fadeUp}
               key={social.id}
-              className="py-6 px-4   border-2 border-white   hover:shadow-lg transition-shadow"
+              className="py-6 px-4   border-2 border-[#1f1f1f]   hover:shadow-lg transition-shadow"
             >
               <Link href={social.link}>
               <div className="flex items-center gap-4">
-                <div className="p-3">
+                <div className="p-3 text-foreground">
                   {/* <Icon className="h-6 w-6" /> */}
                   <HugeiconsIcon icon={social.icon} />
                   {/* {social.icon} */}
                   
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg text-white font-bold font-sans tracking-widest uppercase">{social.linkname}</h3>
-                  <p className="text-[#939393] text-sm md:text-base">{social.handle}</p>
+                  <h3 className="text-base md:text-lg text-foreground font-bold font-sans tracking-widest uppercase">{social.linkname}</h3>
+                  <p className="text-muted-foreground text-sm md:text-base">{social.handle}</p>
                 </div>
               </div>
               </Link>

@@ -11,15 +11,15 @@ import { ArrowRight02Icon ,ArrowLeft02Icon} from '@hugeicons/core-free-icons'
 const ExperienceItem = ({ date, title, institution, description, isLast }) => (
   <div className="relative pl-8 md:pl-12 group">
     {/* Timeline Dot */}
-    <div className={`absolute left-0 top-2 w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-white z-10 transition-all ${isLast ? 'bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]' : 'bg-black group-hover:bg-white'}`}></div>
+    <div className={`absolute left-0 top-2 w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-foreground z-10 transition-all ${isLast ? 'bg-primary shadow-[0_0_10px_var(--primary)]' : 'bg-background group-hover:bg-foreground'}`}></div>
 
-    <span className="text-white text-xs md:text-sm font-bold mb-2 block uppercase tracking-[0.2em] text-white/60">
+    <span className="text-foreground text-xs md:text-sm font-bold mb-2 block uppercase tracking-[0.2em] text-foreground/60">
       {date}
     </span>
-    <h3 className="text-2xl md:text-3xl font-black text-white mb-2">
-      {title} <span className="block text-lg md:text-xl font-medium text-white/70 mt-1">{institution}</span>
+    <h3 className="text-2xl md:text-3xl font-black text-foreground mb-2">
+      {title} <span className="block text-lg md:text-xl font-medium text-foreground/70 mt-1">{institution}</span>
     </h3>
-    <p className="text-[#E0E0E0] text-base md:text-lg leading-relaxed max-w-xl font-medium">
+    <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-xl font-medium">
       {description}
     </p>
   </div>
@@ -86,24 +86,24 @@ const projects = [
 ];
 const ProjectCard = ({ id, projectname, desc, imgurl, preview, code, type, year }) => (
   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] group snap-center">
-    <div className="relative overflow-hidden aspect-[4/5] bg-neutral-900 mb-6 border border-white/10 rounded-sm">
+    <div className="relative overflow-hidden aspect-[4/5] bg-card mb-6 border border-border/40 rounded-sm">
       <img
         alt={projectname}
         className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700  hover:grayscale-0"
         src={imgurl}
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
       <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6">
-        <h3 className="text-3xl md:text-4xl font-black mb-4 md:mb-6 text-white uppercase tracking-tighter leading-none">
+        <h3 className="text-3xl md:text-4xl font-black mb-4 md:mb-6 text-foreground uppercase tracking-tighter leading-none">
           {projectname}
         </h3>
-        <a className="inline-block py-3 px-6 md:py-4 md:px-10 border-2 border-white text-xs md:text-sm font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all bg-black/50 backdrop-blur-md" href={preview} target="_blank" >
+        <a className="inline-block py-3 px-6 md:py-4 md:px-10 border-2 border-foreground text-xs md:text-sm font-black uppercase tracking-widest hover:bg-foreground hover:text-background transition-all bg-background/50 backdrop-blur-md" href={preview} target="_blank" >
           View Project
         </a>
       </div>
     </div>
-    <div className="flex justify-between text-white font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em]">
+    <div className="flex justify-between text-foreground font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em]">
       <span>{type}</span>
       <span>{year}</span>
     </div>
@@ -136,30 +136,30 @@ export default function HomePage() {
  
 
   return (
-    <div className="bg-[#050505] text-white selection:bg-white selection:text-black min-h-screen overflow-x-hidden">
+    <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground min-h-screen overflow-x-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 ">
         {/* <div className="noise-texture"></div> */}
         <section className="min-h-screen flex flex-col justify-center relative grid-bg pt-20 lg:pt-0" id="hero">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-27 lg:gap-8 items-center">
             <div className="order-1 lg:order-1 lg:col-span-7 z-10">
-              {/* <span className="text-white/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
+              {/* <span className="text-foreground/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
                 Premium Software Development
             </span> */}
               <div className="mt-8 md:mt-12 flex items-center gap-6">
-                <div className="h-px w-12 md:w-24 bg-white"></div>
-                <p className="text-sm md:text-xl text-white font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
+                <div className="h-px w-12 md:w-24 bg-foreground"></div>
+                <p className="text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
               </div>
               <h1 className="font-outfit leading-[0.9] flex flex-col gap-2 lg:gap-0">
-                <span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter text-white">ADEDEJI</span>
-                <span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter outline-text">ADEBAYO</span>
+                <span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter text-foreground/90">ADEDEJI</span>
+                <span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter outline-text opacity-70">ADEBAYO</span>
               </h1>
-              <p className="max-w-2xl text-base md:text-lg  mt-4 text-white/80 ">
+              <p className="max-w-2xl text-base md:text-lg  mt-4 text-foreground/80 ">
                 Year 2 Software Engineering student passionate about creating beautiful, functional websites and web applications using modern technologies.
               </p>
               <a
                 href="#contact"
-                className="mt-3 inline-block py-3 px-6 border-2 border-white text-xs font-black uppercase tracking-widest
-                bg-white text-black hover:bg-transparent hover:text-white transition-all"
+                className="mt-3 inline-block py-3 px-6 border-2 border-foreground text-xs font-black uppercase tracking-widest
+                bg-foreground text-background hover:bg-transparent hover:text-foreground transition-all"
               >
                 Hire Me!
               </a>
@@ -180,16 +180,16 @@ export default function HomePage() {
                 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-3xl rotate-12 flex items-center justify-center border border-white/30 backdrop-blur-sm"
+                  className="absolute inset-0 bg-gradient-to-tr from-foreground/10 to-transparent rounded-3xl rotate-12 flex items-center justify-center border border-foreground/20 backdrop-blur-sm"
                   animate={{ rotate: [12, 14, 12] }}
                   transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
                 >
-                  <motion.div className="w-2/3 h-2/3 border border-white/40 -rotate-12 flex items-center justify-center"
+                  <motion.div className="w-2/3 h-2/3 border border-foreground/30 -rotate-12 flex items-center justify-center"
                     animate={{ rotate: [-12, -16, -12] }}
                     transition={{ duration: 12, ease: "easeInOut", repeat: Infinity }}
                   >
                     <motion.div
-                      className="w-1/2 h-1/2 border-2 border-white/60 rotate-45 flex items-center justify-center"
+                      className="w-1/2 h-1/2 border-2 border-foreground/40 rotate-45 flex items-center justify-center"
                       animate={{
                         rotate: [45, 50, 45],
                         scale: [1, 1.05, 1],
@@ -201,7 +201,7 @@ export default function HomePage() {
                       }}
                     >
                       <motion.div
-                        className="w-1/3 h-1/3 bg-white/20 blur-xl"
+                        className="w-1/3 h-1/3 bg-foreground/10 blur-xl"
                         animate={{ opacity: [0.4, 0.7, 0.4] }}
                         transition={{
                           duration: 4,
@@ -213,7 +213,7 @@ export default function HomePage() {
                   </motion.div>
                 </motion.div>
                 {/* Placeholder image for stability */}
-                <img alt="Abstract Art" className="w-full h-full object-cover mix-blend-lighten opacity-60 rounded-3xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZ671MaKeJEWJEA19VmKxiwVPnejyNc69XyGHgU8pYdc6bdsmLEzLNjbmVa61i6RsmYgckpmct6PjZNVx3dLyRO5c6x9SXvUsKJ5nBvFODZeHW5zh1kQor1V61yk42Ey8MzFbq5THoZyn0vNdvyo2KspWHvwGwRKetjiEnueqpmjCr7tpcShtAWpdCLbDViCSU2LGbi5hZutOm3lxu_SMKs0-FzUxfkgk9ciLpr1-pDvmhGcM9n6ztjzBjzEQcMobfno9uhE9ltc" />
+                <img alt="Abstract Art" className="w-full h-full object-cover mix-blend-multiply dark:mix-blend-lighten opacity-60 rounded-3xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZ671MaKeJEWJEA19VmKxiwVPnejyNc69XyGHgU8pYdc6bdsmLEzLNjbmVa61i6RsmYgckpmct6PjZNVx3dLyRO5c6x9SXvUsKJ5nBvFODZeHW5zh1kQor1V61yk42Ey8MzFbq5THoZyn0vNdvyo2KspWHvwGwRKetjiEnueqpmjCr7tpcShtAWpdCLbDViCSU2LGbi5hZutOm3lxu_SMKs0-FzUxfkgk9ciLpr1-pDvmhGcM9n6ztjzBjzEQcMobfno9uhE9ltc" />
               </motion.div>
               {/* <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
 							<div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-3xl rotate-12 flex items-center justify-center border border-white/30 backdrop-blur-sm">
@@ -230,20 +230,20 @@ export default function HomePage() {
           </div>
         </section>
         <section id="about" className="py-20 md:py-32">
-          <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-white">
-            About <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 01</span>
+          <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
+            About <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 01</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <p className="text-base md:text-lg  mt-4 text-white/80 ">
+              <p className="text-base md:text-lg  mt-4 text-foreground/80 ">
                 I am a passionate Software Engineering student at Babcock University with a focus on Full Stack Development. My journey in tech began with a curiosity about how websites work, which led me to explore the fascinating world of web development.
               </p>
-              <p className="text-base md:text-lg  mt-4 text-white/80 ">
+              <p className="text-base md:text-lg  mt-4 text-foreground/80 ">
                 I specialize in both frontend and backend development, continuously exploring new technologies and methodologies to stay at the forefront of web development. My main goal is to become a proficient web developer by consistently exploring how technology can be applied to solve real-world problems in our daily lives.
               </p>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl mb-5 font-black tracking-tight flex items-center gap-4 text-white">Favourite Tracks</h2>
+              <h2 className="text-3xl md:text-4xl mb-5 font-black tracking-tight flex items-center gap-4 text-foreground">Favourite Tracks</h2>
               <iframe
                 title="Spotify Embed: Recommendation Playlist "
                 src={`https://open.spotify.com/embed/playlist/21fSTvzLcGkx12unbI2nMe?utm_source=generator&theme=0`}
@@ -260,10 +260,10 @@ export default function HomePage() {
 
 
         </section>
-        <section className="py-20 md:py-32 border-t border-white/10" id="projects">
+        <section className="py-20 md:py-32 border-t border-border/20" id="projects">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 gap-6">
-            <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-white">
-              Projects <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 02</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
+              Projects <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 02</span>
             </h2>
             {/* Arrows hidden on mobile, user naturally swipes */}
             <div className="hidden sm:flex gap-4">
@@ -271,7 +271,7 @@ export default function HomePage() {
                 onClick={() =>
                   scrollRef.current.scrollBy({ left: -300, behavior: "smooth" })
                 }
-                className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
+                className="p-4 md:p-5 border border-border/40 hover:border-foreground text-foreground transition-colors">
                 <West />
                 {/* <HugeiconsIcon icon={ArrowLeft0Icon} /> */}
               </button>
@@ -279,7 +279,7 @@ export default function HomePage() {
                 onClick={() =>
                   scrollRef.current.scrollBy({ left: 300, behavior: "smooth" })
                 }
-                className="p-4 md:p-5 border border-white/20 hover:border-white text-white transition-colors">
+                className="p-4 md:p-5 border border-border/40 hover:border-foreground text-foreground transition-colors">
                 <East />
                 {/* <HugeiconsIcon icon={ArrowRight02Icon} /> */}
               </button>
@@ -314,17 +314,17 @@ export default function HomePage() {
             /> */}
           </div>
         </section>
-        <section className="pt-20 md:pt-32 pb-12 border-t border-white/10" id="experience">
+        <section className="pt-20 md:pt-32 pb-12 border-t border-border/20" id="experience">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
 
             {/* <section className="flex flex-col justify-center py-20" id="experience"> */}
             <div className="lg:col-span-7">
-              <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
-                Education <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 03</span>
+              <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-foreground">
+                Education <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 03</span>
               </h2>
 
               <div className="space-y-16 md:space-y-20 relative">
-                <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-white/20"></div>
+                <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-border/40"></div>
 
                 <ExperienceItem
                   date="October 2024 - Present"
@@ -347,22 +347,22 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-5">
-              <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-white">
-                Tools <span className="text-xs md:text-base font-bold text-white/50 tracking-widest uppercase mt-2">/ 04</span>
+              <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-foreground">
+                Tools <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 04</span>
               </h2>
               <div className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline">
-                <span className="text-4xl md:text-6xl font-black text-white">React</span>
-                <span className="text-2xl md:text-4xl font-black text-white/90">Node.js</span>
-                <span className="text-xl md:text-2xl font-bold text-white/80">Javascript</span>
-                <span className="text-3xl md:text-5xl font-black text-white">HTML</span>
-                <span className="text-2xl md:text-3xl font-bold text-white/85">Next.js</span>
+                <span className="text-4xl md:text-6xl font-black text-foreground">React</span>
+                <span className="text-2xl md:text-4xl font-black text-foreground/90">Node.js</span>
+                <span className="text-xl md:text-2xl font-bold text-foreground/80">Javascript</span>
+                <span className="text-3xl md:text-5xl font-black text-foreground">HTML</span>
+                <span className="text-2xl md:text-3xl font-bold text-foreground/85">Next.js</span>
                 <span className="text-3xl md:text-5xl font-black outline-text">MongoDB</span>
-                <span className="text-xl md:text-2xl font-bold text-white/60">Supabase</span>
-                <span className="text-2xl md:text-3xl font-black text-white/90">PostgreSQL</span>
-                <span className="text-xl md:text-2xl font-bold text-white/70">Git</span>
-                <span className="text-2xl md:text-4xl font-black text-white">Github</span>
-                <span className="text-xl md:text-2xl font-bold text-white/60">Bootstrap</span>
-                <span className="text-2xl md:text-3xl font-black text-white/90">Tailwind</span>
+                <span className="text-xl md:text-2xl font-bold text-foreground/60">Supabase</span>
+                <span className="text-2xl md:text-3xl font-black text-foreground/90">PostgreSQL</span>
+                <span className="text-xl md:text-2xl font-bold text-foreground/70">Git</span>
+                <span className="text-2xl md:text-4xl font-black text-foreground">Github</span>
+                <span className="text-xl md:text-2xl font-bold text-foreground/60">Bootstrap</span>
+                <span className="text-2xl md:text-3xl font-black text-foreground/90">Tailwind</span>
               </div>
             </div>
 

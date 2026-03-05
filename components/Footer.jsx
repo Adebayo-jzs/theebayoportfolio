@@ -4,11 +4,11 @@ const social_links = [
   {id:3,href:"https://x.com/theebayo",label:"𝕏",iconPath:<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"></path>}
 ]
 const SocialLink = ({ href, iconPath, label }) => (
-  <a className="group text-white flex flex-col items-center" href={href} target="_blank" aria-label={label}>
+  <a className="group text-foreground flex flex-col items-center" href={href} target="_blank" aria-label={label}>
     <svg className="w-12 h-12 md:w-20 md:h-20 transition-transform group-hover:-translate-y-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       {iconPath}
     </svg>
-    <span className="uppercase block text-center mt-4 md:mt-6 text-[10px] md:text-sm font-black tracking-[0.2em] md:tracking-[0.4em] text-white">
+    <span className="uppercase block text-center mt-4 md:mt-6 text-[10px] md:text-sm font-black tracking-[0.2em] md:tracking-[0.4em] text-foreground">
       {label}
     </span>
     {/* <Github/> */}
@@ -17,7 +17,7 @@ const SocialLink = ({ href, iconPath, label }) => (
 
 export default function Footer(){
     return(
-        <footer className="bg-[#050505]"> 
+        <footer className="bg-background"> 
             <div className="w-full mb-20 md:mb-32 ">
            
           <div className="flex flex-wrap justify-center  items-center gap-12 md:gap-32">
@@ -32,7 +32,7 @@ export default function Footer(){
         
             <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24">
 
-                <div className="w-full flex flex-col md:flex-row justify-between items-center py-10 border-t border-white/20 text-white text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.4em] gap-6 md:gap-0">
+                <div className="w-full flex flex-col md:flex-row justify-between items-center py-10 border-t border-border/20 text-foreground text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.4em] gap-6 md:gap-0">
                     <p> &copy; {new Date().getFullYear()} ADEDEJI ADEBAYO</p>
                     <div className="flex gap-8 md:gap-12">
                         <a className="hover:underline underline-offset-4 transition-all" href="#">PRIVACY</a>

@@ -9,7 +9,7 @@ const ProjectsCard = ({
   year,
 }) => (
   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] snap-center">
-    <div className="relative overflow-hidden aspect-[4/5] bg-neutral-900 group mb-6 border border-white/10 rounded-sm">
+    <div className="relative overflow-hidden aspect-[4/5] bg-card group mb-6 border border-border/40 rounded-sm">
       
       {/* Image */}
       <img
@@ -20,8 +20,8 @@ const ProjectsCard = ({
         loading="lazy"
       />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent group-hover:opacity-80 group-hover:backdrop-blur-sm" />
+      {/* Theme-aware overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent group-hover:opacity-80 group-hover:backdrop-blur-sm" />
 
        
 
@@ -33,7 +33,7 @@ const ProjectsCard = ({
         </h3>
         <p className="
             translate-y-8 group-hover:translate-y-0
-            transition-transform duration-500 text-[#939393]
+            transition-transform duration-500 text-muted-foreground
             text-sm md:text-base leading-relaxed my-6 max-w-md 
             opacity-0 group-hover:opacity-100 absolute group-hover:relative">
             {desc}
@@ -42,8 +42,8 @@ const ProjectsCard = ({
             <a
               href={preview}
               target="_blank"
-              className="inline-block py-3 px-6 border-2 border-white text-xs font-black uppercase tracking-widest
-                hover:bg-white hover:text-black transition-all"
+              className="inline-block py-3 px-6 border-2 border-foreground text-xs font-black uppercase tracking-widest
+                hover:bg-foreground hover:text-background transition-all"
             >
               View Project
             </a>
@@ -63,7 +63,7 @@ const ProjectsCard = ({
     </div>
 
     {/* Meta */}
-    <div className="flex justify-between text-white font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em]">
+    <div className="flex justify-between text-foreground font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em]">
       <span>{type}</span>
       <span>{year}</span>
     </div>

@@ -53,10 +53,10 @@ export default function SubscribeToNewsLetter() {
     return (
         <div className="relative">
             <h1 className="font-outfit leading-[0.9] mb-10">
-                <span className="text-[15vw] md:text-[13vw] font-black tracking-tighter text-white">stay synced</span>
+                <span className="text-[15vw] md:text-[13vw] font-black tracking-tighter text-foreground">stay synced</span>
             </h1>
             <form onSubmit={handleSubmit}>
-                <div className="max-w-3xl flex mx-auto border-b-2 border-white">
+                <div className="max-w-3xl flex mx-auto border-b-2 border-foreground">
                     <input
                         id="email"
                         name="email"
@@ -65,13 +65,13 @@ export default function SubscribeToNewsLetter() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter Email Address"
-                        className="bg-transparent border-none focus:ring-0 outline-none flex-grow md:text-xl placeholder:text-white/20 uppercase tracking-widest px-3 py-2 text-white"
+                        className="bg-transparent border-none focus:ring-0 outline-none flex-grow md:text-xl placeholder:text-foreground/20 uppercase tracking-widest px-3 py-2 text-foreground"
                         disabled={isSubmitting}
                     />
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="tracking-widest uppercase bg-white text-black py-2 px-3 font-semibold hover:bg-transparent hover:text-white border-2 border-white transition disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="tracking-widest uppercase bg-foreground text-background py-2 px-3 font-semibold hover:bg-transparent hover:text-foreground border-2 border-foreground transition disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         {isSubmitting ? "..." : "Submit"}
                     </button>
@@ -85,8 +85,8 @@ export default function SubscribeToNewsLetter() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className={`fixed bottom-8 right-8 z-50 flex items-start gap-4 p-6 rounded-lg shadow-2xl backdrop-blur-md border border-white/10 max-w-sm w-full
-                            ${status === "success" ? "bg-green-900/90 text-white" : "bg-red-900/90 text-white"}`}
+                        className={`fixed bottom-8 right-8 z-50 flex items-start gap-4 p-6 rounded-lg shadow-2xl backdrop-blur-md border border-border/10 max-w-sm w-full
+                            ${status === "success" ? "bg-green-600/90 text-white" : "bg-red-600/90 text-white"}`}
                     >
                         <div className="flex-shrink-0 mt-1">
                             {status === "success" ? (
