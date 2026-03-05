@@ -85,7 +85,7 @@ export default async function Blog() {
                 <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 ">
                     <section className="md:min-h-screen flex flex-col justify-center  pt-30 lg:pt-0" id="hero">
                         <h1 className="font-outfit leading-[0.9]  mb-10">
-                            <span className="text-[17vw] md:text-[15vw] font-black tracking-tighter text-white">INSIGHTS</span>
+                            <span className="text-[17vw] md:text-[15vw] font-black tracking-tighter text-white dark:text-black">INSIGHTS</span>
                         </h1>
                         <p className="font-serif text-2xl lg:text-3xl text-white/80 max-w-2xl italic border-l-4 border-white pl-8">Thoughts on software architecture,engineering,<br />philosophy of physical designs and life update.</p>
 

@@ -93,15 +93,15 @@ export default function RootLayout({ children }) {
 
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-white selection:text-black`}
       >
         {/* <Analytics> */}
-        <CursorWrapper className="mix-blend-difference">
+        {/* <CursorWrapper className="mix-blend-difference"> */}
           <Navbar/>
           {children}
           <Contact/>
           <Footer/>
-        </CursorWrapper>
+        {/* </CursorWrapper> */}
         <Analytics/>
 
         <div className="block fixed bottom-8 right-3 mix-blend-difference z-50">

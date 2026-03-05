@@ -138,7 +138,7 @@ export default function HomePage() {
   return (
     <div className="bg-[#050505] text-white selection:bg-white selection:text-black min-h-screen overflow-x-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 ">
-        <div className="noise-texture"></div>
+        {/* <div className="noise-texture"></div> */}
         <section className="min-h-screen flex flex-col justify-center relative grid-bg pt-20 lg:pt-0" id="hero">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-27 lg:gap-8 items-center">
             <div className="order-1 lg:order-1 lg:col-span-7 z-10">
