@@ -81,6 +81,7 @@ h2 {
 .grid-bg {
   position: relative;
   background-color: var(--background);
+  overflow: hidden;
 }
 
 .grid-bg::before {
@@ -93,7 +94,9 @@ h2 {
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.1;
+  opacity: 0.15;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 80%);
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -216,14 +219,16 @@ h2 {
     }
   }
 
-  .animate-scroll {
-    animation: scroll 40s linear infinite;
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
   }
 
-  /* The hollow text effect */
-  .text-stroke {
-    -webkit-text-stroke: 1px var(--foreground);
-    color: transparent;
-    opacity: 0.5;
+  .animate-shine {
+    animation: shine 0.8s ease-in-out;
   }
 }

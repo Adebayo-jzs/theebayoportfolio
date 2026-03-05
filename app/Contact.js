@@ -170,7 +170,7 @@ const Contact = () => {
               <motion.div 
               variants={fadeUp}
               key={social.id}
-              className="py-6 px-4   border-2 border-[#1f1f1f]   hover:shadow-lg transition-shadow"
+              className="py-6 px-4   border-2 border-border  hover:shadow-lg transition-shadow"
             >
               <Link href={social.link}>
               <div className="flex items-center gap-4">

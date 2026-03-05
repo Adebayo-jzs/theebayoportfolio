@@ -145,89 +145,112 @@ export default function HomePage() {
               {/* <span className="text-foreground/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
                 Premium Software Development
             </span> */}
-              <div className="mt-8 md:mt-12 flex items-center gap-6">
+            <div className="order-1 lg:order-1 lg:col-span-7 z-10">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="mt-8 md:mt-12 flex items-center gap-6"
+              >
                 <div className="h-px w-12 md:w-24 bg-foreground"></div>
                 <p className="text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
+              </motion.div>
+              
+              <div className="overflow-hidden mt-4">
+                <motion.h1 
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                  className="font-outfit leading-[0.85] flex flex-col"
+                >
+                  <span className="text-7xl md:text-9xl lg:text-[140px] font-black tracking-tighter text-foreground/90">ADEDEJI</span>
+                  <span className="text-7xl md:text-9xl lg:text-[140px] font-black tracking-tighter outline-text opacity-50 -mt-2 md:-mt-4">ADEBAYO</span>
+                </motion.h1>
               </div>
-              <h1 className="font-outfit leading-[0.9] flex flex-col gap-2 lg:gap-0">
-                <span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter text-foreground/90">ADEDEJI</span>
-                <span className="text-6xl md:text-8xl lg:text-[130px] font-black tracking-tighter outline-text opacity-70">ADEBAYO</span>
-              </h1>
-              <p className="max-w-2xl text-base md:text-lg  mt-4 text-foreground/80 ">
-                Year 2 Software Engineering student passionate about creating beautiful, functional websites and web applications using modern technologies.
-              </p>
-              <a
-                href="#contact"
-                className="mt-3 inline-block py-3 px-6 border-2 border-foreground text-xs font-black uppercase tracking-widest
-                bg-foreground text-background hover:bg-transparent hover:text-foreground transition-all"
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="max-w-2xl text-base md:text-lg mt-6 text-foreground/70 font-medium leading-relaxed"
               >
-                Hire Me!
-              </a>
+                Year 2 Software Engineering student passionate about creating beautiful, functional websites and web applications using modern technologies.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                <a
+                  href="#contact"
+                  className="mt-8 group relative inline-flex items-center gap-3 py-4 px-10 bg-foreground text-background font-black uppercase tracking-widest overflow-hidden transition-all hover:pr-14"
+                >
+                  <span className="relative z-10">Hire Me!</span>
+                  <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-background/10 opacity-40 group-hover:animate-shine" />
+                  <span className="absolute right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                    →
+                  </span>
+                </a>
+              </motion.div>
+            </div>
 
             </div>
-            <div className="order-2 lg:order-2  lg:col-span-5 relative flex justify-center lg:justify-end">
+            <div className="hidden order-2 lg:order-2 lg:col-span-5 relative  justify-center lg:justify-end py-12 lg:py-0">
               <motion.div
-                className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]"
+                className="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px]"
                 animate={{
-                  y: [0, -14, 0],
-                  rotate: [50, 40, 35],
-                  // rotate: [12, 10, 12],
+                  y: [0, -20, 0],
                 }}
                 transition={{
-                  duration: 8,
+                  duration: 6,
                   ease: "easeInOut",
                   repeat: Infinity,
                 }}
-              >
+              > 
+                <div className="absolute inset-0 bg-primary/5 blur-[120px] rounded-full scale-110" />
+
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-tr from-foreground/10 to-transparent rounded-3xl rotate-12 flex items-center justify-center border border-foreground/20 backdrop-blur-sm"
-                  animate={{ rotate: [12, 14, 12] }}
-                  transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
+                  className="absolute inset-0 bg-gradient-to-tr from-foreground/5 to-transparent rounded-[40px] rotate-[35deg] flex items-center justify-center border border-foreground/10 backdrop-blur-[2px]"
+                  animate={{ rotate: [35, 38, 35] }}
+                  transition={{ duration: 8, ease: "easeInOut", repeat: Infinity }}
                 >
-                  <motion.div className="w-2/3 h-2/3 border border-foreground/30 -rotate-12 flex items-center justify-center"
-                    animate={{ rotate: [-12, -16, -12] }}
-                    transition={{ duration: 12, ease: "easeInOut", repeat: Infinity }}
+                  <motion.div className="w-[85%] h-[85%] border border-foreground/20 -rotate-12 flex items-center justify-center rounded-[30px]"
+                    animate={{ rotate: [-12, -15, -12] }}
+                    transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
                   >
                     <motion.div
-                      className="w-1/2 h-1/2 border-2 border-foreground/40 rotate-45 flex items-center justify-center"
+                      className="w-3/4 h-3/4 border-2 border-foreground/30 rotate-45 flex items-center justify-center rounded-2xl relative"
                       animate={{
-                        rotate: [45, 50, 45],
+                        rotate: [45, 52, 45],
                         scale: [1, 1.05, 1],
                       }}
                       transition={{
-                        duration: 6,
+                        duration: 8,
                         ease: "easeInOut",
                         repeat: Infinity,
                       }}
                     >
+                      <div className="absolute inset-0 border border-foreground/10 translate-x-4 translate-y-4 rounded-2xl -z-10" />
                       <motion.div
-                        className="w-1/3 h-1/3 bg-foreground/10 blur-xl"
-                        animate={{ opacity: [0.4, 0.7, 0.4] }}
-                        transition={{
-                          duration: 4,
-                          ease: "easeInOut",
-                          repeat: Infinity,
-                        }}
-                      ></motion.div>
+                        className="w-1/2 h-1/2 bg-foreground/5 blur-[60px]"
+                        animate={{ opacity: [0.3, 0.6, 0.3] }}
+                        transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+                      />
                     </motion.div>
                   </motion.div>
                 </motion.div>
-                {/* Placeholder image for stability */}
-                <img alt="Abstract Art" className="w-full h-full object-cover mix-blend-multiply dark:mix-blend-lighten opacity-60 rounded-3xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZ671MaKeJEWJEA19VmKxiwVPnejyNc69XyGHgU8pYdc6bdsmLEzLNjbmVa61i6RsmYgckpmct6PjZNVx3dLyRO5c6x9SXvUsKJ5nBvFODZeHW5zh1kQor1V61yk42Ey8MzFbq5THoZyn0vNdvyo2KspWHvwGwRKetjiEnueqpmjCr7tpcShtAWpdCLbDViCSU2LGbi5hZutOm3lxu_SMKs0-FzUxfkgk9ciLpr1-pDvmhGcM9n6ztjzBjzEQcMobfno9uhE9ltc" />
+                
+                {/* The 3D-like technical asset */}
+                <div className="absolute inset-0 flex items-center justify-center p-12">
+                   <img 
+                    alt="Technical Abstract Asset" 
+                    className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-lighten opacity-80 rounded-3xl z-20" 
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZ671MaKeJEWJEA19VmKxiwVPnejyNc69XyGHgU8pYdc6bdsmLEzLNjbmVa61i6RsmYgckpmct6PjZNVx3dLyRO5c6x9SXvUsKJ5nBvFODZeHW5zh1kQor1V61yk42Ey8MzFbq5THoZyn0vNdvyo2KspWHvwGwRKetjiEnueqpmjCr7tpcShtAWpdCLbDViCSU2LGbi5hZutOm3lxu_SMKs0-FzUxfkgk9ciLpr1-pDvmhGcM9n6ztjzBjzEQcMobfno9uhE9ltc" 
+                  />
+                </div>
               </motion.div>
-              {/* <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px]">
-							<div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-3xl rotate-12 flex items-center justify-center border border-white/30 backdrop-blur-sm">
-								<div className="w-2/3 h-2/3 border border-white/40 -rotate-12 flex items-center justify-center">
-										<div className="w-1/2 h-1/2 border-2 border-white/60 rotate-45 flex items-center justify-center">
-										<div className="w-1/3 h-1/3 bg-white/20 blur-xl"></div>
-										</div>
-								</div>
-							</div>
-							// Placeholder image for stability 
-							<img alt="Abstract Art" className="w-full h-full object-cover mix-blend-lighten opacity-60 rounded-3xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZ671MaKeJEWJEA19VmKxiwVPnejyNc69XyGHgU8pYdc6bdsmLEzLNjbmVa61i6RsmYgckpmct6PjZNVx3dLyRO5c6x9SXvUsKJ5nBvFODZeHW5zh1kQor1V61yk42Ey8MzFbq5THoZyn0vNdvyo2KspWHvwGwRKetjiEnueqpmjCr7tpcShtAWpdCLbDViCSU2LGbi5hZutOm3lxu_SMKs0-FzUxfkgk9ciLpr1-pDvmhGcM9n6ztjzBjzEQcMobfno9uhE9ltc" />
-						</div> */}
-            </div>
-          </div>
+            </div> 
+          </div> 
         </section>
         <section id="about" className="py-20 md:py-32">
           <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
@@ -451,7 +474,7 @@ export default function HomePage() {
 
       </section> */}
         {/* <Contact /> */}
-      </div>
+    </div>
 
 
     </div>
