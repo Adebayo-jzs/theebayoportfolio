@@ -72,9 +72,9 @@ const Navbar = () => {
           md:hidden
         `}
       >
-        <NavLink href="#about" onClick={() => setOpen(false)}>About</NavLink>
-        <NavLink href="#projects" onClick={() => setOpen(false)}>Projects</NavLink>
-        <NavLink href="#experience" onClick={() => setOpen(false)}>Education</NavLink>
+        <NavLink href="/#about" onClick={() => setOpen(false)}>About</NavLink>
+        <NavLink href="/#projects" onClick={() => setOpen(false)}>Projects</NavLink>
+        <NavLink href="#contact" onClick={() => setOpen(false)}>Contact</NavLink>
         <NavLink href="/blog" onClick={() => setOpen(false)}>Insights</NavLink>
       </div>
     </>
