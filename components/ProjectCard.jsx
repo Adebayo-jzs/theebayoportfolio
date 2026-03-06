@@ -9,7 +9,7 @@ const ProjectsCard = ({
   year,
 }) => (
   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] snap-center">
-    <div className="relative overflow-hidden aspect-[4/5] bg-card group mb-6 border border-border/40 rounded-sm">
+    <div className="relative overflow-hidden aspect-[4/5] bg-card group mb-6 border border-border rounded-sm">
       
       {/* Image */}
       <img
