@@ -337,7 +337,7 @@ export default function HomePage() {
             /> */}
           </div>
         </section>
-        <section className="pt-20 md:pt-32 pb-12 border-t border-border/20" id="experience">
+        <section className="pt-20 md:pt-32 pb-12 border-t font-outfit border-border/20" id="experience">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
 
             {/* <section className="flex flex-col justify-center py-20" id="experience"> */}
@@ -347,7 +347,7 @@ export default function HomePage() {
               </h2>
 
               <div className="space-y-16 md:space-y-20 relative">
-                <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-border/40"></div>
+                <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-foreground/50  "></div>
 
                 <ExperienceItem
                   date="October 2024 - Present"

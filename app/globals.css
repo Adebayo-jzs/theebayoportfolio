@@ -231,4 +231,14 @@ h2 {
   .animate-shine {
     animation: shine 0.8s ease-in-out;
   }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px var(--foreground);
+    color: transparent;
+    opacity: 0.5;
+  }
 }
