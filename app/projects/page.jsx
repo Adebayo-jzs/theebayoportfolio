@@ -9,13 +9,13 @@ import TechIcon from "@/components/TechIcon";
 export default function ProjectsPage() {
   return (
     <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground min-h-screen overflow-x-hidden">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 py-12">
-        <Link 
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 py-20">
+        {/* <Link 
           href="/" 
           className="inline-flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors mb-20 uppercase text-xs font-black tracking-widest"
         >
           <West fontSize="small" /> Back to Home
-        </Link>
+        </Link> */}
 
         <section className="flex flex-col justify-center mb-32" id="hero"> 
           <motion.h1 
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
                     src={project.imgurl}
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/20 to-transparent" />
                   <div className="absolute bottom-6 left-6 pr-6">
                     <h3 className="text-2xl md:text-3xl font-black text-foreground uppercase tracking-tighter leading-none mb-2">
                       {project.projectname}
