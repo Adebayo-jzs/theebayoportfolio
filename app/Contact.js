@@ -11,7 +11,7 @@ const links = [
   {id:1,linkname:"Email",handle:"adedejiadebayo732@gmail.com",link:"mailto:adededejiadebayo732@gmail.com",icon:Mail02FreeIcons},
   {id:2,linkname:"GitHub",handle:"@adebayo-jzs",link:"https://github.com/Adebayo-jzs",icon:GithubIcon},
   {id:3,linkname:"LinkedIn",handle:"/in/theebayo",link:"https://linkedin.com/in/theebayo",icon:Linkedin02Icon},
-  {id:4,linkname:"𝕏",handle:"@theebayo",link:"https://x.com/theebayo",icon:Twitter},
+  // {id:4,linkname:"𝕏",handle:"@theebayo",link:"https://x.com/theebayo",icon:Twitter},
 ]
 const Contact = () => {
   
