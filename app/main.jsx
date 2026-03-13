@@ -7,6 +7,8 @@ import ProjectsCard from "@/components/ProjectCard";
 import Contact from "./Contact";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowRight02Icon ,ArrowLeft02Icon} from '@hugeicons/core-free-icons'
+import { projects } from "@/lib/projects";
+import TechIcon from "@/components/TechIcon";
 
 const ExperienceItem = ({ date, title, institution, description, isLast }) => (
   <div className="relative pl-8 md:pl-12 group">
@@ -25,76 +27,7 @@ const ExperienceItem = ({ date, title, institution, description, isLast }) => (
   </div>
 );
 
-const projects = [
-  {
-    id: 1,
-    projectname: "Textcognito",
-    desc: "Textcognito is an anonymous messaging website where users can create unique links to receive anonymous messages from their friends.",
-    tools: ["NextJS", "Tailwind", "Vanilla CSS", "Supabase", "Node.js"],
-    preview: "https://textcognito.click",
-    // code: "https://github.com/adebayo-jzs/incognito",
-    imgurl: "/textcognito.png",
-    type: "Web Application",
-    year: 2026,
-  },
-  {
-    id: 2,
-    projectname: "Arecnime",
-    desc: "Arecnime is an anime discovery and recommendation website designed to reimagine the anime browsing experience for anime lovers",
-    tools: ["TAilwind", "CSS", "Javascript"],
-    preview: "https://arecnime.vercel.app",
-    // code: "https://github.com/adebayo-jzs/arecnime",
-    imgurl: "/anime.png",
-    type: "Website",
-    year: 2026,
-  },
-  {
-    id: 3,
-    projectname: "Tourtech Admin Dashboard",
-    desc: "Overview and analytics dashboard for an industrial visit planning and booking system for a school project",
-    tools: ["NextJS", "Tailwind", "Vanilla CSS", "Supabase", "Node.js"],
-    // preview: "https://tourtech.name.ng/admin",
-    code: "https://github.com/adebayo-jzs/tourtech",
-    imgurl: "/admindash.jpg",
-    type: "Web Application",
-    year: 2025,
-  },
-  {
-    id: 4,
-    projectname: "Fuelping",
-    desc: "Community-driven real-time fuel price updates at nearby stations in Nigeria",
-    tools: ["React","Typescript", "Tailwind", "Supabase"],
-    preview: "https://fuelping.vercel.app",
-    code: "https://github.com/adebayo-jzs/fuelping",
-    imgurl: "/fuelping.png",
-    type: "Website",
-    year: 2026,
-  },
-  {
-    id: 5,
-    projectname: "Personal Blog",
-    desc: "Personal Developer blog built with supabase fully optimisized for Search Engines ",
-    tools: ["React", "Tailwind", "Typescript", "Supabse"],
-    preview: "https://blog.theebayo.name.ng",
-    code: "https://github.com/adebayo-jzs/nextblog",
-    imgurl: "/blog.jpg",
-    type: "Web Application",
-    year: 2025,
-  },
-  
-  {
-    id: 6,
-    projectname: "Basic Weather App",
-    desc: "A basic weather app built with Open Weather API for checking 24 hours weather forecast for various locations ",
-    tools: ["HTML", "CSS", "Javascript"],
-    preview: "https://adebayo-jzs.github.io/weatherapp",
-    code: "https://github.com/adebayo-jzs/weatherapp",
-    imgurl: "/weatherapp.jpg",
-    type: "Website",
-    year: 2025,
-  },
-  
-];
+
 const ProjectCard = ({ id, projectname, desc, imgurl, preview, code, type, year }) => (
   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] group snap-center">
     <div className="relative overflow-hidden aspect-[4/5] bg-card mb-6 border border-border/40 rounded-sm">
@@ -385,18 +318,42 @@ export default function HomePage() {
                 Tools <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 04</span>
               </h2>
               <div className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline">
-                <span className="text-4xl md:text-6xl font-black text-foreground">React</span>
-                <span className="text-2xl md:text-4xl font-black text-foreground/90">Node.js</span>
-                <span className="text-xl md:text-2xl font-bold text-foreground/80">Javascript</span>
-                <span className="text-3xl md:text-5xl font-black text-foreground">HTML</span>
-                <span className="text-2xl md:text-3xl font-bold text-foreground/85">Next.js</span>
-                <span className="text-3xl md:text-5xl font-black outline-text">MongoDB</span>
-                <span className="text-xl md:text-2xl font-bold text-foreground/60">Supabase</span>
-                <span className="text-2xl md:text-3xl font-black text-foreground/90">PostgreSQL</span>
-                <span className="text-xl md:text-2xl font-bold text-foreground/70">Git</span>
-                <span className="text-2xl md:text-4xl font-black text-foreground">Github</span>
-                <span className="text-xl md:text-2xl font-bold text-foreground/60">Bootstrap</span>
-                <span className="text-2xl md:text-3xl font-black text-foreground/90">Tailwind</span>
+                <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
+                  <TechIcon name="React" className="w-8 h-8 md:w-12 md:h-12" /> React
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
+                  <TechIcon name="Node.js" className="w-6 h-6 md:w-8 md:h-8" /> Node.js
+                </span>
+                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/80">
+                  <TechIcon name="Javascript" className="w-4 h-4 md:w-6 md:h-6" /> Javascript
+                </span>
+                <span className="flex items-center gap-2 text-3xl md:text-5xl font-black text-foreground">
+                  <TechIcon name="HTML" className="w-6 h-6 md:w-10 md:h-10" /> HTML
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-3xl font-bold text-foreground/85">
+                  <TechIcon name="Next.js" className="w-6 h-6 md:w-8 md:h-8" /> Next.js
+                </span>
+                <span className="flex items-center gap-2 text-3xl md:text-5xl font-black outline-text">
+                  <TechIcon name="MongoDB" className="w-6 h-6 md:w-10 md:h-10" /> MongoDB
+                </span>
+                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/60">
+                  <TechIcon name="Supabase" className="w-4 h-4 md:w-6 md:h-6" /> Supabase
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-3xl font-black text-foreground/90">
+                  <TechIcon name="PostgreSQL" className="w-6 h-6 md:w-8 md:h-8" /> PostgreSQL
+                </span>
+                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/70">
+                  <TechIcon name="Git" className="w-4 h-4 md:w-6 md:h-6" /> Git
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground">
+                  <TechIcon name="Github" className="w-6 h-6 md:w-10 md:h-10" /> Github
+                </span>
+                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/60">
+                  <TechIcon name="Bootstrap" className="w-4 h-4 md:w-6 md:h-6" /> Bootstrap
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-3xl font-black text-foreground/90">
+                  <TechIcon name="Tailwind" className="w-6 h-6 md:w-8 md:h-8" /> Tailwind
+                </span>
               </div>
             </div>
 

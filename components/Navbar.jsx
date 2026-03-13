@@ -35,7 +35,7 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 uppercase font-bold">
           <NavLink href="/#about">About</NavLink>
-          <NavLink href="/#projects">Projects</NavLink>
+          <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/#experience">Education</NavLink>
           <NavLink href="/blog">Insights</NavLink>
           <ThemeToggle />
@@ -73,7 +73,7 @@ const Navbar = () => {
         `}
       >
         <NavLink href="/#about" onClick={() => setOpen(false)}>About</NavLink>
-        <NavLink href="/#projects" onClick={() => setOpen(false)}>Projects</NavLink>
+        <NavLink href="/projects" onClick={() => setOpen(false)}>Projects</NavLink>
         <NavLink href="#contact" onClick={() => setOpen(false)}>Contact</NavLink>
         <NavLink href="/blog" onClick={() => setOpen(false)}>Insights</NavLink>
       </div>
