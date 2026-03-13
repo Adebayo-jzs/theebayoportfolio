@@ -22,7 +22,7 @@ export default function ProjectDetailsPage() {
 
   return (
     <div className="bg-background text-foreground min-h-screen overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 pt-25">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 pt-24 md:pt-32">
         
         <Link 
           href="/projects" 
@@ -31,9 +31,9 @@ export default function ProjectDetailsPage() {
           <West fontSize="small" /> Back to Projects
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           {/* Left Column: Project Info */}
-          <div className="lg:col-span-5 order-2 lg:order-1">
+          <div className="w-full lg:w-[45%] order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function ProjectDetailsPage() {
                   <h3 className="text-xs font-bold tracking-[0.3em] uppercase text-foreground/40 mb-6">Technologies Used</h3>
                   <div className="flex flex-wrap gap-3">
                     {project.tools.map((tool) => (
-                      <span key={tool} className="flex items-center gap-2 text-sm font-bold bg-foreground/5 py-2 px-4 rounded-sm border border-border/10 hover:bg-foreground/10 transition-colors">
+                      <span key={tool} className="flex items-center gap-2 text-sm font-bold bg-foreground/5 py-2 px-4 rounded-sm border border-border/10">
                         <TechIcon name={tool} className="w-4 h-4 text-foreground/70" />
                         {tool}
                       </span>
@@ -97,7 +97,7 @@ export default function ProjectDetailsPage() {
           </div>
 
           {/* Right Column: Project Image */}
-          <div className="lg:col-span-7 order-1 lg:order-2">
+          <div className="w-full lg:w-[55%] order-1 lg:order-2">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
