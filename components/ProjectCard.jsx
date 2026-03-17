@@ -10,7 +10,7 @@ const ProjectsCard = ({
   type,
   year,
 }) => (
-  <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] snap-center group">
+  <div className="w-[100%] snap-center group">
     <Link href={`/projects/${id}`}>
       <div className="relative overflow-hidden aspect-[4/3] bg-card mb-6 border border-border rounded-sm transition-all hover:border-foreground/50">
         

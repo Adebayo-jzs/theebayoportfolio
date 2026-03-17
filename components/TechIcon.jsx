@@ -8,6 +8,7 @@ const TechIcon = ({ name, className = "w-5 h-5" }) => {
     "Next.js": "nextjs",
     "Tailwind": "tailwind",
     "Vanilla CSS": "css",
+    "Gemini API": "gemini",
     "CSS": "css",
     "Supabase": "supabase",
     "Supabse": "supabase",

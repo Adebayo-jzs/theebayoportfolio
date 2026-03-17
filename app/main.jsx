@@ -7,6 +7,7 @@ import ProjectsCard from "@/components/ProjectCard";
 import Contact from "./Contact";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowRight02Icon ,ArrowLeft02Icon} from '@hugeicons/core-free-icons'
+import Link from "next/link";
 import { projects } from "@/lib/projects";
 import TechIcon from "@/components/TechIcon";
 
@@ -233,14 +234,14 @@ export default function HomePage() {
               Projects <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 02</span>
             </h2>
             {/* Arrows hidden on mobile, user naturally swipes */}
-            <div className="hidden sm:flex gap-4">
+            {/* <div className="hidden sm:flex gap-4">
               <button
                 onClick={() =>
                   scrollRef.current.scrollBy({ left: -300, behavior: "smooth" })
                 }
                 className="p-4 md:p-5 border border-border/40 hover:border-foreground text-foreground transition-colors">
                 <West />
-                {/* <HugeiconsIcon icon={ArrowLeft0Icon} /> */}
+                 
               </button>
               <button
                 onClick={() =>
@@ -248,14 +249,21 @@ export default function HomePage() {
                 }
                 className="p-4 md:p-5 border border-border/40 hover:border-foreground text-foreground transition-colors">
                 <East />
-                {/* <HugeiconsIcon icon={ArrowRight02Icon} /> */}
+                 
               </button>
-            </div>
+            </div> */}
+            <Link 
+              href="/projects" 
+              className="border-2 border-foreground py-4 px-10 font-black uppercase tracking-widest hover:bg-foreground hover:text-background transition-all"
+            >
+              All Projects
+            </Link>
           </div>
 
           {/* Scroll Container with Snap */}
-          <div ref={scrollRef} className="flex flex-col sm:flex-row gap-16 sm:gap-10  overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
-            {projects.map((project) => (
+          {/* <div ref={scrollRef} className="flex flex-col sm:flex-row gap-16 sm:gap-10  overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"> */}
+          <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10  overflow-x-auto   pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
+            {projects.slice(0,6).map((project) => (
               <ProjectsCard
                 key={project.id}
                 {...project}
