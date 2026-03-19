@@ -25,6 +25,15 @@ export const metadata = {
         "Tech Blog",
     ],
     authors: [{ name: "Adedeji Adebayo", url: "https://theebayo.name.ng" }],
+    robots: {
+        index: true,
+        follow: true,
+        nocache: true,
+        googleBot: {
+            index: true,
+            follow: true,
+        },
+    },
     openGraph: {
         title: "Theebayo | Blog - Insights on Software Development",
         description:

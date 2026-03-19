@@ -24,6 +24,15 @@ export const metadata = {
     "Node.js",
   ],
   authors: [{ name: "Adedeji Adebayo" }],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: "Adebayo ADEDEJI | Software Developer",
     description:

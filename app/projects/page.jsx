@@ -9,6 +9,15 @@ export const metadata = {
     title: "Projects | Adebayo ADEDEJI",
     description: "A collection of digital products, experiments, and open-source contributions focusing on modern web technologies.",
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function ProjectsPage() {

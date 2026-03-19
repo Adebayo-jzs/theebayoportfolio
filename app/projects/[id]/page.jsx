@@ -17,6 +17,15 @@ export async function generateMetadata({ params }) {
       description: project.desc,
       images: [{ url: project.imgurl }],
     },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
   };
 }
 

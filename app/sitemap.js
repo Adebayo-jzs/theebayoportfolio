@@ -1,4 +1,5 @@
 import { supabase } from "@/utils/supabase";
+import { projects } from "@/lib/projects";
 
 export default async function sitemap() {
     const { data: posts } = await supabase
@@ -13,6 +14,13 @@ export default async function sitemap() {
         priority: 0.8,
     })) || [];
 
+    const projectEntries = projects.map((project) => ({
+        url: `https://theebayo.name.ng/projects/${project.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+    }));
+
     return [
         {
             url: 'https://theebayo.name.ng',
@@ -26,6 +34,13 @@ export default async function sitemap() {
             changeFrequency: 'weekly',
             priority: 0.8,
         },
+        {
+            url: 'https://theebayo.name.ng/projects',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
         ...blogEntries,
+        ...projectEntries,
     ]
 }

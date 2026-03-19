@@ -22,6 +22,18 @@ export const metadata = {
   keywords: ["Adebayo ADEDEJI", "Theebayo", "Software Developer", "Next.js", "React", "Node.js"],
   authors: [{ name: "Adebayo ADEDEJI" }],
   creator: "Adebayo ADEDEJI",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

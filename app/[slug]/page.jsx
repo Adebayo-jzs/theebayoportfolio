@@ -35,6 +35,15 @@ export async function generateMetadata({ params }) {
         alternates: {
             canonical: `https://theebayo.name.ng/${post.slug}`,
         },
+        robots: {
+            index: true,
+            follow: true,
+            nocache: true,
+            googleBot: {
+                index: true,
+                follow: true,
+            },
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
