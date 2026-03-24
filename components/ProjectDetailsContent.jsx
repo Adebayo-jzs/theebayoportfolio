@@ -138,7 +138,7 @@ export default function ProjectDetailsContent({ project, nextProject }) {
                 Next
               </h4>
               <Link
-                href={`/projects/${nextProject.id}`}
+                href={`/projects/${nextProject.slug}`}
                 className="text-4xl md:text-6xl font-black uppercase tracking-tighter hover:text-primary transition-colors inline-block"
               >
                 {nextProject.projectname} →

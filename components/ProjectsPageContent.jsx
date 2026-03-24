@@ -43,7 +43,7 @@ export default function ProjectsPageContent({ projects }) {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <Link href={`/projects/${project.id}`}>
+              <Link href={`/projects/${project.slug}`}>
                 <div className="relative overflow-hidden aspect-[4/5] bg-card border border-border rounded-sm mb-6 transition-all hover:border-foreground/40">
                   <img
                     alt={project.projectname}

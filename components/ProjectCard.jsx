@@ -3,6 +3,7 @@ import Link from "next/link";
 const ProjectsCard = ({
   id,
   projectname,
+  slug,
   desc,
   imgurl,
   preview,
@@ -11,7 +12,7 @@ const ProjectsCard = ({
   year,
 }) => (
   <div className="w-[100%] snap-center group">
-    <Link href={`/projects/${id}`}>
+    <Link href={`/projects/${slug}`}>
       <div className="relative overflow-hidden aspect-[4/3] bg-card mb-6 border border-border rounded-sm transition-all hover:border-foreground/50">
         
         {/* Image */}
