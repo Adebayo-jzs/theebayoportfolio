@@ -27,7 +27,7 @@ const ProjectsCard = ({
         {/* Theme-aware overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/40 to-transparent group-hover:opacity-80 group-hover:backdrop-blur-sm transition-all" />
 
-        <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6 transition-all">
+        <div className="absolute bottom-3 left-3 xl:bottom-5 md:left-5 pr-6 transition-all">
           <h3 className="text-3xl transition-all md:text-4xl font-black text-[#e5e5e5] uppercase tracking-tighter leading-none">
             {projectname}
           </h3>

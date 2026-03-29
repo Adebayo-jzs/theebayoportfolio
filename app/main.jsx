@@ -29,31 +29,31 @@ const ExperienceItem = ({ date, title, institution, description, isLast }) => (
 );
 
 
-const ProjectCard = ({ id, projectname, desc, imgurl, preview, code, type, year }) => (
-  <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] group snap-center">
-    <div className="relative overflow-hidden aspect-[4/5] bg-card mb-6 border border-border/40 rounded-sm">
-      <img
-        alt={projectname}
-        className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700  hover:grayscale-0"
-        src={imgurl}
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
-      <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6">
-        <h3 className="text-3xl md:text-4xl font-black mb-4 md:mb-6 text-foreground uppercase tracking-tighter leading-none">
-          {projectname}
-        </h3>
-        <a className="inline-block py-3 px-6 md:py-4 md:px-10 border-2 border-foreground text-xs md:text-sm font-black uppercase tracking-widest hover:bg-foreground hover:text-background transition-all bg-background/50 backdrop-blur-md" href={preview} target="_blank" >
-          View Project
-        </a>
-      </div>
-    </div>
-    <div className="flex justify-between text-foreground font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em]">
-      <span>{type}</span>
-      <span>{year}</span>
-    </div>
-  </div>
-);
+// const ProjectCard = ({ id, projectname, desc, imgurl, preview, code, type, year }) => (
+//   <div className="min-w-[85vw] md:min-w-[450px] lg:min-w-[500px] group snap-center">
+//     <div className="relative overflow-hidden aspect-[4/5] bg-card mb-6 border border-border/40 rounded-sm">
+//       <img
+//         alt={projectname}
+//         className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700  hover:grayscale-0"
+//         src={imgurl}
+//         loading="lazy"
+//       />
+//       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+//       <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 pr-6">
+//         <h3 className="text-3xl md:text-4xl font-black mb-4 md:mb-6 text-foreground uppercase tracking-tighter leading-none">
+//           {projectname}
+//         </h3>
+//         <a className="inline-block py-3 px-6 md:py-4 md:px-10 border-2 border-foreground text-xs md:text-sm font-black uppercase tracking-widest hover:bg-foreground hover:text-background transition-all bg-background/50 backdrop-blur-md" href={preview} target="_blank" >
+//           View Project
+//         </a>
+//       </div>
+//     </div>
+//     <div className="flex justify-between text-foreground font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em]">
+//       <span>{type}</span>
+//       <span>{year}</span>
+//     </div>
+//   </div>
+// );
 const techs = ["REACT", "JAVASCRIPT", "NEXT.JS", "SUPABASE", "TAILWIND", "REACT", "JAVASCRIPT", "NEXT.JS", "SUPABASE", "TAILWIND"];
 const social_links = [
   { id: 1, href: "https://github.com/adebayo-jzs", label: "github", iconPath: <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"></path> },
@@ -262,7 +262,7 @@ export default function HomePage() {
 
           {/* Scroll Container with Snap */}
           {/* <div ref={scrollRef} className="flex flex-col sm:flex-row gap-16 sm:gap-10  overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"> */}
-          <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10  overflow-x-auto   pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
+          <div className="grid grid-col-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-7   overflow-x-auto   pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
             {projects.slice(0,6).map((project) => (
               <ProjectsCard
                 key={project.id}
