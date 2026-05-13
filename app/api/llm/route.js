@@ -6,21 +6,21 @@ export async function GET() {
     skills: ["React","Javascript", "Next.js", "Node.js", "MongoDB", "Tailwind"],
     projects: [
       {
-        name: "Simple Quiz App",
-        description: "A basic JavaScript quiz application.",
-        link: "https://adebayo-jzs.github.io/examhelp"
+        name: "PageForge", 
+        description: "Transform your product ideas into high-conversion landing pages in seconds using Gemini AI. No coding required.",
+        link: "https://pageforge-nu.vercel.app",
+         
       },
-      { 
-        name: "Industrial Visit Planning and booking System",
-        description:"Overview and analytics dashboard for an industrial visit planning and booking system for a school project",
-        tools: ["NextJS", "Tailwind","Vanilla CSS","Supabase","Node.js"],
-        link: "https://tourtech.name.ng/admin", 
-  },
+      {
+        name: "Focus Mode", 
+        description: "Chrome Extension for blocking distracting sites on demand. Stay in the zone.", 
+        link: "https://github.com/adebayo-jzs/focus-mode", 
+      },
     ],
     social: {
+      twitter: "https://x.com/theebayo",
       github: "https://github.com/adebayo-jzs",
       linkedin: "https://linkedin.com/in/theebayo",
-      twitter: "https://x.com/theebayo"
     }
   };
 
