@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Allow: /api/llm
+Allow: /projects
+Allow: /projects/*
+Allow: /blog
 Sitemap: https://theebayo.name.ng/sitemap.xml
 
  
