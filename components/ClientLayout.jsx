@@ -29,7 +29,7 @@ export default function ClientLayout({ children }) {
     <ThemeProvider
       attribute="class"
       defaultTheme="dark"
-      enableSystem
+      // enableSystem
       disableTransitionOnChange
     >
       <CursorWrapper>
