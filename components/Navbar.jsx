@@ -36,9 +36,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8 uppercase font-bold">
           <NavLink href="/#about">About</NavLink>
           <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/#experience">Education</NavLink>
+          {/* <NavLink href="/#experience">Education</NavLink> */}
           <NavLink href="/blog">Insights</NavLink>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
 
         {/* CTA Button */}
