@@ -293,7 +293,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
 
             {/* <section className="flex flex-col justify-center py-20" id="experience"> */}
-            <div className="lg:col-span-7">
+            <div className=" lg:col-spa-7 hidden">
               <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-foreground">
                 Education <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 03</span>
               </h2>
@@ -328,6 +328,12 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline">
                 <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
                   <TechIcon name="React" className="w-8 h-8 md:w-12 md:h-12" /> React
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
+                  <TechIcon name="Framer" className="w-6 h-6 md:w-8 md:h-8" /> Framer
+                </span>
+                <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
+                  <TechIcon name="React" className="w-8 h-8 md:w-12 md:h-12" /> Wordpress
                 </span>
                 <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
                   <TechIcon name="Node.js" className="w-6 h-6 md:w-8 md:h-8" /> Node.js
