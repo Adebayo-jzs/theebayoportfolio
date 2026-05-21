@@ -65,10 +65,10 @@ const TechIcon = ({ name, className = "w-5 h-5" }) => {
       "https://cdn.simpleicons.org/tailwindcss",
     ],
     "Vanilla CSS": [
-      "https://cdn.simpleicons.org/css3/1572B6",
+      "https://cdn.simpleicons.org/css/1572B6",
     ],
     "CSS":         [
-      "https://cdn.simpleicons.org/css3/1572B6",
+      "https://cdn.simpleicons.org/css/1572B6",
     ],
     "Gemini API":  [
       "https://cdn.simpleicons.org/googlegemini",
