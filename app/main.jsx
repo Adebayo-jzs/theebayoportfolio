@@ -210,7 +210,7 @@ export default function HomePage() {
                 I specialize in both frontend and backend development, continuously exploring new technologies and methodologies to stay at the forefront of web development. My main goal is to become a proficient web developer by consistently exploring how technology can be applied to solve real-world problems in our daily lives.
               </p>
             </div>
-            <div>
+            <div className="hidden">
               <h2 className="text-3xl md:text-4xl mb-5 font-black tracking-tight flex items-center gap-4 text-foreground">Favourite Tracks</h2>
               <iframe
                 title="Spotify Embed: Recommendation Playlist "
@@ -330,22 +330,23 @@ export default function HomePage() {
                   <TechIcon name="React" className="w-8 h-8 md:w-12 md:h-12" /> React
                 </span>
                 <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
-                  <TechIcon name="Framer" className="w-6 h-6 md:w-8 md:h-8" /> Framer
-                </span>
-                <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
-                  <TechIcon name="React" className="w-8 h-8 md:w-12 md:h-12" /> Wordpress
-                </span>
-                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
                   <TechIcon name="Node.js" className="w-6 h-6 md:w-8 md:h-8" /> Node.js
                 </span>
                 <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/80">
                   <TechIcon name="Javascript" className="w-4 h-4 md:w-6 md:h-6" /> Javascript
                 </span>
+                <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
+                  <TechIcon name="WordPress" className="w-8 h-8 md:w-12 md:h-12" /> Wordpress
+                </span>
+                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
+                  <TechIcon name="Framer" className="w-6 h-6 md:w-8 md:h-8" /> 
+                   Framer
+                </span>
                 <span className="flex items-center gap-2 text-3xl md:text-5xl font-black text-foreground">
                   <TechIcon name="HTML" className="w-6 h-6 md:w-10 md:h-10" /> HTML
                 </span>
                 <span className="flex items-center gap-2 text-2xl md:text-3xl font-bold text-foreground/85">
-                  <TechIcon name="Next.js" className="w-6 h-6 md:w-8 md:h-8" /> Next.js
+                  <TechIcon name="NextJS" className="w-6 h-6 md:w-8 md:h-8" /> Next.js
                 </span>
                 <span className="flex items-center gap-2 text-3xl md:text-5xl font-black outline-text">
                   <TechIcon name="MongoDB" className="w-6 h-6 md:w-10 md:h-10" /> MongoDB
