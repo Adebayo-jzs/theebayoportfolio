@@ -206,7 +206,7 @@
 </div>
 </div>
 <div class="w-full flex justify-between items-center py-10 border-t border-white/20 text-white text-xs font-black tracking-[0.4em]">
-<p>© 2024 ADEDEJI ADEBAYO</p>
+<p>© 2024 ADEDEJI SAMOD</p>
 <div class="flex gap-12">
 <a class="hover:underline underline-offset-4 transition-all" href="#">PRIVACY POLICY</a>
 <a class="hover:underline underline-offset-4 transition-all" href="#">TERMS</a>

@@ -64,4 +64,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-Developed by **Adedeji Adebayo (Theebayo)** - [Connect with me on LinkedIn](https://www.linkedin.com/in/theebayo/)
+Developed by **Adedeji Samod (Theebayo)** - [Connect with me on LinkedIn](https://www.linkedin.com/in/theebayo/)

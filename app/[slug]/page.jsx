@@ -51,7 +51,7 @@ export async function generateMetadata({ params }) {
             type: "article",
             publishedTime: post.created_at,
             modifiedTime: post.updated_at,
-            authors: ["Adebayo Adedeji"],
+            authors: ["Samod Adedeji"],
             images: [
                 {
                     url: `https://theebayo.name.ng/${post.slug}/opengraph-image`,
@@ -113,7 +113,7 @@ export default async function BlogPostPage({ params }) {
         dateModified: post.updated_at,
         author: {
             "@type": "Person",
-            name: "Adebayo Adedeji",
+            name: "Samod Adedeji",
             url: "https://theebayo.name.ng",
             sameAs: [
                 "https://twitter.com/theebayo",

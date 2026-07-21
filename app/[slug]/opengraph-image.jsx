@@ -123,7 +123,7 @@ export default async function Image({ params }) {
                     height="60" 
                     style={{ borderRadius: "50%", marginRight: "20px", border: "2px solid rgba(255,255,255,0.2)" }} 
                 /> */}
-                <div style={{ fontSize: "30px", fontWeight: "bold", color: "#00e6ff" }}>Adebayo Adedeji</div>
+                <div style={{ fontSize: "30px", fontWeight: "bold", color: "#00e6ff" }}>Samod Adedeji</div>
             </div>
             <div
             style={{

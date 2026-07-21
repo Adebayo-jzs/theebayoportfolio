@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
     description: project.desc,
     url: `https://theebayo.name.ng/projects/${project.slug}`,
     openGraph: {
-      title: `${project.projectname} | Adebayo ADEDEJI`,
+      title: `${project.projectname} | Samod ADEDEJI`,
       description: project.desc,
       images: [
         {

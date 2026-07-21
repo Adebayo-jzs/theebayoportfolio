@@ -1,6 +1,6 @@
 export async function GET() {
   const data = {
-    name: "Adebayo Adedeji",
+    name: "Samod Adedeji",
     username: "theebayo",
     role: "Software Developer",
     skills: ["React","Javascript", "Next.js", "Node.js", "MongoDB", "Tailwind"],
@@ -14,12 +14,12 @@ export async function GET() {
       {
         name: "Focus Mode", 
         description: "Chrome Extension for blocking distracting sites on demand. Stay in the zone.", 
-        link: "https://github.com/adebayo-jzs/focus-mode", 
+        link: "https://github.com/Adebayo-jzs/focus-mode", 
       },
     ],
     social: {
-      twitter: "https://x.com/theebayo",
-      github: "https://github.com/adebayo-jzs",
+      twitter: "https://x.com/bytebybayo",
+      github: "https://github.com/Adebayo-jzs",
       linkedin: "https://linkedin.com/in/theebayo",
     }
   };

@@ -5,12 +5,15 @@
 import HomePage from "./main";
 export const metadata = {
   metadataBase: new URL("https://theebayo.name.ng"),
-  title: "Adebayo ADEDEJI | Software Developer",
+  title: "Samod ADEDEJI | Software Developer",
   description:
     "Software Developer specializing in modern full‑stack development with Next.js, React,Node.js and other prominent javascript technologies",
   keywords: [
-    "Adedeji Adebayo",
+    "Adedeji Samod",
+    "Samod Adedeji",
+    "Theebayo dev",
     "Theebayo",
+    "bytebybayo",
     "Theebayo dev",
     "frontend Developer",
     "Framer Developer",
@@ -20,14 +23,13 @@ export const metadata = {
     "Software Developer",
     "Adedeji Samod Adebayo",
     "Adedeji Samod",
-    "Adebayodv",
     "Javascript",
     "Full Stack Developer",
     "Next.js",
     "React",
     "Node.js",
   ],
-  authors: [{ name: "Adedeji Adebayo" }],
+  authors: [{ name: "Adedeji Samod" }],
   robots: {
     index: true,
     follow: true,
@@ -38,20 +40,20 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Adebayo ADEDEJI | Software Developer",
+    title: "Samod ADEDEJI | Software Developer",
     description:
-      "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
+      "Portfolio website for fullstack javascript Developer,Adedeji Samod",
     type: "website",
     images: [
-      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Adebayo Portfolio" }
+      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Samod Portfolio" }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adebayo ADEDEJI | Software Developer",
-    description: "Portfolio website for fullstack javascript Developer,Adedeji Adebayo",
+    title: "Samod ADEDEJI | Software Developer",
+    description: "Portfolio website for fullstack javascript Developer,Adedeji Samod",
     site: "@theebayo",
-    creator: "@theebayo",
+    creator: "@bytebybayo",
     images: ["/og-image.jpg"],
   },
 };
@@ -66,10 +68,10 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: [
-              "Adedeji Adebayo",
+              "Adedeji Samod",
               "Theebayo",
               "Theebayo dev",
-              "Adebayodv"
+              "Samoddv"
             ],
             jobTitle:[ 
               "Software Developer",
@@ -79,9 +81,9 @@ export default function Home() {
             ],
             url: "https://theebayo.name.ng",
             sameAs: [
-              "https://x.com/theebayo",
+              "https://x.com/bytebybayo",
               "https://linkedin.com/in/theebayo",
-              "https://github.com/adebayo-jzs",
+              "https://github.com/Adebayo-jzs",
             ],
           }),
         }}

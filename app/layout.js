@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL("https://theebayo.name.ng"),
   title: {
-    default: "Adebayo ADEDEJI | Software Developer",
-    template: "%s | Adebayo ADEDEJI",
+    default: "Samod Adedeji | Software Developer",
+    template: "%s | Samod Adedeji",
   },
   description: "Fullstack Javascript developer skilled in Next.js, React, Node.js and modern javascript technologies",
-  keywords: ["Adebayo ADEDEJI", "Theebayo", "Software Developer", "Next.js", "React", "Node.js"],
-  authors: [{ name: "Adebayo ADEDEJI" }],
-  creator: "Adebayo ADEDEJI",
+  keywords: ["Samod Adedeji", "Adedeji Samod", "Theebayo","Bytebybayo", "Theebayo dev", "frontend Developer", "Framer Developer", "Framer Website", "Wordpress Developer", "Wordpress Engineer", "Software Developer", "Next.js", "React", "Node.js"],
+  authors: [{ name: "Samod Adedeji" }],
+  creator: "Samod Adedeji",
   robots: {
     index: true,
     follow: true,
@@ -38,18 +38,18 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://theebayo.name.ng",
-    title: "Adebayo ADEDEJI | Software Developer",
+    title: "Samod Adedeji | Software Developer",
     description: "Fullstack Javascript developer skilled in Next.js, React, Node.js and modern javascript technologies",
-    siteName: "Adebayo ADEDEJI Portfolio",
+    siteName: "Samod Adedeji Portfolio",
      images: [
-      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Adebayo Portfolio" }
+      { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Samod Portfolio" }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adebayo ADEDEJI | Software Developer",
+    title: "Samod Adedeji | Software Developer",
     description: "Fullstack Javascript developer skilled in Next.js, React, Node.js and modern javascript technologies",
-    creator: "@theebayo",
+    creator: "@bytebybayo",
     images: ["/og-image.jpg"],
   },
 };
@@ -65,22 +65,22 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Adebayo ADEDEJI",
+              "name": "Samod ADEDEJI",
               image: "https://theebayo.name.ng/avatar.jpg",
-              "alternateName": ["Theebayo", "Adedeji Adebayo", "Adebayodv"],
+              "alternateName": ["Theebayo", "Adedeji Samod", "Bytebybayo"],
               "jobTitle": "FullStack JavaScript Developer",
               "description":"Fullstack Javascript developer skilled in Next.Js,React,Node.js and modern javascript technologies",
               "url": "https://theebayo.name.ng",
               "image": "https://theebayo.name.ng/avatar.jpg",
               "sameAs": [
-                "https://x.com/theebayo",
+                "https://x.com/bytebybayo",
                 "https://linkedin.com/in/theebayo",
-                "https://github.com/adebayo-jzs"
+                "https://github.com/Adebayo-jzs"
               ],
               "socialLinks": [
-                "https://x.com/theebayo",
+                "https://x.com/bytebybayo",
                 "https://linkedin.com/in/theebayo",
-                "https://github.com/adebayo-jzs"
+                "https://github.com/Adebayo-jzs"
               ],
               "knowsAbout": [
                 "Next.js",

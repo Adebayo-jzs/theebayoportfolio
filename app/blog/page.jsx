@@ -4,19 +4,19 @@ import { supabase } from "@/utils/supabase";
 
 export const metadata = {
     metadataBase: new URL("https://theebayo.name.ng/blog"),
-    title: "Adebayo ADEDEJI (theebayo) | Software Developer | Blog",
+    title: "Samod ADEDEJI (theebayo) | Software Developer | Blog",
     description:
         "Sharing insights on Next.js, Software Development and life updates.",
      
     keywords: [
-        "Adedeji Adebayo",
+        "Adedeji Samod",
         "Theebayo",
         "Theebayo dev",
         "frontend Developer",
         "Software Developer",
-        "Adedeji Samod Adebayo",
+        "Adedeji Samod Samod",
         "Adedeji Samod",
-        "Adebayodv",
+        "Samoddv",
         "Javascript",
         "Full Stack Developer",
         "Next.js",
@@ -24,7 +24,7 @@ export const metadata = {
         "Node.js",
         "Tech Blog",
     ],
-    authors: [{ name: "Adedeji Adebayo", url: "https://theebayo.name.ng" }],
+    authors: [{ name: "Adedeji Samod", url: "https://theebayo.name.ng" }],
     robots: {
         index: true,
         follow: true,
@@ -42,7 +42,7 @@ export const metadata = {
         url: "https://theebayo.name.ng/blog",
         siteName: "Theebayo",
         images: [
-            { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Adebayo Portfolio" }
+            { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Samod Portfolio" }
         ],
         locale: 'en_US',
     },
@@ -79,7 +79,7 @@ export default async function Blog() {
         "url": "https://theebayo.name.ng/blog",
         "author": {
             "@type": "Person",
-            "name": "Adedeji Adebayo",
+            "name": "Adedeji Samod",
             "url": "https://theebayo.name.ng"
         }
     };

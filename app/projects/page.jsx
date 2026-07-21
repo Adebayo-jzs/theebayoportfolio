@@ -3,10 +3,10 @@ import { projects } from "@/lib/projects";
 import ProjectsPageContent from "@/components/ProjectsPageContent";
 
 export const metadata = {
-  title: "Adebayo ADEDEJI | Software Developer | Projects",
+  title: "Samod ADEDEJI | Software Developer | Projects",
   description: "A collection of digital products, experiments, and open-source contributions focusing on modern web technologies.",
   openGraph: {
-    title: "Projects | Adebayo ADEDEJI",
+    title: "Projects | Samod ADEDEJI",
     description: "A collection of digital products, experiments, and open-source contributions focusing on modern web technologies.",
   },
   robots: {

@@ -84,7 +84,7 @@ export async function POST(request) {
         await resend.emails.send({
             from: "Theebayo Blog <blog@theebayo.name.ng>",
             to: recipientEmails,
-            subject: `Adebayo just published a post: ${title}`,
+            subject: `Bytebybayo just published a post: ${title}`,
             html: emailHtml,
         });
 
