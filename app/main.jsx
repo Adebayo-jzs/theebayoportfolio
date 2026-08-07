@@ -6,7 +6,7 @@ import { useRef } from "react";
 import ProjectsCard from "@/components/ProjectCard";
 import Contact from "./Contact";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight02Icon ,ArrowLeft02Icon} from '@hugeicons/core-free-icons'
+import { ArrowRight02Icon, ArrowLeft02Icon, AiChat02Icon } from '@hugeicons/core-free-icons';
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import TechIcon from "@/components/TechIcon";
@@ -84,32 +84,28 @@ export default function HomePage() {
     <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground min-h-screen overflow-x-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 ">
         {/* <div className="noise-texture"></div> */}
-        <section className="min-h-screen flex flex-col justify-center relative grid-bg pt-20 lg:pt-0" id="hero">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-27 lg:gap-8 items-center">
-            <div className="order-1 lg:order-1 lg:col-span-7 z-10">
-              {/* <span className="text-foreground/80 tracking-[0.4em] md:tracking-[0.6em] text-xs md:text-sm font-bold font-sans uppercase mb-4 md:mb-6 block">
-                Premium Software Development
-            </span> */}
-            <div className="order-1 lg:order-1 lg:col-span-7 z-10">
+        <section className="min-h-screen flex flex-col justify-center relative grid-bg pt-28 pb-12 lg:py-0" id="hero">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="order-1 lg:col-span-7 z-10">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="mt-8 md:mt-12 flex items-center gap-6"
+                className="mt-4 sm:mt-8 md:mt-12 flex items-center gap-4 sm:gap-6"
               >
-                <div className="h-px w-12 md:w-24 bg-foreground"></div>
-                <p className="text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">SOFTWARE DEVELOPER</p>
+                <div className="h-px w-8 sm:w-12 md:w-24 bg-foreground"></div>
+                <p className="text-xs sm:text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">SOFTWARE DEVELOPER</p>
               </motion.div>
               
-              <div className="overflow-hidden mt-4">
+              <div className="overflow-hidden mt-3 sm:mt-4">
                 <motion.h1 
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                  className="font-outfit leading-[0.85] flex flex-col"
+                  className="font-outfit leading-none flex flex-col gap-1 sm:gap-2"
                 >
-                  <span className="text-7xl md:text-9xl lg:text-[140px] font-black tracking-tighter text-foreground/90">ADEDEJI</span>
-                  <span className="text-7xl md:text-9xl lg:text-[140px] font-black tracking-tighter outline-text opacity-50 -mt-2 md:-mt-4">SAMOD</span>
+                  <span className="font-black tracking-tighter text-foreground/90 whitespace-nowrap text-[clamp(2.75rem,8.8vw,8.75rem)]">ADEDEJI</span>
+                  <span className="font-black tracking-tighter outline-text opacity-50 whitespace-nowrap text-[clamp(2.75rem,8.8vw,8.75rem)]">SAMOD</span>
                 </motion.h1>
               </div>
 
@@ -117,7 +113,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="max-w-2xl text-base md:text-lg mt-6 text-foreground/70 font-medium leading-relaxed"
+                className="max-w-2xl text-sm sm:text-base md:text-lg mt-4 sm:mt-6 text-foreground/70 font-medium leading-relaxed"
               >
                 Year 3 Software Engineering student passionate about creating beautiful, functional websites and web applications using modern technologies.
               </motion.p>
@@ -128,7 +124,7 @@ export default function HomePage() {
               >
                 <a
                   href="#contact"
-                  className="mt-8 group relative inline-flex items-center gap-3 py-4 px-10 bg-foreground text-background font-black uppercase tracking-widest overflow-hidden transition-all hover:pr-14"
+                  className="mt-6 sm:mt-8 group relative inline-flex items-center gap-3 py-3.5 px-8 sm:py-4 sm:px-10 bg-foreground text-background font-black uppercase tracking-widest overflow-hidden transition-all hover:pr-14 text-xs sm:text-sm"
                 >
                   <span className="relative z-10">Hire Me!</span>
                   <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-background/10 opacity-40 group-hover:animate-shine" />
@@ -139,8 +135,7 @@ export default function HomePage() {
               </motion.div>
             </div>
 
-            </div>
-            <div className="hidden order-2 lg:order-2 lg:col-span-5 relative  justify-center lg:justify-end py-12 lg:py-0">
+            <div className="hidden order-2 lg:col-span-5 relative justify-center lg:justify-end py-12 lg:py-0">
               <motion.div
                 className="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px]"
                 animate={{
@@ -197,6 +192,54 @@ export default function HomePage() {
             </div> 
           </div> 
         </section>
+
+        {/* Ask Bayo – Chat CTA */}
+        <section className="py-8 md:py-14">
+          <Link
+            href="/chat"
+            id="ask-bayo-cta"
+            className="group relative block overflow-hidden border border-border/40 hover:border-foreground/30 rounded-2xl transition-all duration-500 hover:shadow-lg hover:shadow-foreground/5 bg-card/40 backdrop-blur-sm"
+          >
+            {/* Subtle gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <div className="relative flex items-center justify-between gap-4 sm:gap-6 px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7">
+              {/* Left: Icon + Text */}
+              <div className="flex items-center gap-3.5 sm:gap-5 min-w-0">
+                {/* Pulsing avatar container with SVG icon */}
+                <div className="relative shrink-0">
+                  <div className="w-11 h-11 sm:w-13 sm:h-13 md:w-14 md:h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform duration-300">
+                    <HugeiconsIcon icon={AiChat02Icon} size={24} className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  {/* Pulse ring */}
+                  <span className="absolute -top-0.5 -right-0.5 flex h-3 w-3 sm:h-3.5 sm:w-3.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex rounded-full h-3 w-3 sm:h-3.5 sm:w-3.5 bg-emerald-500 border-2 border-background" />
+                  </span>
+                </div>
+
+                <div className="min-w-0">
+                  <h3 className="text-base sm:text-lg font-black text-foreground tracking-tight truncate">
+                    Ask about Bayo
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 line-clamp-2 sm:line-clamp-1">
+                    Chat with an AI that knows my projects, skills & experience
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Arrow */}
+              <div className="shrink-0 w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full border border-border/50 group-hover:border-foreground group-hover:bg-foreground group-hover:text-background flex items-center justify-center transition-all duration-300">
+                <HugeiconsIcon
+                  icon={ArrowRight02Icon}
+                  size={20}
+                  className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-0.5 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </Link>
+        </section>
+
         <section id="about" className="py-20 md:py-32">
           <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
             About <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 01</span>
