@@ -72,7 +72,7 @@ export default function AskAboutBayo() {
 
   const handleSend = async () => {
     const question = input.trim();
-    if (!question || isLoading) return;
+    if (!question || question.length > 500 || isLoading) return;
 
     // Add user message
     const userMessage = { role: "user", content: question };
@@ -404,39 +404,46 @@ export default function AskAboutBayo() {
 
               {/* Input area */}
               <div className="shrink-0 z-30 bg-background/95 backdrop-blur-md border-t border-border/30 px-4 py-3 sm:pb-5">
-                <div className="flex items-end gap-2.5">
-                  {/* Text input */}
-                  <div className="flex-1 bg-card border border-border/60 rounded-2xl px-3.5 py-2 sm:px-4 sm:py-2.5 shadow-sm focus-within:border-foreground/30 transition-colors duration-200">
-                    <textarea
-                      ref={inputRef}
-                      id="chat-input"
-                      value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      onKeyDown={handleKeyDown}
-                      placeholder="Ask anything about Bayo..."
-                      rows={1}
-                      className="w-full resize-none bg-transparent text-base md:text-sm text-foreground placeholder:text-muted-foreground outline-none max-h-28 leading-relaxed"
-                      style={{
-                        height: "auto",
-                        overflowY:
-                          input.split("\n").length > 3 ? "auto" : "hidden",
-                      }}
-                      onInput={(e) => {
-                        e.target.style.height = "auto";
-                        e.target.style.height =
-                          Math.min(e.target.scrollHeight, 112) + "px";
-                      }}
-                    />
-                  </div>
+                {/* Unified Input Capsule with Send Button Inside */}
+                <div className="flex items-end bg-card border border-border/60 rounded-3xl p-1.5 sm:p-2 shadow-sm focus-within:border-foreground/40 focus-within:shadow-md transition-all duration-200">
+                  <textarea
+                    ref={inputRef}
+                    id="chat-input"
+                    value={input}
+                    maxLength={500}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Ask anything about Bayo..."
+                    rows={1}
+                    className="flex-1 bg-transparent pl-3.5 pr-2 py-1.5 text-base md:text-sm text-foreground placeholder:text-muted-foreground outline-none max-h-28 leading-relaxed resize-none"
+                    style={{
+                      height: "auto",
+                      overflowY:
+                        input.split("\n").length > 3 ? "auto" : "hidden",
+                    }}
+                    onInput={(e) => {
+                      e.target.style.height = "auto";
+                      e.target.style.height =
+                        Math.min(e.target.scrollHeight, 112) + "px";
+                    }}
+                  />
 
-                  {/* Circular send button */}
+                  {/* Character counter (appears when approaching limit >= 400) */}
+                  {input.length >= 400 && (
+                    <span className="text-[10px] tabular-nums text-muted-foreground self-center px-1 font-mono transition-opacity duration-200">
+                      {input.length}/500
+                    </span>
+                  )}
+
+                  {/* Send button inside input capsule */}
                   <button
                     id="send-btn"
                     onClick={handleSend}
                     disabled={!input.trim() || isLoading}
-                    className="shrink-0 w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center transition-all duration-200 hover:opacity-80 disabled:opacity-20 disabled:cursor-not-allowed active:scale-90 mb-0.5 cursor-pointer"
+                    className="shrink-0 w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-foreground text-background flex items-center justify-center transition-all duration-200 hover:opacity-80 disabled:opacity-20 disabled:cursor-not-allowed active:scale-90 cursor-pointer self-end mb-0.5 mr-0.5"
+                    aria-label="Send message"
                   >
-                    <HugeiconsIcon icon={ArrowUp02Icon} size={18} />
+                    <HugeiconsIcon icon={ArrowUp02Icon} size={16} />
                   </button>
                 </div>
               </div>

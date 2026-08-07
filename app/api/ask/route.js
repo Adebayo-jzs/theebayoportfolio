@@ -13,12 +13,27 @@ export async function POST(request) {
       );
     }
 
+    if (body.question.trim().length > 500) {
+      return Response.json(
+        { error: "Question cannot exceed 500 characters." },
+        { status: 400 }
+      );
+    }
+
     // Support multiple environment variable naming conventions with local fallback
-    const rawBaseUrl =
+    let rawBaseUrl = (
       process.env.BACKEND_BASE_URL ||
       process.env.BACKEND_URL ||
       process.env.NEXT_PUBLIC_BACKEND_URL ||
-      "http://localhost:5000";
+      "http://localhost:5000"
+    ).trim();
+
+    // Ensure protocol is present (e.g. if env variable was set as askaboutbayo.pxxl.click)
+    if (!/^https?:\/\//i.test(rawBaseUrl)) {
+      const isLocal =
+        rawBaseUrl.startsWith("localhost") || rawBaseUrl.startsWith("127.0.0.1");
+      rawBaseUrl = `${isLocal ? "http" : "https"}://${rawBaseUrl}`;
+    }
 
     // Clean base URL (strip trailing slashes)
     const baseUrl = rawBaseUrl.replace(/\/+$/, "");
@@ -70,7 +85,7 @@ export async function POST(request) {
     return Response.json(
       {
         error:
-          "Something went wrong. TRy agin later.",
+          "Something went wrong. Please try again later.",
       },
       { status: 502 }
     );
