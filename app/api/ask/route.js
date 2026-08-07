@@ -30,11 +30,22 @@ export async function POST(request) {
       ? `${baseUrl}/ask`
       : `${baseUrl}/api/ask`;
 
+    // Forward real client IP for rate-limiting
+    const clientIp =
+      request.headers.get("x-forwarded-for") ||
+      request.headers.get("x-real-ip") ||
+      "";
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+    if (clientIp) {
+      headers["x-forwarded-for"] = clientIp;
+    }
+
     const backendResponse = await fetch(targetUrl, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers,
       body: JSON.stringify({ question: body.question.trim() }),
       cache: "no-store",
     });
