@@ -70,7 +70,7 @@ export async function POST(request) {
     return Response.json(
       {
         error:
-          "Failed to connect to the AI backend. Please verify that the backend server is running.",
+          "Something went wrong. TRy agin later.",
       },
       { status: 502 }
     );
