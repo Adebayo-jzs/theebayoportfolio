@@ -4,7 +4,7 @@ import { supabase } from "@/utils/supabase";
 
 export const metadata = {
     metadataBase: new URL("https://theebayo.name.ng/blog"),
-    title: "Samod ADEDEJI (theebayo) | Software Developer | Blog",
+    title: "Samod ADEDEJI (bytebybayo | Software Developer | Blog",
     description:
         "Sharing insights on Next.js, Software Development and life updates.",
      

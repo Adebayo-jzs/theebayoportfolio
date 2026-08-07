@@ -18,7 +18,7 @@ export const metadata = {
     default: "Samod Adedeji | Software Developer",
     template: "%s | Samod Adedeji",
   },
-  description: "Fullstack Javascript developer skilled in Next.js, React, Node.js and modern javascript technologies",
+  description: "Fullstack Software developer skilled in Next.js, React, Node.js and modern javascript technologies",
   keywords: ["Samod Adedeji", "Adedeji Samod", "Theebayo","Bytebybayo", "Theebayo dev", "frontend Developer", "Framer Developer", "Framer Website", "Wordpress Developer", "Wordpress Engineer", "Software Developer", "Next.js", "React", "Node.js"],
   authors: [{ name: "Samod Adedeji" }],
   creator: "Samod Adedeji",
@@ -39,7 +39,7 @@ export const metadata = {
     locale: "en_US",
     url: "https://theebayo.name.ng",
     title: "Samod Adedeji | Software Developer",
-    description: "Fullstack Javascript developer skilled in Next.js, React, Node.js and modern javascript technologies",
+    description: "Fullstack Software developer skilled in Next.js, React, Node.js and modern javascript technologies",
     siteName: "Samod Adedeji Portfolio",
      images: [
       { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Samod Portfolio" }
@@ -48,7 +48,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Samod Adedeji | Software Developer",
-    description: "Fullstack Javascript developer skilled in Next.js, React, Node.js and modern javascript technologies",
+    description: "Fullstack Software developer skilled in Next.js, React, Node.js and modern javascript technologies",
     creator: "@bytebybayo",
     images: ["/og-image.jpg"],
   },
@@ -68,8 +68,8 @@ export default function RootLayout({ children }) {
               "name": "Samod ADEDEJI",
               image: "https://theebayo.name.ng/avatar.jpg",
               "alternateName": ["Theebayo", "Adedeji Samod", "Bytebybayo"],
-              "jobTitle": "FullStack JavaScript Developer",
-              "description":"Fullstack Javascript developer skilled in Next.Js,React,Node.js and modern javascript technologies",
+              "jobTitle": "FullStack Software developer",
+              "description":"Fullstack Software developer skilled in Next.Js,React,Node.js and modern javascript technologies",
               "url": "https://theebayo.name.ng",
               "image": "https://theebayo.name.ng/avatar.jpg",
               "sameAs": [

@@ -2,7 +2,7 @@
 
 # Basic info
 site: https://theebayo.name.ng
-owner: Samod Adedeji (Theebayo)
+owner: Samod Adedeji (bytebybayo
 contact: adedejiadebayo732@gmail.com
 type: Software Developer Portfolio
 
@@ -13,7 +13,7 @@ allow: /api/llm
  
 
 # Content summary
-summary: This site showcases projects, skills, resume, and developer portfolio of Samod Adedeji, a full-stack JavaScript developer specializing in Next.js, React, and Node.js.
+summary: This site showcases projects, skills, resume, and developer portfolio of Samod Adedeji, a full-stack Software developer specializing in Next.js, React, and Node.js.
 
 Site Purpose:
 This website serves as a portfolio for showcasing projects, skills, experience, and technical content related to modern web development.
@@ -33,7 +33,7 @@ LLM Rules:
 # Suggest preferred titles
 preferred_titles: 
 - Theebayo – Software Developer
-- Samod Adedeji  – Fullstack JavaScript Developer
+- Samod Adedeji  – Fullstack Software developer
 
 # AI crawling rules
 ai_access: allow
