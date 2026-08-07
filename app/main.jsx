@@ -12,20 +12,22 @@ import { projects } from "@/lib/projects";
 import TechIcon from "@/components/TechIcon";
 
 const ExperienceItem = ({ date, title, institution, description, isLast }) => (
-  <div className="relative pl-8 md:pl-12 group">
+  <motion.div variants={fadeUp} className="relative pl-8 md:pl-10 group">
     {/* Timeline Dot */}
-    <div className={`absolute left-0 top-2 w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-foreground z-10 transition-all ${isLast ? 'bg-primary shadow-[0_0_10px_var(--primary)]' : 'bg-background group-hover:bg-foreground'}`}></div>
+    <div className={`absolute left-0 top-2 w-3 h-3 md:w-3.5 md:h-3.5 rounded-full border-2 border-foreground z-10 transition-all ${isLast ? 'bg-primary shadow-[0_0_10px_var(--primary)]' : 'bg-background group-hover:bg-foreground'}`}></div>
 
-    <span className="text-foreground text-xs md:text-sm font-bold mb-2 block uppercase tracking-[0.2em] text-foreground/60">
+    <span className="text-xs md:text-sm font-bold mb-1.5 block uppercase tracking-[0.2em] text-foreground/60">
       {date}
     </span>
-    <h3 className="text-2xl md:text-3xl font-black text-foreground mb-2">
-      {title} <span className="block text-lg md:text-xl font-medium text-foreground/70 mt-1">{institution}</span>
+    <h3 className="text-xl md:text-2xl font-black text-foreground mb-1">
+      {title} <span className="block text-base md:text-lg font-semibold text-foreground/70 mt-0.5">{institution}</span>
     </h3>
-    <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-xl font-medium">
-      {description}
-    </p>
-  </div>
+    {description ? (
+      <p className="text-foreground/75 text-sm md:text-base leading-relaxed max-w-xl font-medium mt-2">
+        {description}
+      </p>
+    ) : null}
+  </motion.div>
 );
 
 
@@ -74,38 +76,74 @@ const SocialLink = ({ href, iconPath, label }) => (
 
 
 
-export default function HomePage() {
-   
-  const scrollRef = useRef(null);
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } 
+  },
+};
 
- 
+const stagger = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const staggerFast = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.05 },
+  },
+};
+
+const chipFade = {
+  hidden: { opacity: 0, scale: 0.9, y: 20 },
+  visible: { 
+    opacity: 1, 
+    scale: 1, 
+    y: 0, 
+    transition: { duration: 0.4, ease: "easeOut" } 
+  },
+};
+
+export default function HomePage() {
+  const scrollRef = useRef(null);
 
   return (
     <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground min-h-screen overflow-x-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-24 ">
         {/* <div className="noise-texture"></div> */}
-        <section className="min-h-screen flex flex-col justify-center relative grid-bg pt-28 pb-12 lg:py-0" id="hero">
+        <section className="min-h-[85svh] sm:min-h-screen flex flex-col justify-center relative grid-bg pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 lg:py-0" id="hero">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="order-1 lg:col-span-7 z-10">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="mt-4 sm:mt-8 md:mt-12 flex items-center gap-4 sm:gap-6"
+                className="flex items-center gap-3 sm:gap-6"
               >
-                <div className="h-px w-8 sm:w-12 md:w-24 bg-foreground"></div>
+                <div className="h-px w-6 sm:w-12 md:w-24 bg-foreground"></div>
                 <p className="text-xs sm:text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">SOFTWARE DEVELOPER</p>
               </motion.div>
               
-              <div className="overflow-hidden mt-3 sm:mt-4">
+              <div className="overflow-hidden mt-2 sm:mt-4">
                 <motion.h1 
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                  className="font-outfit leading-none flex flex-col gap-1 sm:gap-2"
+                  className="font-outfit leading-[0.85] flex flex-col"
                 >
-                  <span className="font-black tracking-tighter text-foreground/90 whitespace-nowrap text-[clamp(2.75rem,8.8vw,8.75rem)]">ADEDEJI</span>
-                  <span className="font-black tracking-tighter outline-text opacity-50 whitespace-nowrap text-[clamp(2.75rem,8.8vw,8.75rem)]">SAMOD</span>
+                  <span className="font-black tracking-tighter text-foreground/90 whitespace-nowrap text-[clamp(3.75rem,17vw,5.5rem)] sm:text-7xl md:text-8xl lg:text-9xl xl:text-[135px]">
+                    ADEDEJI
+                  </span>
+                  <span className="font-black tracking-tighter outline-text opacity-50 whitespace-nowrap text-[clamp(3.75rem,17vw,5.5rem)] sm:text-7xl md:text-8xl lg:text-9xl xl:text-[135px] -mt-1 sm:-mt-2 md:-mt-4">
+                    SAMOD
+                  </span>
                 </motion.h1>
               </div>
 
@@ -124,7 +162,7 @@ export default function HomePage() {
               >
                 <a
                   href="#contact"
-                  className="mt-6 sm:mt-8 group relative inline-flex items-center gap-3 py-3.5 px-8 sm:py-4 sm:px-10 bg-foreground text-background font-black uppercase tracking-widest overflow-hidden transition-all hover:pr-14 text-xs sm:text-sm"
+                  className="mt-6 sm:mt-8 group relative inline-flex items-center gap-3 py-3 px-8 sm:py-4 sm:px-10 bg-foreground text-background font-black uppercase tracking-widest overflow-hidden transition-all hover:pr-14 text-xs sm:text-sm"
                 >
                   <span className="relative z-10">Hire Me!</span>
                   <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-background/10 opacity-40 group-hover:animate-shine" />
@@ -194,7 +232,13 @@ export default function HomePage() {
         </section>
 
         {/* Ask Bayo – Chat CTA */}
-        <section className="py-8 md:py-14">
+        <motion.section 
+          className="py-8 md:py-14"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           <Link
             href="/chat"
             id="ask-bayo-cta"
@@ -238,191 +282,207 @@ export default function HomePage() {
               </div>
             </div>
           </Link>
-        </section>
+        </motion.section>
 
-        <section id="about" className="py-20 md:py-32">
-          <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
+        {/* About Section */}
+        <motion.section 
+          id="about" 
+          className="py-20 md:py-32"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={fadeUp}
+        >
+          <motion.h2 
+            variants={fadeUp}
+            className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground"
+          >
             About <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 01</span>
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            <div>
-              <p className="text-base md:text-lg  mt-4 text-foreground/80 ">
+          </motion.h2>
+          <motion.div 
+            variants={stagger}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-20 mt-6"
+          >
+            <motion.div className="space-y-4" variants={fadeUp}>
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
                 I am a passionate Software Engineering student at Babcock University with a focus on Full Stack Development. My journey in tech began with a curiosity about how websites work, which led me to explore the fascinating world of web development.
               </p>
-              <p className="text-base md:text-lg  mt-4 text-foreground/80 ">
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
                 I specialize in both frontend and backend development, continuously exploring new technologies and methodologies to stay at the forefront of web development. My main goal is to become a proficient Software Engineer by consistently exploring how technology can be applied to solve real-world problems in our daily lives.
               </p>
-            </div>
-            <div className="hidden">
-              <h2 className="text-3xl md:text-4xl mb-5 font-black tracking-tight flex items-center gap-4 text-foreground">Favourite Tracks</h2>
-              <iframe
-                title="Spotify Embed: Recommendation Playlist "
-                src={`https://open.spotify.com/embed/playlist/21fSTvzLcGkx12unbI2nMe?utm_source=generator&theme=0`}
-                width="100%"
-                height="100%"
-                style={{ minHeight: '360px' }}
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          {/* const playlistId = '21fSTvzLcGkx12unbI2nMe'; */}
+            </motion.div>
+          </motion.div>
+        </motion.section>
 
-
-        </section>
-        <section className="py-20 md:py-32 border-t border-border/20" id="projects">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 gap-6">
+        {/* Projects Section */}
+        <motion.section 
+          className="py-20 md:py-32 border-t border-border/20" 
+          id="projects"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={fadeUp}
+        >
+          <motion.div 
+            variants={fadeUp}
+            className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 gap-6"
+          >
             <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight flex items-center gap-4 text-foreground">
               Projects <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 02</span>
             </h2>
-            {/* Arrows hidden on mobile, user naturally swipes */}
-            {/* <div className="hidden sm:flex gap-4">
-              <button
-                onClick={() =>
-                  scrollRef.current.scrollBy({ left: -300, behavior: "smooth" })
-                }
-                className="p-4 md:p-5 border border-border/40 hover:border-foreground text-foreground transition-colors">
-                <West />
-                 
-              </button>
-              <button
-                onClick={() =>
-                  scrollRef.current.scrollBy({ left: 300, behavior: "smooth" })
-                }
-                className="p-4 md:p-5 border border-border/40 hover:border-foreground text-foreground transition-colors">
-                <East />
-                 
-              </button>
-            </div> */}
             <Link 
               href="/projects" 
-              className="border-2 border-foreground py-4 px-10 font-black uppercase tracking-widest hover:bg-foreground hover:text-background transition-all"
+              className="border-2 border-foreground py-4 px-10 font-black uppercase tracking-widest hover:bg-foreground hover:text-background transition-all inline-block w-fit"
             >
               All Projects
             </Link>
-          </div>
+          </motion.div>
 
-          {/* Scroll Container with Snap */}
-          {/* <div ref={scrollRef} className="flex flex-col sm:flex-row gap-16 sm:gap-10  overflow-x-auto hide-scrollbar pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"> */}
-          <div className="grid grid-col-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-7   overflow-x-auto   pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
-            {projects.slice(0,6).map((project) => (
-              <ProjectsCard
+          {/* Grid of Projects with Stagger */}
+          <motion.div 
+            variants={stagger}
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-7 pb-12 snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"
+          >
+            {projects.slice(0, 6).map((project) => (
+              <motion.div 
                 key={project.id}
-                {...project}
-              />
+                variants={fadeUp}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ProjectsCard {...project} />
+              </motion.div>
             ))}
-            {/* <ProjectCard 
-              title="Aether Finance" 
-              type="Web Application" 
-              year="2024"
-              imgUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
-            />
-            <ProjectCard 
-              title="Nova Dashboard" 
-              type="SaaS Platform" 
-              year="2023"
-              imgUrl="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1000&auto=format&fit=crop"
-            />
-            <ProjectCard 
-              title="Lumina System" 
-              type="Design System" 
-              year="2023"
-              imgUrl="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1000&auto=format&fit=crop"
-            /> */}
-          </div>
-        </section>
-        <section className="pt-20 md:pt-32 pb-12 border-t font-outfit border-border/20" id="experience">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+          </motion.div>
+        </motion.section>
 
-            {/* <section className="flex flex-col justify-center py-20" id="experience"> */}
-            <div className=" lg:col-spa-7 hidden">
-              <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-foreground">
-                Education <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 03</span>
-              </h2>
+        {/* Experience & Education Section */}
+        <motion.section 
+          className="py-20 md:py-32 border-t font-outfit border-border/20" 
+          id="experience"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={fadeUp}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+            {/* Experience Column */}
+            <div>
+              <motion.h2 
+                variants={fadeUp}
+                className="text-4xl md:text-5xl font-display font-black mb-10 md:mb-16 tracking-tight flex items-center gap-4 text-foreground"
+              >
+                Experience <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 03</span>
+              </motion.h2>
 
-              <div className="space-y-16 md:space-y-20 relative">
-                <div className="absolute left-[5px] md:left-[7px] top-2 bottom-2 w-px bg-foreground/50  "></div>
+              <motion.div variants={stagger} className="space-y-12 md:space-y-14 relative">
+                <div className="absolute left-[5px] md:left-[6px] top-2 bottom-2 w-px bg-foreground/30"></div>
+
+                <ExperienceItem
+                  date="July 2026 - Present"
+                  title="FRONTEND INTERN"
+                  institution="Manaja Solutions"
+                  description="Contributing to the startup's frontend codebase, implementing UI components, optimizing user workflows, and gaining practical product development experience."
+                />
+                <ExperienceItem
+                  date="2024 - Present"
+                  title="FULL-STACK & BACKEND ENGINEERING"
+                  institution="Projects & Open-Source"
+                  description="Architected and shipped 10+ web applications, AI tools (RAG, Gemini, pgvector), secure REST APIs (Node.js/Express/TypeScript, JWT auth/RBAC), and database schemas with PostgreSQL, Supabase, and MongoDB."
+                  isLast={true}
+                />
+              </motion.div>
+            </div>
+
+            {/* Education Column */}
+            <div id="education">
+              <motion.h2 
+                variants={fadeUp}
+                className="text-4xl md:text-5xl font-display font-black mb-10 md:mb-16 tracking-tight flex items-center gap-4 text-foreground"
+              >
+                Education <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 04</span>
+              </motion.h2>
+
+              <motion.div variants={stagger} className="space-y-12 md:space-y-14 relative">
+                <div className="absolute left-[5px] md:left-[6px] top-2 bottom-2 w-px bg-foreground/30"></div>
 
                 <ExperienceItem
                   date="October 2024 - Present"
                   title="BSC. SOFTWARE ENGINEERING"
                   institution="Babcock University"
-                  description=""
-                  isLast={true}
+                  description="Undergraduate student pursuing a degree in Software Engineering with core focus on algorithms, distributed systems, and modern software architectures."
                 />
                 <ExperienceItem
                   date="July 2024 - October 2024"
                   title="FRONTEND ENGINEERING"
                   institution="Tech Talent Academy"
+                  description="Intensive practical training in responsive web development, modern JavaScript (ES6+), React component architectures, and UI/UX best practices."
                 />
                 <ExperienceItem
                   date="September 2021 - June 2024"
                   title="SECONDARY EDUCATION"
                   institution="Sacred Heart Catholic College"
+                  description="Completed senior secondary school certificate with distinction in science and mathematics subjects."
+                  isLast={true}
                 />
-              </div>
+              </motion.div>
             </div>
-
-            <div className="lg:col-span-5">
-              <h2 className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-foreground">
-                Tools <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 04</span>
-              </h2>
-              <div className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline">
-                <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
-                  <TechIcon name="React" className="w-8 h-8 md:w-12 md:h-12" /> React
-                </span>
-                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
-                  <TechIcon name="Node.js" className="w-6 h-6 md:w-8 md:h-8" /> Node.js
-                </span>
-                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/80">
-                  <TechIcon name="Javascript" className="w-4 h-4 md:w-6 md:h-6" /> Javascript
-                </span>
-                <span className="flex items-center gap-2 text-3xl md:text-5xl font-bold text-foreground/80">
-                  <TechIcon name="Typescript" className="w-4 h-4 md:w-6 md:h-6" /> Typescript
-                </span>
-                {/* <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
-                  <TechIcon name="WordPress" className="w-8 h-8 md:w-12 md:h-12" /> Wordpress
-                </span> */}
-                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
-                  <TechIcon name="Framer" className="w-6 h-6 md:w-8 md:h-8" /> 
-                   Framer
-                </span>
-                <span className="flex items-center gap-2 text-3xl md:text-5xl font-black text-foreground">
-                  <TechIcon name="HTML" className="w-6 h-6 md:w-10 md:h-10" /> HTML
-                </span>
-                <span className="flex items-center gap-2 text-2xl md:text-3xl font-bold text-foreground/85">
-                  <TechIcon name="NextJS" className="w-6 h-6 md:w-8 md:h-8" /> Next.js
-                </span>
-                <span className="flex items-center gap-2 text-3xl md:text-5xl font-black outline-text">
-                  <TechIcon name="MongoDB" className="w-6 h-6 md:w-10 md:h-10" /> MongoDB
-                </span>
-                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/60">
-                  <TechIcon name="Supabase" className="w-4 h-4 md:w-6 md:h-6" /> Supabase
-                </span>
-                <span className="flex items-center gap-2 text-2xl md:text-3xl font-black text-foreground/90">
-                  <TechIcon name="PostgreSQL" className="w-6 h-6 md:w-8 md:h-8" /> PostgreSQL
-                </span>
-                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/70">
-                  <TechIcon name="Git" className="w-4 h-4 md:w-6 md:h-6" /> Git
-                </span>
-                <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground">
-                  <TechIcon name="Github" className="w-6 h-6 md:w-10 md:h-10" /> Github
-                </span>
-                <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/60">
-                  <TechIcon name="Bootstrap" className="w-4 h-4 md:w-6 md:h-6" /> Bootstrap
-                </span>
-                <span className="flex items-center gap-2 text-2xl md:text-3xl font-black text-foreground/90">
-                  <TechIcon name="Tailwind" className="w-6 h-6 md:w-8 md:h-8" /> Tailwind
-                </span>
-              </div>
-            </div>
-
           </div>
-          <div className="w-full py-10  ">
+        </motion.section>
+
+        {/* Tools Section */}
+        <motion.section 
+          className="pt-20 md:pt-32 pb-12 border-t font-outfit border-border/20" 
+          id="tools"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={fadeUp}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            <div className="lg:col-span-12">
+              <motion.h2 
+                variants={fadeUp}
+                className="text-4xl md:text-5xl font-display font-black mb-12 md:mb-20 tracking-tight flex items-center gap-4 text-foreground"
+              >
+                Tools <span className="text-xs md:text-base font-bold text-foreground/50 tracking-widest uppercase mt-2">/ 05</span>
+              </motion.h2>
+              <motion.div 
+                variants={staggerFast}
+                className="flex flex-wrap gap-x-6 gap-y-8 md:gap-x-10 md:gap-y-14 items-baseline"
+              >
+                {[
+                  { name: "React", size: "text-4xl md:text-6xl font-black text-foreground", iconSize: "w-8 h-8 md:w-12 md:h-12" },
+                  { name: "Node.js", size: "text-2xl md:text-4xl font-black text-foreground/90", iconSize: "w-6 h-6 md:w-8 md:h-8" },
+                  { name: "Javascript", size: "text-xl md:text-2xl font-bold text-foreground/80", iconSize: "w-4 h-4 md:w-6 md:h-6" },
+                  { name: "Typescript", size: "text-3xl md:text-5xl font-bold text-foreground/80", iconSize: "w-4 h-4 md:w-6 md:h-6" },
+                  { name: "Framer", size: "text-2xl md:text-4xl font-black text-foreground/90", iconSize: "w-6 h-6 md:w-8 md:h-8" },
+                  { name: "HTML", size: "text-3xl md:text-5xl font-black text-foreground", iconSize: "w-6 h-6 md:w-10 md:h-10" },
+                  { name: "NextJS", label: "Next.js", size: "text-2xl md:text-3xl font-bold text-foreground/85", iconSize: "w-6 h-6 md:w-8 md:h-8" },
+                  { name: "MongoDB", size: "text-3xl md:text-5xl font-black outline-text", iconSize: "w-6 h-6 md:w-10 md:h-10" },
+                  { name: "Supabase", size: "text-xl md:text-2xl font-bold text-foreground/60", iconSize: "w-4 h-4 md:w-6 md:h-6" },
+                  { name: "PostgreSQL", size: "text-2xl md:text-3xl font-black text-foreground/90", iconSize: "w-6 h-6 md:w-8 md:h-8" },
+                  { name: "Git", size: "text-xl md:text-2xl font-bold text-foreground/70", iconSize: "w-4 h-4 md:w-6 md:h-6" },
+                  { name: "Github", size: "text-2xl md:text-4xl font-black text-foreground", iconSize: "w-6 h-6 md:w-10 md:h-10" },
+                  { name: "Bootstrap", size: "text-xl md:text-2xl font-bold text-foreground/60", iconSize: "w-4 h-4 md:w-6 md:h-6" },
+                  { name: "Tailwind", size: "text-2xl md:text-3xl font-black text-foreground/90", iconSize: "w-6 h-6 md:w-8 md:h-8" },
+                ].map((item, idx) => (
+                  <motion.span 
+                    key={idx}
+                    variants={chipFade}
+                    whileHover={{ scale: 1.08, y: -4 }}
+                    transition={{ duration: 0.2 }}
+                    className={`flex items-center gap-2 cursor-default transition-colors ${item.size}`}
+                  >
+                    <TechIcon name={item.name} className={item.iconSize} /> {item.label || item.name}
+                  </motion.span>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+          <div className="w-full py-10">
             <div className="flex w-full overflow-hidden">
               <div className="flex whitespace-nowrap animate-scroll">
-                {/* We render the list twice to ensure seamless looping */}
                 {[...techs, ...techs].map((tech, i) => (
                   <span key={i} className="text-6xl md:text-8xl font-black mx-8 text-stroke font-sans tracking-tighter">
                     {tech} <span className="text-white/20 ml-8">///</span>
@@ -431,81 +491,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
-        {/* <section>
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6">
-        
-        
-        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300 group">
-          <h3 className="text-gray-500 text-sm font-mono mb-6 tracking-widest">BASED IN</h3>
-          <p className="text-2xl font-bold flex items-center gap-2">
-            <span>🇳🇬</span> IBADAN, NG
-          </p>
-        </div>
-
-         
-        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-          <div className="flex justify-between items-start">
-            <h3 className="text-gray-500 text-sm font-mono tracking-widest">STATUS</h3>
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-            </span>
-          </div>
-          <p className="text-2xl font-bold mt-4">AVAILABLE</p>
-        </div>
-
-         
-        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300">
-          <h3 className="text-gray-500 text-sm font-mono mb-6 tracking-widest">EXPERIENCE</h3>
-          <p className="text-4xl font-black">3+ YEARS</p>
-        </div>
-
-         
-        <div className="bg-[#111] border border-white/10 p-8 rounded-2xl hover:bg-[#1a1a1a] hover:-translate-y-1 transition-all duration-300">
-          <h3 className="text-gray-500 text-sm font-mono mb-6 tracking-widest">LISTENING TO</h3>
-          <div className="flex items-center gap-4">
-             
-            <div className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center animate-spin-slow">
-                🎵
-            </div>
-            <div>
-                <p className="font-bold text-lg leading-tight">City Boys</p>
-                <p className="text-gray-500 text-sm">Burna Boy</p>
-            </div>
-          </div>
-        </div>
-
+        </motion.section>
       </div>
-      </section> */}
-        {/* <section className="pt-20 md:pt-32 flex flex-col items-center" id="contact">
-        <div className="w-full mb-20 md:mb-32 ">
-           
-          <div className="flex flex-wrap justify-center  items-center gap-12 md:gap-32">
-            {social_links.map((links) => (
-    					<SocialLink
-      					key={links.id}
-      					{...links}
-							/>
-						))}
-          </div>
-        </div>
-        
-      
-        <div className="w-full flex flex-col md:flex-row justify-between items-center py-10 border-t border-white/20 text-white text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.4em] gap-6 md:gap-0">
-            <p> &copy; {new Date().getFullYear()} ADEDEJI SAMOD</p>
-            <div className="flex gap-8 md:gap-12">
-              <a className="hover:underline underline-offset-4 transition-all" href="#">PRIVACY</a>
-              <a className="hover:underline underline-offset-4 transition-all" href="#">TERMS</a>
-            </div>
-            <p>fabriqué la nuit</p>
-        </div>
-
-      </section> */}
-        {/* <Contact /> */}
-    </div>
-
-
     </div>
   );
 }
