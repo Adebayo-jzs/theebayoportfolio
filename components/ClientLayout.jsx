@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
 import Contact from "@/app/Contact";
@@ -11,7 +12,12 @@ import CursorWrapper from "@/components/CursorWrapper";
 
 export default function ClientLayout({ children }) {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const pathname = usePathname();
 
+  let showFooters = true;
+  if (pathname === "/chat") {
+    showFooters = false;
+  }
   useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollTop;
@@ -24,7 +30,6 @@ export default function ClientLayout({ children }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   return (
     <ThemeProvider
       attribute="class"
@@ -35,10 +40,14 @@ export default function ClientLayout({ children }) {
       <CursorWrapper>
         <Navbar />
         {children}
-        <Contact />
-        <Footer />
+        {showFooters && 
+          <>
+            <Contact />
+            <Footer />
+          </>
+        }
         <Analytics />
-
+        {showFooters && 
         <div className="block fixed bottom-8 right-3 mix-blend-difference z-50">
           <div className="flex flex-col items-center gap-6">
             <span className="[writing-mode:vertical-rl] text-[11px] font-black tracking-[0.6em] text-white uppercase">
@@ -58,6 +67,7 @@ export default function ClientLayout({ children }) {
             <North />
           </button>
         </div>
+        }
       </CursorWrapper>
     </ThemeProvider>
   );
