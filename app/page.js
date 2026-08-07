@@ -42,7 +42,7 @@ export const metadata = {
   openGraph: {
     title: "Samod ADEDEJI | Software Developer",
     description:
-      "Portfolio website for fullstack javascript Developer,Adedeji Samod",
+      "Portfolio website for fullstack software developer,Adedeji Samod",
     type: "website",
     images: [
       { url: "/og-image.jpg", width: 1200, height: 630, alt: "Adedeji Samod Portfolio" }
@@ -51,7 +51,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Samod ADEDEJI | Software Developer",
-    description: "Portfolio website for fullstack javascript Developer,Adedeji Samod",
+    description: "Portfolio website for fullstack software developer,Adedeji Samod",
     site: "@theebayo",
     creator: "@bytebybayo",
     images: ["/og-image.jpg"],

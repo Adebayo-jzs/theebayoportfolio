@@ -98,7 +98,7 @@ export default function HomePage() {
                 className="mt-8 md:mt-12 flex items-center gap-6"
               >
                 <div className="h-px w-12 md:w-24 bg-foreground"></div>
-                <p className="text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">JAVASCRIPT DEVELOPER</p>
+                <p className="text-sm md:text-xl text-foreground font-bold font-sans tracking-widest uppercase">SOFTWARE DEVELOPER</p>
               </motion.div>
               
               <div className="overflow-hidden mt-4">
@@ -207,7 +207,7 @@ export default function HomePage() {
                 I am a passionate Software Engineering student at Babcock University with a focus on Full Stack Development. My journey in tech began with a curiosity about how websites work, which led me to explore the fascinating world of web development.
               </p>
               <p className="text-base md:text-lg  mt-4 text-foreground/80 ">
-                I specialize in both frontend and backend development, continuously exploring new technologies and methodologies to stay at the forefront of web development. My main goal is to become a proficient web developer by consistently exploring how technology can be applied to solve real-world problems in our daily lives.
+                I specialize in both frontend and backend development, continuously exploring new technologies and methodologies to stay at the forefront of web development. My main goal is to become a proficient Software Engineer by consistently exploring how technology can be applied to solve real-world problems in our daily lives.
               </p>
             </div>
             <div className="hidden">
@@ -335,9 +335,12 @@ export default function HomePage() {
                 <span className="flex items-center gap-2 text-xl md:text-2xl font-bold text-foreground/80">
                   <TechIcon name="Javascript" className="w-4 h-4 md:w-6 md:h-6" /> Javascript
                 </span>
-                <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
-                  <TechIcon name="WordPress" className="w-8 h-8 md:w-12 md:h-12" /> Wordpress
+                <span className="flex items-center gap-2 text-3xl md:text-5xl font-bold text-foreground/80">
+                  <TechIcon name="Typescript" className="w-4 h-4 md:w-6 md:h-6" /> Typescript
                 </span>
+                {/* <span className="flex items-center gap-2 text-4xl md:text-6xl font-black text-foreground">
+                  <TechIcon name="WordPress" className="w-8 h-8 md:w-12 md:h-12" /> Wordpress
+                </span> */}
                 <span className="flex items-center gap-2 text-2xl md:text-4xl font-black text-foreground/90">
                   <TechIcon name="Framer" className="w-6 h-6 md:w-8 md:h-8" /> 
                    Framer

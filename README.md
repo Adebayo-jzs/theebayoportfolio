@@ -1,6 +1,6 @@
 # Theebayo - Full-Stack Developer Portfolio
 
-Welcome to my professional portfolio! This site showcases my journey as a Full-Stack JavaScript Developer, featuring my projects, technical skills, and professional experience.
+Welcome to my professional portfolio! This site showcases my journey as a Full-Stack Software developer, featuring my projects, technical skills, and professional experience.
 
 Built with **Next.js 15**, **React 19**, and **Tailwind CSS v4**, this portfolio is designed for performance, accessibility, and a premium user experience.
 
@@ -34,17 +34,20 @@ To get a local copy up and running, follow these simple steps:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Adebayo-jzs/theebayoportfolio.git
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Configure Environment Variables:
    Create a `.env.local` file in the root directory and add your Supabase and Resend credentials:
+
    ```env
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -52,6 +55,7 @@ To get a local copy up and running, follow these simple steps:
    ```
 
 4. Run the development server:
+
    ```bash
    npm run dev
    ```
@@ -64,4 +68,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-Developed by **Adedeji Samod (Theebayo)** - [Connect with me on LinkedIn](https://www.linkedin.com/in/theebayo/)
+Developed by **Adedeji Samod (bytebybayo** - [Connect with me on LinkedIn](https://www.linkedin.com/in/theebayo/)
