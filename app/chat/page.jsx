@@ -163,7 +163,7 @@ export default function AskAboutBayo() {
         onClick={() => setMenuOpen((prev) => !prev)}
         aria-label="Navigation menu"
         aria-expanded={menuOpen}
-        className="fixed top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-50 w-10 h-10 sm:w-11 sm:h-11 bg-card/90 hover:bg-accent text-foreground border border-border/60 hover:border-border rounded-full shadow-lg backdrop-blur-md flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95"
+        className="fixed top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-50 w-10 h-10 sm:w-11 sm:h-11 bg-card/95 hover:bg-accent text-foreground border border-border/60 hover:border-border rounded-full shadow-lg backdrop-blur-md flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95"
       >
         <AnimatePresence mode="wait" initial={false}>
           {menuOpen ? (

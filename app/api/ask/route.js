@@ -2,18 +2,48 @@
  * Proxy route to forward chat queries to the external AskBayo RAG backend.
  * Frontend calls /api/ask → this route forwards to ${BACKEND_BASE_URL}/api/ask
  */
+/**
+ * Helper function to sanitize user input text:
+ * 1. Strips null bytes, non-printable control characters, and zero-width spaces.
+ * 2. Normalizes excessive whitespace and newlines.
+ * 3. Trims leading and trailing whitespace.
+ */
+function sanitizeInput(text) {
+  if (typeof text !== "string") return "";
+
+  return text
+    // Strip null bytes and non-printable control characters (except \t and \n)
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "")
+    // Strip invisible zero-width characters
+    .replace(/[\u200B-\u200D\uFEFF]/g, "")
+    // Collapse excessive consecutive newlines (max 2)
+    .replace(/\n{3,}/g, "\n\n")
+    // Collapse excessive consecutive spaces
+    .replace(/[ \t]{4,}/g, "   ")
+    .trim();
+}
+
 export async function POST(request) {
   try {
-    const body = await request.json();
+    const body = await request.json().catch(() => null);
 
-    if (!body?.question?.trim()) {
+    if (!body || typeof body.question !== "string") {
+      return Response.json(
+        { error: "A valid 'question' string is required." },
+        { status: 400 }
+      );
+    }
+
+    const question = sanitizeInput(body.question);
+
+    if (!question) {
       return Response.json(
         { error: "A non-empty 'question' is required." },
         { status: 400 }
       );
     }
 
-    if (body.question.trim().length > 500) {
+    if (question.length > 500) {
       return Response.json(
         { error: "Question cannot exceed 500 characters." },
         { status: 400 }
@@ -61,7 +91,7 @@ export async function POST(request) {
     const backendResponse = await fetch(targetUrl, {
       method: "POST",
       headers,
-      body: JSON.stringify({ question: body.question.trim() }),
+      body: JSON.stringify({ question }),
       cache: "no-store",
     });
 
