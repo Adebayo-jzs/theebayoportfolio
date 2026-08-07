@@ -1,32 +1,68 @@
 /**
- * Proxy route to forward chat queries to the external LLM backend.
- * Frontend calls /api/ask → this route forwards to localhost:5000/api/ask
+ * Proxy route to forward chat queries to the external AskBayo RAG backend.
+ * Frontend calls /api/ask → this route forwards to ${BACKEND_BASE_URL}/api/ask
  */
 export async function POST(request) {
   try {
     const body = await request.json();
 
-    const backendResponse = await fetch("http://localhost:5000/api/ask", {
+    if (!body?.question?.trim()) {
+      return Response.json(
+        { error: "A non-empty 'question' is required." },
+        { status: 400 }
+      );
+    }
+
+    // Support multiple environment variable naming conventions with local fallback
+    const rawBaseUrl =
+      process.env.BACKEND_BASE_URL ||
+      process.env.BACKEND_URL ||
+      process.env.NEXT_PUBLIC_BACKEND_URL ||
+      "http://localhost:5000";
+
+    // Clean base URL (strip trailing slashes)
+    const baseUrl = rawBaseUrl.replace(/\/+$/, "");
+
+    // Ensure endpoint targets /api/ask
+    const targetUrl = baseUrl.endsWith("/api/ask")
+      ? baseUrl
+      : baseUrl.endsWith("/api")
+      ? `${baseUrl}/ask`
+      : `${baseUrl}/api/ask`;
+
+    const backendResponse = await fetch(targetUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question: body.question }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ question: body.question.trim() }),
+      cache: "no-store",
     });
 
+    const data = await backendResponse.json().catch(() => null);
+
     if (!backendResponse.ok) {
-      const errorText = await backendResponse.text();
+      const errorMessage =
+        data?.message ||
+        data?.error ||
+        `Backend returned an error (${backendResponse.status})`;
+
       return Response.json(
-        { error: "Backend returned an error", details: errorText },
+        { error: errorMessage, details: data },
         { status: backendResponse.status }
       );
     }
 
-    const data = await backendResponse.json();
     return Response.json(data);
   } catch (error) {
-    console.error("Error proxying to LLM backend:", error);
+    console.error("Error proxying to AskBayo backend:", error);
     return Response.json(
-      { error: "Failed to connect to the AI backend. Make sure it's running on port 5000." },
+      {
+        error:
+          "Failed to connect to the AI backend. Please verify that the backend server is running.",
+      },
       { status: 502 }
     );
   }
 }
+
